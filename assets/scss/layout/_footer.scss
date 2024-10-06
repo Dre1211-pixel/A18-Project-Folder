@@ -1,4 +1,50 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+footer {
+  background-color: #31302f;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-unstyled {
+  li {
+    margin-bottom: 12px;
+  }
+}
+
+// 間距
+.py-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.px-20 {
+  padding: 0 20px;
+}
+
+.me-12 {
+  margin-right: 12px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-28 {
+  font-size: 28px;
+}
+
+.pe-100 {
+  padding-right: 100px;
+}
+
+// 顏色
+.subtile-title-color {
+  color: #adaba9;
 }
