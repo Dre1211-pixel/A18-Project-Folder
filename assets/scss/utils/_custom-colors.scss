@@ -1,0 +1,55 @@
+// custom-colors.scss
+
+// fm-project-color-neutral
+$neutral-99: #FCFCFF;
+$neutral-95: #F4F0EE;
+$neutral-90: #E5E2E0;
+$neutral-80: #C9C6C4;
+$neutral-70: #ADABA9;
+$neutral-60: #93908F;
+$neutral-50: #797775;
+$neutral-40: #605E5D;
+$neutral-30: #484645;
+$neutral-20: #31302F;
+$neutral-10: #1C1B1B;
+// scss-docs-end neutral-color-variables
+
+// fm-project-color-primary
+$primary:#261900;
+$primary-70: #FFDEA0;
+$primary-60: #F6BE3B;
+$primary-50: #D8A31D;
+$primary-40: #B98900;
+$primary-30: #795900;
+$primary-20: #5C4300;
+$primary-10: #402D00;
+// scss-docs-end primary-color-variables
+
+
+// 自定義顏色地圖
+$custom-colors: (
+    "primary": $primary,
+    "primary-70": $primary-70,
+    "primary-60": $primary-60,
+    "primary-50": $primary-50,
+    "primary-40": $primary-40,
+    "primary-30": $primary-30,
+    "primary-20": $primary-20,
+    "primary-10": $primary-10,
+
+    "neutral-99": $neutral-99,
+    "neutral-95": $neutral-95,
+    "neutral-90": $neutral-90,
+    "neutral-80": $neutral-80,
+    "neutral-70": $neutral-70,
+    "neutral-60": $neutral-60,
+    "neutral-50": $neutral-50,
+    "neutral-40": $neutral-40,
+    "neutral-30": $neutral-30,
+    "neutral-20": $neutral-20,
+    "neutral-10": $neutral-10,
+
+);
+
+// 合併至 Bootstrap 的 $theme-colors 變數中
+$theme-colors: map-merge($theme-colors, $custom-colors);
