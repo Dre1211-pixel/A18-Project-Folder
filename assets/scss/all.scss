@@ -9,22 +9,25 @@
 
 // 字體
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap");
-
-// 搜尋欄
-.radius-5 {
-  border-radius: 2.5rem; // radius 40px
-}
 // 搜尋的icon
 .search-icon {
   position: relative; /* 為絕對定位的子元素提供參考 */
 }
-
 .search-icon i {
   position: absolute; /* 使用絕對定位 */
   left: 10px; /* 調整圖標的左邊距 */
   top: 50%; /* 垂直置中 */
   transform: translateY(-50%); /* 精確的垂直置中 */
   color: #6c757d; /* 圖標顏色，根據需要調整 */
+}
+@media (min-width: 992px) {
+  .search-icon i {
+    position: absolute; /* 使用絕對定位 */
+    left: 10px; /* 調整圖標的左邊距 */
+    top: 50%; /* 垂直置中 */
+    transform: translateY(-50%); /* 精確的垂直置中 */
+    color: #6c757d; /* 圖標顏色，根據需要調整 */
+  }
 }
 
 .search-icon input {

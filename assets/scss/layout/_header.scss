@@ -1,3 +1,88 @@
 .switch-btn-color {
   background-color: #261900; /* 自訂背景顏色 */
 }
+
+.nav-link {
+  color: black;
+}
+
+header li {
+  border: 1px solid #000;
+}
+
+// 搜尋icon在手機板的位置
+@media (max-width: 996px) {
+  header .search-icon i {
+    left: -24px; /* 調整圖標的左邊距 */
+  }
+}
+
+@media (min-width: 992px) {
+  header li {
+    border: none;
+  }
+}
+
+.bt-0 {
+  border-top: none;
+}
+
+// 搜尋欄樣式
+.form-control {
+  border-radius: 2.5rem; // radius 40px
+  border: 1.5px solid #000;
+}
+
+.radius-5 {
+  border-radius: 2.5rem; // radius 40px
+}
+
+// .navbar-toggler {
+//   width: 40px;
+//   height: 40px;
+//   position: relative;
+//   display: block;
+//   .hamburg-line {
+//     width: 20px;
+//     height: 2px;
+//     display: block;
+//     background: $dark;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transition: transform 0.5s ease;
+//     &:nth-child(1) {
+//       transform-origin: 50% 50%;
+//       transform: translateY(-8px) translateX(-50%);
+//     }
+//     &:nth-child(2) {
+//       transform: translateX(-50%);
+//     }
+//     &:nth-child(3) {
+//       transform-origin: 50% 50%;
+//       transform: translateY(8px) translateX(-50%);
+//     }
+
+//     &.active {
+//       &:nth-child(1) {
+//         transform: translateX(-50%) translateY(-50%) rotate(45deg);
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//       }
+//       &:nth-child(2) {
+//         opacity: 0;
+//       }
+//       &:nth-child(3) {
+//         transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width: 376px) {
+//   a.navbar-brand img {
+//     width: 86px;
+//     height: 80px;
+//   }
+// }
