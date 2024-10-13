@@ -2,7 +2,7 @@
   <div class="container">
     <nav class="navbar navbar-expand-lg">
       <button
-        class="navbar-toggler"
+        class="navbar-toggler border-0"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent"
@@ -10,7 +10,10 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <span class="hamburg-line"></span>
+        <span class="hamburg-line"></span>
+        <span class="hamburg-line"></span>
       </button>
       <a href="#" class="navbar-brand">
         <img src="../assets/images/Property 1=Default.png" alt="台味尋寶圖" />
@@ -38,8 +41,14 @@
           <li class="nav-item ms-lg-4 text-center bt-0">
             <a class="nav-link" href="#">美食專欄</a>
           </li>
+          <li class="nav-item ms-lg-4 text-center bt-0 d-lg-none">
+            <a class="nav-link" href="#">切換英文</a>
+          </li>
         </ul>
-        <div class="btn-group ms-lg-4" role="group">
+        <div
+          class="switch-lang btn-group ms-lg-4 d-none d-lg-flex"
+          role="group"
+        >
           <input
             type="radio"
             class="btn-check"
