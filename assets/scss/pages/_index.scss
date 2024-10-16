@@ -1,10 +1,60 @@
-.index-title {
-  font-size: 100px;
+// Variables
+$font-family: $font-primary;
+$text-color: #333;
+$gap: 40px;
+$underline-thickness: 3px;
+$main-title-font-size: 72px;
+$sub-title-font-size: 32px;
+
+/* Body Styles */
+body {
+    font-family: $font-primary;
+    background-image: url(/assets/images/deco/bg7.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-.banner {
-  color: var(--secondary);
-  background-image: url("/assets/images/cat.jpg");
-  background-size: cover;
-  height: calc(100vh - 80px);
+/* Container for text */
+.container {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    height: 100%;
+
+    /* Text group */
+    .text-group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: $gap;
+
+
+        /* Subtitle */
+        .sub-title {
+            font-size: $sub-title-font-size;
+            color: $text-color;
+            writing-mode: vertical-rl;
+            font-weight: 600;
+            letter-spacing: 16px;
+        }
+
+        /* Main title */
+        .main-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 700;
+
+            div {
+                font-size: $main-title-font-size;
+                color: $text-color;
+                border-bottom: $underline-thickness solid $text-color;
+                margin: 10px 0;
+            }
+        }
+    }
 }
