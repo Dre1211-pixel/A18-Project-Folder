@@ -28,3 +28,25 @@
     border: 1px solid #000;
     border-radius: 40px;
 }
+
+// filter
+.filter-btn{
+    font-weight: $font-weight-semi-bold;
+    background: $white;
+    padding: 8px;
+    border: 1px solid #000;
+    text-align: center;
+}
+.filter-text-btn{
+    border-radius: 4px;
+}
+.filter-btn:hover{
+    background: $primary-80;
+}
+.filter-btn:focus{
+    background: $primary-80;
+}
+.filter-icon-text-btn{
+    border-radius: 12px;
+}
+
