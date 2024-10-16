@@ -1,0 +1,30 @@
+/* badge */
+
+.badge-primary-s{
+    background: $primary-80;
+    padding: 4px;
+    text-align: center;
+    border-radius: 4px;
+
+} // page1,page2.1
+.badge-primary-m{
+    background: $primary-80;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 40px;
+}
+.badge-neutral-s{
+    background: $neutral-95;
+    padding: 4px;
+    text-align: center;
+    border-radius: 4px;
+
+}
+.badge-neutral-m{
+    background: $neutral-95;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 40px;
+}
