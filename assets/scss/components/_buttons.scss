@@ -33,6 +33,8 @@
 .filter-btn{
     font-weight: $font-weight-semi-bold;
     background: $white;
+    padding-inline: 0px; // clear
+    padding-block: 0px; // clear
     padding: 8px;
     border: 1px solid #000;
     text-align: center;
