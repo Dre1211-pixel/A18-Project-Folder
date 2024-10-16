@@ -55,10 +55,10 @@ $font-weight-semi-bold: 600;
     @include header-semiBold-style(16px, 1.2, 4%); 
 }
 .body2-semiBold{
-    @include header-semiBold-style(16px, 1.5, 0%); 
+    @include header-semiBold-style(14px, 1.5, 0); 
 }
 .body3-semiBold{
-    @include header-semiBold-style(12px, 1.5, 0%); 
+    @include header-semiBold-style(12px, 1.5, 0); 
 }
 
 // Bold-zh-TW
@@ -99,10 +99,10 @@ $font-weight-semi-bold: 600;
     @include header-bold-style(16px, 1.2, 4%); 
 }
 .body2-bold{
-    @include header-bold-style(16px, 1.5, 0%); 
+    @include header-bold-style(14px, 1.5, 0); 
 }
 .body3-bold{
-    @include header-bold-style(12px, 1.5, 0%); 
+    @include header-bold-style(12px, 1.5, 0); 
 }
 
 // eng
@@ -136,8 +136,8 @@ $font-weight-semi-bold: 600;
     @include header-eng-style(16px, 1.2, 4%); 
 }
 .body2-eng{
-    @include header-eng-style(14px, 1.5, 0%); 
+    @include header-eng-style(14px, 1.5, 0); 
 }
 .body3-eng{
-    @include header-eng-style(12px, 1.5, 0%); 
+    @include header-eng-style(12px, 1.5, 0); 
 }
