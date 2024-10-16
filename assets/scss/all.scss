@@ -1,14 +1,41 @@
 @import "../../node_modules/bootstrap/scss/functions";
-@import './utils/variables';
-@import'./utils/_custom-colors.scss';
+@import "./utils/variables";
+@import "./utils/_custom-colors.scss";
 
 @import "../../node_modules/bootstrap";
 
 @import "./base/base.scss";
 @import "./base/fontStyle.scss";
 
-@import './components/buttons.scss';
-@import './layout/header.scss';
-@import './layout/footer.scss';
+@import "./components/buttons.scss";
+@import "./layout/header.scss";
+@import "./layout/footer.scss";
 
-@import './pages/index.scss';
+@import "./pages/index.scss";
+
+// 字體
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap");
+// 搜尋的icon
+.search-icon {
+  position: relative; /* 為絕對定位的子元素提供參考 */
+}
+.search-icon i {
+  position: absolute; /* 使用絕對定位 */
+  left: 10px; /* 調整圖標的左邊距 */
+  top: 50%; /* 垂直置中 */
+  transform: translateY(-50%); /* 精確的垂直置中 */
+  color: #6c757d; /* 圖標顏色，根據需要調整 */
+}
+@media (min-width: 992px) {
+  .search-icon i {
+    position: absolute; /* 使用絕對定位 */
+    left: 10px; /* 調整圖標的左邊距 */
+    top: 50%; /* 垂直置中 */
+    transform: translateY(-50%); /* 精確的垂直置中 */
+    color: #6c757d; /* 圖標顏色，根據需要調整 */
+  }
+}
+
+.search-icon input {
+  padding-left: 40px; /* 為了避免文字與圖標重疊，調整左邊內邊距 */
+}
