@@ -1,3 +1,10 @@
 .index-title {
   font-size: 100px;
 }
+
+.banner {
+  color: var(--secondary);
+  background-image: url("/assets/images/cat.jpg");
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
