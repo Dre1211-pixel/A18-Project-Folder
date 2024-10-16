@@ -33,7 +33,6 @@ $grays: (
   "700": $gray-700,
   "800": $gray-800,
   "900": $gray-900,
-  "900": $gray-900,
 ) !default;
 // scss-docs-end gray-colors-map
 // fusv-enable
@@ -78,8 +77,6 @@ $colors: (
   "white": $white,
   "gray": $gray-600,
   "gray-dark": $gray-800,
-  "blue": $blue,
-  "indigo": $indigo,
   "purple": $purple,
   "pink": $pink,
   "red": $red,
@@ -256,7 +253,6 @@ $pinks: (
   "pink-700": $pink-700,
   "pink-800": $pink-800,
   "pink-900": $pink-900,
-  "pink-900": $pink-900,
 ) !default;
 
 $reds: (
@@ -268,7 +264,6 @@ $reds: (
   "red-600": $red-600,
   "red-700": $red-700,
   "red-800": $red-800,
-  "red-900": $red-900,
   "red-900": $red-900,
 ) !default;
 
@@ -282,7 +277,6 @@ $oranges: (
   "orange-700": $orange-700,
   "orange-800": $orange-800,
   "orange-900": $orange-900,
-  "orange-900": $orange-900,
 ) !default;
 
 $yellows: (
@@ -294,7 +288,6 @@ $yellows: (
   "yellow-600": $yellow-600,
   "yellow-700": $yellow-700,
   "yellow-800": $yellow-800,
-  "yellow-900": $yellow-900,
   "yellow-900": $yellow-900,
 ) !default;
 
@@ -308,7 +301,6 @@ $greens: (
   "green-700": $green-700,
   "green-800": $green-800,
   "green-900": $green-900,
-  "green-900": $green-900,
 ) !default;
 
 $teals: (
@@ -321,7 +313,6 @@ $teals: (
   "teal-700": $teal-700,
   "teal-800": $teal-800,
   "teal-900": $teal-900,
-  "teal-900": $teal-900,
 ) !default;
 
 $cyans: (
@@ -333,7 +324,6 @@ $cyans: (
   "cyan-600": $cyan-600,
   "cyan-700": $cyan-700,
   "cyan-800": $cyan-800,
-  "cyan-900": $cyan-900,
   "cyan-900": $cyan-900,
 ) !default;
 // fusv-enable
@@ -1684,8 +1674,7 @@ $form-validation-states: (
       rgba(var(--#{$prefix}danger-rgb), $input-btn-focus-color-opacity),
     "border-color": var(--#{$prefix}form-invalid-border-color),
   ),
-  ),
-) !default;
+  )!default;
 // scss-docs-end form-validation-states
 
 // Z-index master list
