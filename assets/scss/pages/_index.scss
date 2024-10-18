@@ -1,43 +1,26 @@
 // Variables
-$font-family: $font-primary;
-$text-color: #333;
 $gap: 40px;
 $underline-thickness: 3px;
-$main-title-font-size: 72px;
-$sub-title-font-size: 32px;
 
-/* Body Styles */
-body {
-  font-family: $font-primary;
-  background-image: url(/assets/images/deco/bg7.png);
-
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
 
 /* Container for text */
-.container {
-  //   display: flex;
-  justify-content: start;
-  align-items: flex-start;
-  //   height: 100%;
+.banner-container {
+    background-image: url('/assets/images/deco/bg7.png');
+    display: flex;
+    justify-content: center;
+
 
   /* Text group */
   .text-group {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: $gap;
+    }
 
     /* Subtitle */
     .sub-title {
-      font-size: $sub-title-font-size;
-      color: $text-color;
       writing-mode: vertical-rl;
-      font-weight: 600;
       letter-spacing: 16px;
     }
 
@@ -46,14 +29,126 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      font-weight: 700;
 
       div {
-        font-size: $main-title-font-size;
-        color: $text-color;
-        border-bottom: $underline-thickness solid $text-color;
+        border-bottom: $underline-thickness solid black;
         margin: 10px 0;
       }
     }
-  }
+}
+
+/* Our Purpose */
+.about-container {
+    background-image: url(/assets/images/deco/bg8.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Text group */
+.content-box {
+    background-image: url(/assets/images/deco/bg4.png);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 856px;
+    text-align: center;
+    position: relative;
+    display: flex;
+}
+
+.purpose-header {
+    margin-bottom: 20px;
+
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: normal;
+        letter-spacing: 1.5px;
+        position: relative;
+        display: inline-block;
+
+        /* Underline styling */
+        &::after {
+            content: '';
+            display: block;
+            width: 60px; /* Adjust based on design */
+            height: 1px;
+            background-color: $primary; /* Same color as the text */
+            margin: 8px auto 0; /* Space between text and underline */
+            width: 100%;
+        }
+    }
+
+    h1 {
+        display: inline-block; /* Makes the h1's width measurable */
+    }
+
+    /* Dashed line styling */
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        width: calc(100% - 30px); /* Use a relative width based on h1 */
+        max-width: 100%;
+        border-top: 1px dashed #7a6e58; /* Dashed line color */
+        margin: 0 auto; /* Center the lines */
+    }
+
+    &::before {
+        width: calc(100% - 30px); /* Ensure the width matches h1 */
+        margin-bottom: 10px; /* Space between top line and title */
+    }
+
+    &::after {
+        width: calc(100% - 30px); /* Ensure the width matches h1 */
+        margin-top: 10px; /* Space between bottom line and title */
+    }
+}
+
+.purpose-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: start;
+
+    p {
+        line-height: 1.8;
+    }
+}
+
+.purpose-image {
+    img {
+        max-width: 318px;
+        margin-top: 20px;
+    }
+}
+
+
+// 間距 & 外距模組化
+
+.p-5 {
+    padding: 20px;
+}
+
+.p-12 {
+    padding: 48px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mr-20 {
+    margin-right: 80px;;
+}
+
+.mt-30 {
+    margin-top: 120px;
+}
+
+.mb-30 {
+    margin-bottom: 120px;
 }
