@@ -16,10 +16,15 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "gh-pages": "^5.0.0",
     "glob": "^10.2.2",
-    "sass": "^1.61.0",
+    "node": "^20.18.0",
+    "sass": "^1.79.5",
     "sass-loader": "^13.2.2",
     "vite-plugin-live-reload": "^3.0.2"
   }
 }
+
+
+

@@ -35,7 +35,6 @@ $grays: (
 // scss-docs-end gray-colors-map
 // fusv-enable
 
-
 // scss-docs-start color-variables
 $blue: #0d6efd !default;
 $indigo: #6610f2 !default;
@@ -415,17 +414,28 @@ $gradient: linear-gradient(
 $spacer: 1rem !default; //16px
 $spacers: (
   0: 0,
-  1: $spacer * 0.25, // 4px 
-  2: $spacer * 0.5, // 8px
-  3: $spacer *0.75 , // 12px
-  4: $spacer * 1, // 16px
-  5: $spacer * 1.25, // 20px
-  6: $spacer * 1.5, // 24px
-  7: $spacer * 1.75, // 28px
-  8: $spacer * 2, // 32px
-  9: $spacer * 2.25, // 36px
-  10: $spacer * 2.5, // 40px
-  20: $spacer * 5, // 80px
+  1: $spacer * 0.25,
+  // 4px
+  2: $spacer * 0.5,
+  // 8px
+  3: $spacer * 0.75,
+  // 12px
+  4: $spacer * 1,
+  // 16px
+  5: $spacer * 1.25,
+  // 20px
+  6: $spacer * 1.5,
+  // 24px
+  7: $spacer * 1.75,
+  // 28px
+  8: $spacer * 2,
+  // 32px
+  9: $spacer * 2.25,
+  // 36px
+  10: $spacer * 2.5,
+  // 40px
+  20: $spacer * 5,
+  // 80px
 ) !default;
 // scss-docs-end spacer-variables-maps
 

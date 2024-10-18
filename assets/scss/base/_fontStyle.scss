@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap");
 // font-family
-$font-primary: "Noto Serif TC", serif; // 中文字體
-$font-secondary: "Poltawski Nowy", serif; // 英文字體
+$font-primary: "Noto Serif TC"; // 中文字體
+$font-secondary: "Poltawski Nowy"; // 英文字體
 
 // font-weight
 $font-weight-regular: 400;
@@ -21,38 +21,38 @@ $font-weight-semi-bold: 600;
 }
 
 .display1-semiBold{
-    @include header-semiBold-style(72px, 1.2, 4%); 
+    @include header-semiBold-style(72px, 1.2, 0.04em); 
 }
 
 .display2-semiBold{
-    @include header-semiBold-style(48px, 1.2, 4%); 
+    @include header-semiBold-style(48px, 1.2, 0.04em); 
 }
 
 .h1-semiBold{
-    @include header-semiBold-style(40px, 1.2, 4%); 
+    @include header-semiBold-style(40px, 1.2, 0.04em); 
 }
 
 .h2-semiBold{
-    @include header-semiBold-style(38px, 1.2, 4%); 
+    @include header-semiBold-style(38px, 1.2, 0.04em); 
 }
 
 .h3-semiBold{
-    @include header-semiBold-style(32px, 1.2, 4%); 
+    @include header-semiBold-style(32px, 1.2, 0.04em); 
 }
 
 .h4-semiBold{
-    @include header-semiBold-style(28px, 1.2, 4%); 
+    @include header-semiBold-style(28px, 1.2, 0.04em); 
 }
 
 .h5-semiBold{
-    @include header-semiBold-style(24px, 1.2, 4%); 
+    @include header-semiBold-style(24px, 1.2, 0.04em); 
 }
 
 .h6-semiBold{
-    @include header-semiBold-style(20px, 1.2, 4%); 
+    @include header-semiBold-style(20px, 1.2, 0.04em); 
 }
 .body1-semiBold{
-    @include header-semiBold-style(16px, 1.2, 4%); 
+    @include header-semiBold-style(16px, 1.2, 0.04em); 
 }
 .body2-semiBold{
     @include header-semiBold-style(14px, 1.5, 0); 
@@ -71,32 +71,32 @@ $font-weight-semi-bold: 600;
 }
 
 .display1-bold{
-    @include header-bold-style(72px, 1.2, 4%); 
+    @include header-bold-style(72px, 1.2, 0.04em); 
 }
 
 .display2-bold{
-    @include header-bold-style(48px, 1.2, 4%); 
+    @include header-bold-style(48px, 1.2, 0.04em); 
 }
 .h1-bold{
-    @include header-bold-style(40px, 1.2, 4%); 
+    @include header-bold-style(40px, 1.2, 0.04em); 
 }
 .h2-bold{
-    @include header-bold-style(38px, 1.2, 4%); 
+    @include header-bold-style(38px, 1.2, 0.04em); 
 }
 .h3-bold{
-    @include header-bold-style(32px, 1.2, 4%); 
+    @include header-bold-style(32px, 1.2, 0.04em); 
 }
 .h4-bold{
-    @include header-bold-style(28px, 1.2, 4%); 
+    @include header-bold-style(28px, 1.2, 0.04em); 
 }
 .h5-bold{
-    @include header-bold-style(24px, 1.2, 4%); 
+    @include header-bold-style(24px, 1.2, 0.04em); 
 }
 .h6-bold{
-    @include header-bold-style(20px, 1.2, 4%); 
+    @include header-bold-style(20px, 1.2, 0.04em); 
 }
 .body1-bold{
-    @include header-bold-style(16px, 1.2, 4%); 
+    @include header-bold-style(16px, 1.2, 0.04em); 
 }
 .body2-bold{
     @include header-bold-style(14px, 1.5, 0); 
@@ -115,25 +115,25 @@ $font-weight-semi-bold: 600;
 }
 
 .h1-eng{
-    @include header-eng-style(40px, 1.2, 4%); 
+    @include header-eng-style(40px, 1.2, 0.04em); 
 }
 .h2-eng{
-    @include header-eng-style(38px, 1.2, 4%); 
+    @include header-eng-style(38px, 1.2, 0.04em); 
 }
 .h3-eng{
-    @include header-eng-style(32px, 1.2, 4%); 
+    @include header-eng-style(32px, 1.2, 0.04em); 
 }
 .h4-eng{
-    @include header-eng-style(28px, 1.2, 4%); 
+    @include header-eng-style(28px, 1.2, 0.04em); 
 }
 .h5-eng{
-    @include header-eng-style(24px, 1.2, 4%); 
+    @include header-eng-style(24px, 1.2, 0.04em); 
 }
 .h6-eng{
-    @include header-eng-style(20px, 1.2, 4%); 
+    @include header-eng-style(20px, 1.2, 0.04em); 
 }
 .body1-eng{
-    @include header-eng-style(16px, 1.2, 4%); 
+    @include header-eng-style(16px, 1.2, 0.04em); 
 }
 .body2-eng{
     @include header-eng-style(14px, 1.5, 0); 
