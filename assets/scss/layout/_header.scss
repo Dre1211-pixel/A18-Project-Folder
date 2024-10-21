@@ -1,5 +1,11 @@
-.switch-btn {
-  padding: 4px; /* 自訂背景顏色 */
+header {
+  border-bottom: 1px solid rgba(72, 70, 69, 1);
+  background: #0000001a;
+}
+
+// 搜尋欄跟著背景色
+.form-control {
+  background-color: inherit;
 }
 
 .nav-link {
