@@ -1,12 +1,5 @@
-// .banner {
-//   background-image: url("../images/banner.png");
-
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: top -168px left; /* 可以設置起始位置 */
-// }
 .banner {
-  background-image: url("../images/banner.png");
+  background-image: url("../images/deco/bg1.png");
   background-size: 1920px 851px; /* 根據需求設置具體寬度和高度 */
   background-repeat: no-repeat;
   background-position: top -168px left; /* 可以設置起始位置 */
@@ -16,4 +9,27 @@ img {
 }
 .pb-120 {
   padding-bottom: 120px;
+}
+
+// feature部分
+.feature {
+  background-image: url("../images/deco/bg2.png");
+
+  background-repeat: no-repeat;
+}
+
+// festival部分
+.festival {
+  background-image: url("../images/deco/bg9.png");
+
+  background-repeat: no-repeat;
+}
+
+.festival-content {
+  background-image: url("../images/deco/bg10.png");
+}
+
+// 店家動態部分
+.newsfeed {
+  background-image: url("../images/deco/bg4.png");
 }
