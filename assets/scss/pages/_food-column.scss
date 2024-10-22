@@ -1,0 +1,19 @@
+// .banner {
+//   background-image: url("../images/banner.png");
+
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: top -168px left; /* 可以設置起始位置 */
+// }
+.banner {
+  background-image: url("../images/banner.png");
+  background-size: 1920px 851px; /* 根據需求設置具體寬度和高度 */
+  background-repeat: no-repeat;
+  background-position: top -168px left; /* 可以設置起始位置 */
+}
+img {
+  max-width: 100%;
+}
+.pb-120 {
+  padding-bottom: 120px;
+}
