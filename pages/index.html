@@ -11,6 +11,7 @@
 <body>
   <%- include('./layout/header'); -%>
 
+    <!-- Banner Map -->
     <section class="banner-container">
       <div class="row">
         <div class="col-2 text-group">
@@ -28,6 +29,7 @@
       </div>
     </section>
 
+      <!-- Our Purpose -->
     <section class="about-container">
       <div class="content-box p-12 mt-30 mb-30">
         <div class="container mr-20">
@@ -48,7 +50,7 @@
 
     <!-- Highlights Title -->
     <section class="flavors-section pt-18">
-      <div class= "mb-10">
+      <div class= "mb-10 align-center">
         <h3>This Week's Highlight</h3>
         <h1 >美食專欄</h1>
       </div>
@@ -57,9 +59,9 @@
       <div class="content-container">
       
         <!-- Left Side: Title and Button -->
-        <div class="flavors-intro">
-          <h3>台灣食紀</h3>
-          <h1>Discover the Flavors of Taiwan</h1>
+        <div class="flavors-intro mr-10">
+          <h3 class="h6-semiBold">台灣食紀</h3>
+          <h1 class="h1-eng">Discover the Flavors of Taiwan</h1>
           <a href="#" class="explore-btn">一頁一味，探索美食故事 →</a>
         </div>
       
@@ -70,7 +72,7 @@
           <div class="highlight-card">
             <img src="/assets/images/eatery-1.png" alt="Select Shops in Taipei">
             <div class="card-content">
-              <p class="location">台北 | 中山</p>
+              <p>台北 | 中山</p>
               <p class="category">台味尋寶圖</p>
               <h2>Select Shops in Taipei</h2>
               <p class="description">一家藏身巷弄的咖啡小店，有香濃濃的手作溫度，順帶給風貫穿的客交織，讓人流連忘返。</p>
@@ -82,7 +84,7 @@
           <div class="highlight-card">
             <img src="/assets/images/eatery-2.png" alt="Taiwanese Fusions in Taichung">
             <div class="card-content">
-              <p class="location">台中 | 楊梅</p>
+              <p>台中 | 楊梅</p>
               <p class="category">阿貴</p>
               <h2>Taiwanese Fusions in Taichung</h2>
               <p class="description">跨文化的天作之合，"味蕾魔法師"用法式料理手法創新台式家常菜。</p>
@@ -94,7 +96,7 @@
           <div class="highlight-card">
             <img src="/assets/images/eatery-3.png" alt="Wandering Flower in Changhua">
             <div class="card-content">
-              <p class="location">彰化 | 日尾</p>
+              <p>彰化 | 日尾</p>
               <p class="category">台味尋寶圖</p>
               <h2>Wandering Flower in Changhua</h2>
               <p class="description">漫步遊客在日尾的花卉餐廳，享受隱藏的綠意空間，吃著手作的美味。</p>
@@ -102,15 +104,113 @@
             </div>
           </div>
         </div>
+      </div>
+       
+        <!-- Swiper Button -->
+        <div class="arrow-container mb-18">
+          <!-- Left Arrow -->
+          <button id="left-arrow" class="arrow">
+            <img src="left-arrow.png" alt="Left Arrow">
+          </button>
+        
+          <!-- Cards or Carousel Content Goes Here -->
+        
+          <!-- Right Arrow -->
+          <button id="right-arrow" class="arrow">
+            <img src="right-arrow.png" alt="Right Arrow">
+          </button>
+        </div>
+    </section>
 
-        <div>
-          <img src="/assets/images/" alt=""><a href=""></a></img>
+    <!-- This Weeks's Hot Picks -->
+    <section class="hot-picks pt-18">
+      <div class= "mb-10 align-center">
+        <h3>This Week's Hot Picks</h3>
+        <h2>本週熱門店家</h2>
+      </div> 
+      <div class="cards">
+        <div class="hot-picks-card">
+          <div class="image-wrapper">
+            <img src="/assets/images/eatery-4.png" alt="王氏魚皮">
+          </div>
+          <div class="info">
+            <div class="details">
+              <div class="tag">台南</div>
+              <div class="rating">
+                <span class="stars">4.4 ★</span>
+                <span class="reviews">(21則評論)</span>
+              </div>
+            </div>
+            <h3>王氏魚皮</h3>
+          </div>
+        </div>
+  
+        <div class="hot-picks-card">
+          <div class="image-wrapper">
+            <img src="/assets/images/eatery-5.png" alt="文章牛肉湯">
+          </div>
+          <div class="info">
+            <div class="details">
+              <div class="tag">台南</div>
+              <div class="rating">
+                <span class="stars">4.4 ★</span>
+                <span class="reviews">(21則評論)</span>
+              </div>
+            </div>
+            <h3>文章牛肉湯</h3>
+          </div>
+        </div>
+  
+        <div class="hot-picks-card">
+          <div class="image-wrapper">
+            <img src="/assets/images/eatery-6.png" alt="阿和肉燥飯">
+          </div>
+          <div class="info">
+            <div class="details">
+              <div class="tag">台南</div>
+              <div class="rating">
+                <span class="stars">4.4 ★</span>
+                <span class="reviews">(21則評論)</span>
+              </div>
+            </div>
+            <h3>阿和肉燥飯</h3>
+          </div>
         </div>
       </div>
     </section>
-        
 
-
+  <section class="recent-reviews">
+    <h2>最新美食評論</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="tofu_pudding.jpg" alt="同記安平豆花">
+        <div class="info">
+          <span>台南</span>
+          <h3>同記安平豆花</h3>
+          <div class="rating">4.9★</div>
+          <p>這家豆花真的超好吃，口感滑嫩...</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="steamed_buns.jpg" alt="阿三肉圓">
+        <div class="info">
+          <span>新北</span>
+          <h3>阿三肉圓</h3>
+          <div class="rating">4.4★</div>
+          <p>肉圓皮Q，內餡飽滿，有濃濃的醬汁...</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="pig_feet.jpg" alt="富覺豬腳">
+        <div class="info">
+          <span>台北</span>
+          <h3>富覺豬腳</h3>
+          <div class="rating">4.4★</div>
+          <p>這家的豬腳非常嫩滑，11點前就賣光！...</p>
+        </div>
+      </div>
+    </div>
+    </section>
 
     <!-- badge -->
     <!-- <div class="py-20">
