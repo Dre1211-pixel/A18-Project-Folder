@@ -2,11 +2,16 @@ body.food-column {
   background-image: url("../images/deco/bg1.png");
   background-size: cover;
   background-position: center;
-  
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+
 }
+
 img {
   max-width: 100%;
 }
+
 .pb-120 {
   padding-bottom: 120px;
 }
@@ -27,9 +32,76 @@ img {
 
 .festival-content {
   background-image: url("../images/deco/bg10.png");
+  color: var(--Black, #000000);
 }
 
 // 店家動態部分
 .newsfeed {
   background-image: url("../images/deco/bg4.png");
+}
+
+
+
+
+// 樣式
+
+p.cui {
+  font-family: Poltawski Nowy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.04em;
+  text-align: left;
+
+}
+
+p.festi {
+
+  font-family: Poltawski Nowy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.04em;
+
+
+}
+
+.line-cui {
+  background-color: var(--Black, #000000);
+  height: 1px;
+  width: 122px;
+}
+
+.line-festi {
+  background-color: var(--Black, #000000);
+  height: 1px;
+  width: 84px;
+}
+
+.festival-content .card {
+  background: var(--Nutral-95, #F4F0EE);
+  color: var(--Black, #000000);
+  --bs-card-inner-border-radius: 0;
+}
+
+.festival .btn {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px;
+
+  border-radius: 40px;
+  color: var(--Black, #000000);
+
+}
+
+
+
+
+
+
+.card-title {
+  font-weight: 700;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-size: 24px;
 }

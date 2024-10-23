@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body class="food-column">
-    <%- include('./layout/header'); -%>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>美食專欄</title>
+</head>
+
+<body class="food-column">
+  <%- include('./layout/header'); -%>
     <section class="banner pt-10 pb-120">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-5">
-            <p>Story of Cuisine</p>
-            <hr />
+            <p class="cui mb-2">Story of Cuisine</p>
+            <div class="line-cui"></div>
+
             <img src="../assets/images/book.png" alt="一頁一味" />
-            <p>一頁一味</p>
-            <p>探索美食故事。</p>
+            <div class="fs-1">
+              <p>一頁一味</p>
+              <p>探索美食故事。</p>
+            </div>
+
             <hr />
             <p>台灣食紀</p>
             <p>Explore Taiwan</p>
@@ -34,7 +40,7 @@
       <div class="container">
         <div class="row py-20">
           <div class="col-12">
-            <div class="feature d-flex justify-content-center">
+            <div class="d-flex justify-content-center">
               <img src="../assets/images/black-shopping-cart.png" alt="cart" />
               <div class="feature-title">
                 <p>Feature Restaurants</p>
@@ -52,51 +58,47 @@
     <section class="festival">
       <div class="container">
         <div class="row justify-content-center py-20">
-          <div class="col-8 festival-content">
-            <div class="festival-title text-center">
-              <p>Festivals</p>
-              <hr />
-              <p>節日美食</p>
+          <div class="col-8 festival-content p-10 border border-dark">
+            <div class="festival-title d-flex flex-column align-items-center">
+              <p class="festi mb-2 text-center">Festivals</p>
+              <p class="line-festi"></p>
+              <p class="fs-2">節日美食</p>
             </div>
             <div class="festival-content">
-              <div class="card flex-row">
-                <img
-                  src="../assets/images/newyear.png"
-                  class="card-img-top"
-                  alt="年夜飯"
-                />
-                <div class="card-body">
-                  <a href="#" class="btn btn-primary">春節</a>
-                  <h5 class="card-title">年夜飯的身世探索</h5>
+              <div class="card flex-row mb-8 p-3 border-dark rounded-0">
+                <img src="../assets/images/newyear.png" class="card-img-top" alt="年夜飯" />
+                <div class="card-body py-0 ps-6 pe-0">
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14">春節</a>
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14">農曆初一</a>
+                  <h5 class="card-title ">年夜飯的身世探索</h5>
                   <p class="card-text">
                     年夜飯是台灣傳統新年中除夕的重要習俗，全家人齊聚一堂，共享豐盛佳餚，象徵團圓與和睦。魚（寓意年年有餘）、雞（象徵吉祥）、餃子（象徵財富）等，每道菜都有吉祥的寓意，祈願新的一年順遂富足。年夜飯不僅是美食，更是情感的聯繫與文化的傳承。
                   </p>
                 </div>
               </div>
-              <div class="card flex-row-reverse">
-                <img
-                  src="../assets/images/mid-autumn.png"
-                  class="card-img-top"
-                  alt="中秋"
-                />
-                <div class="card-body">
-                  <a href="#" class="btn btn-primary">中秋節</a>
+              <div class="card flex-row-reverse mb-8 p-3 border-dark rounded-0">
+                <img src="../assets/images/mid-autumn.png" class="card-img-top" alt="中秋" />
+                <div class="card-body py-0 ps-0 pe-6">
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14">中秋節</a>
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14">農曆八月十五日</a>
+
                   <h5 class="card-title">
-                    中秋節烤肉的香味傳奇<br />一家烤肉萬家香
+                    <p class="mb-2">中秋節烤肉的香味傳奇</p>
+                    <p class="mb-0">一家烤肉萬家香</p>
+
+
                   </h5>
                   <p class="card-text">
                     中秋節的夜晚，當戾火在爐中燃起，空氣中彌漫著烤肉的香氣，勾起人們的食欲。一家人繞著火爐，忙碌地翻轉著肉片，香氣四溢.笑聲連連。這份烤肉的美味不僅滿足了味蕾，更是讓人心中充滿了溫暖與幸福。
                   </p>
                 </div>
               </div>
-              <div class="card flex-row">
-                <img
-                  src="../assets/images/dragon-boat-festival.png"
-                  class="card-img-top"
-                  alt="端午節"
-                />
-                <div class="card-body">
-                  <a href="#" class="btn btn-primary">端午節</a>
+              <div class="card flex-row p-3 border-dark rounded-0">
+                <img src="../assets/images/dragon-boat-festival.png" class="card-img-top" alt="端午節" />
+                <div class="card-body py-0 ps-6 pe-0">
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14">端午節</a>
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14">農曆五月</a>
+
                   <h5 class="card-title">端午節來臨，各國粽子大不同</h5>
                   <p class="card-text">
                     農曆五月五日，華人傳統節日端午節來臨，是一年一度粽子浮上熱門話題的時期。除了以華人為主體的國家，東北與東南亞皆因文化的代代傳承，發展出各具特色的包米料理。這回世界美食城就來帶你認識端午節時節，各國的道地粽子！
@@ -174,6 +176,7 @@
     </section>
 
     <%- include('./layout/footer'); -%>
-    <script type="module" src="../main.js"></script>
-  </body>
+      <script type="module" src="../main.js"></script>
+</body>
+
 </html>
