@@ -123,14 +123,14 @@
     </section>
 
     <!-- This Weeks's Hot Picks -->
-    <section class="hot-picks pt-18">
+    <section class="hot-picks-section pt-18 mb-">
       <div class= "mb-10 align-center">
         <h3>This Week's Hot Picks</h3>
         <h2>本週熱門店家</h2>
       </div> 
-      <div class="cards">
+      <div class="hot-picks-container">
         <div class="hot-picks-card">
-          <div class="image-wrapper">
+          <div class="picks-image-wrapper">
             <img src="/assets/images/eatery-4.png" alt="王氏魚皮">
           </div>
           <div class="info">
@@ -146,7 +146,7 @@
         </div>
   
         <div class="hot-picks-card">
-          <div class="image-wrapper">
+          <div class="picks-image-wrapper">
             <img src="/assets/images/eatery-5.png" alt="文章牛肉湯">
           </div>
           <div class="info">
@@ -162,7 +162,7 @@
         </div>
   
         <div class="hot-picks-card">
-          <div class="image-wrapper">
+          <div class="picks-image-wrapper">
             <img src="/assets/images/eatery-6.png" alt="阿和肉燥飯">
           </div>
           <div class="info">
@@ -179,38 +179,109 @@
       </div>
     </section>
 
-  <section class="recent-reviews">
-    <h2>最新美食評論</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="tofu_pudding.jpg" alt="同記安平豆花">
-        <div class="info">
-          <span>台南</span>
-          <h3>同記安平豆花</h3>
-          <div class="rating">4.9★</div>
-          <p>這家豆花真的超好吃，口感滑嫩...</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="steamed_buns.jpg" alt="阿三肉圓">
-        <div class="info">
-          <span>新北</span>
-          <h3>阿三肉圓</h3>
-          <div class="rating">4.4★</div>
-          <p>肉圓皮Q，內餡飽滿，有濃濃的醬汁...</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="pig_feet.jpg" alt="富覺豬腳">
-        <div class="info">
-          <span>台北</span>
-          <h3>富覺豬腳</h3>
-          <div class="rating">4.4★</div>
-          <p>這家的豬腳非常嫩滑，11點前就賣光！...</p>
-        </div>
-      </div>
+  <!-- Most Recent Reviews --> 
+  <section class="recent-reviews-section pt-18">
+    <div class= "mb-10 align-center">
+      <h3>This Week's Hot Picks</h3>
+      <h2>本週熱門店家</h2>
     </div>
-    </section>
+    <!-- Card 1 -->
+    <div class="review-card-container"></div>
+      <div class="review-card">
+          <div class="top-details">
+              <div class="image-wrapper">
+                  <img src="food-image1.jpg" alt="Food Image 1">
+                  <div class="small-circle">
+                      <img src="badge-icon1.jpg" alt="Badge Icon">
+                  </div>
+              </div>
+              <div class="card-content">
+                  <div class="category-label">彰化</div>
+                  <div class="card-title">阿三肉圓</div>
+                  <div class="rating">4.4 ★</div>
+                  <div class="address">彰化彰化縣彰化市三民路242號</div>
+              </div>
+          </div>
+
+          <hr />
+
+          <div class="bottom-details">
+              <div class="user-info">
+                  <div class="small-circle-member">
+                      <img src="user-avatar1.jpg" alt="User Avatar">
+                  </div>
+                  <span class="member-name">會員名稱</span>
+                  <span class="badge">角色徽章</span>
+              </div>
+              <div class="timestamp">33mins ago</div>
+              <div class="content">這是我吃過最脆的肉圓肉圓就是要吃炸的，龍骨湯非常濃郁，建議大家</div>
+          </div>
+      </div>
+
+      <!-- Repeat for Card 2 and Card 3 -->
+      <div class="review-card">
+          <div class="top-details">
+              <div class="image-wrapper">
+                  <img src="food-image2.jpg" alt="Food Image 2">
+                  <div class="small-circle">
+                      <img src="badge-icon2.jpg" alt="Badge Icon">
+                  </div>
+              </div>
+              <div class="card-content">
+                  <div class="category-label">台中</div>
+                  <div class="card-title">豆花舖</div>
+                  <div class="rating">4.7 ★</div>
+                  <div class="address">台中市北屯區忠孝路55號</div>
+              </div>
+          </div>
+
+          <hr />
+
+          <div class="bottom-details">
+              <div class="user-info">
+                  <div class="small-circle-member">
+                      <img src="user-avatar2.jpg" alt="User Avatar">
+                  </div>
+                  <span class="member-name">會員名稱</span>
+                  <span class="badge">角色徽章</span>
+              </div>
+              <div class="timestamp">40mins ago</div>
+              <div class="content">這家豆花真的非常滑嫩，而且甜度剛剛好，推薦給喜歡甜品的朋友！</div>
+          </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="review-card">
+          <div class="top-details">
+              <div class="image-wrapper">
+                  <img src="food-image3.jpg" alt="Food Image 3">
+                  <div class="small-circle">
+                      <img src="badge-icon3.jpg" alt="Badge Icon">
+                  </div>
+              </div>
+              <div class="card-content">
+                  <div class="category-label">台南</div>
+                  <div class="card-title">富香羊肉爐</div>
+                  <div class="rating">4.3 ★</div>
+                  <div class="address">台南市中西區安平路100號</div>
+              </div>
+          </div>
+
+          <hr />
+
+          <div class="bottom-details">
+              <div class="user-info">
+                  <div class="small-circle-member">
+                      <img src="user-avatar3.jpg" alt="User Avatar">
+                  </div>
+                  <span class="member-name">會員名稱</span>
+                  <span class="badge">角色徽章</span>
+              </div>
+              <div class="timestamp">1 hour ago</div>
+              <div class="content">富香羊肉爐的湯底超級好喝，搭配的羊肉非常鮮嫩，口感一流。</div>
+          </div>
+      </div>
+</section>
 
     <!-- badge -->
     <!-- <div class="py-20">

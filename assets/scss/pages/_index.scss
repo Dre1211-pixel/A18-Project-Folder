@@ -276,14 +276,14 @@ $underline-thickness: 3px;
   }
 
 // 第4區塊
-  .hot-picks {
+  .hot-picks-section {
     background-image: url('/assets/images/deco/bg5.png');
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .cards {
+  .hot-picks-container {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -302,7 +302,7 @@ $underline-thickness: 3px;
       box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);  /* Add shadow on hover */
     }
   
-    .image-wrapper {
+    .picks-image-wrapper {
       background-image: url('/assets/images/deco/pattern1.png');
       padding: 16px; /* 四周有16px的padding */
       display: flex;
@@ -360,127 +360,157 @@ $underline-thickness: 3px;
     }
   }
 
-  button.more-btn {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    background-color: #f5c518;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .recent-reviews {
-    margin-top: 50px;
-  }
-
-  .card-container {
+// 第5區塊
+.recent-reviews-section {
+    background-image: url('/assets/images/deco/bg5.png');
+    align-items: center;
+    justify-content: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 20px;
-    padding: 20px;
-  }
-  
-  .card {
-    width: 320px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
-  
-  .card-image {
-    position: relative;
-  
-    img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    }
-  
-    .badge {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: #fff;
-      padding: 5px 10px;
-      font-size: 12px;
-      border-radius: 3px;
-    }
-  }
-  
-  .card-content {
-    padding: 15px;
-  
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  
-      .location {
-        font-size: 14px;
-        background-color: #f3f3f3;
-        padding: 3px 8px;
-        border-radius: 15px;
-        font-weight: bold;
-        color: #ffcc00;
-      }
-  
-      .rating {
-        font-size: 14px;
-        color: #000;
-      }
-    }
-  
-    .card-title {
-      font-size: 18px;
-      margin: 10px 0;
-    }
-  
-    .address {
-      font-size: 14px;
-      color: #666;
-    }
-  
-    .card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 15px;
-  
-      .user-info {
-        display: flex;
-        flex-direction: column;
-  
-        .user {
-          font-size: 12px;
-          color: #333;
-          font-weight: bold;
-        }
-  
-        .category {
-          font-size: 12px;
-          color: #999;
-        }
-      }
-  
-      .time {
-        font-size: 12px;
-        color: #666;
-      }
-    }
   }
 
+  .review-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1076px;
+}
+
+/* Review Card Styles */
+.review-card {
+    width: 300px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    hr {
+        border: none;
+        border-top: 1px solid #eee;
+        margin: 10px 0;
+    }
+}
+
+/* Top Details (above the hr) */
+.top-details {
+    .image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .small-circle {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid white;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .card-content {
+        padding: 15px;
+
+        .category-label {
+            background-color: #f0c84b;
+            color: #fff;
+            font-size: 12px;
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .rating {
+            color: #ffcc00;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .address {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+/* Bottom Details (below the hr) */
+.bottom-details {
+    padding: 15px;
+
+    .user-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .small-circle-member {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 10px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .member-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .badge {
+            font-size: 12px;
+            background-color: #e0e0e0;
+            padding: 2px 6px;
+            border-radius: 5px;
+            color: #666;
+        }
+    }
+
+    .timestamp {
+        font-size: 12px;
+        color: #999;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        font-size: 14px;
+        color: #555;
+    }
+}    
+
+  
 
 // 間距 & 外距 & 部分樣式模組化
 
@@ -498,6 +528,10 @@ $underline-thickness: 3px;
 
 .pt-18 {
     padding-top: 72px;
+}
+
+.mr-1 {
+    margin-right: 4px;
 }
 
 .mb-5 {
