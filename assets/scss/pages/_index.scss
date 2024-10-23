@@ -173,192 +173,198 @@ $underline-thickness: 3px;
   
     /* Right-side cards section */
     .cards-container {
-      display: flex;
-      gap: 24px;
-      flex: 2;
-      justify-content: space-between;
-  
-      .highlight-card {
-        border: 1px solid black;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        background-color: transparent;
-        width: 32%;
         display: flex;
-        flex-direction: column;
+        gap: 24px;
+        flex: 2;
         justify-content: space-between;
-        position: relative;
-        transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for both shadow and position */
-        
-        &:hover {
-            box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);  /* Add shadow on hover */
-            transform: translateY(-10px); /* Move the card slightly upwards on hover */ 
-        }
-        
-        img {
-          width: 100%;
-          height: 200px;
-          object-fit: cover;
-        }
-  
-        .card-content {
-          padding: 15px;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-  
-          .location, .category {
-            font-size: 0.9rem;
-            color: #8b8b8b;
-          }
-  
-          h2 {
-            font-size: 1.2rem;
-            margin: 10px 0;
-          }
-  
-          .description {
-            font-size: 0.9rem;
-            color: #333;
-            flex-grow: 1;
-          }
-  
-          .more-link {
-            font-size: 0.9rem;
-            color: #000;
-            text-decoration: none;
-            margin-top: 10px;
-  
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-        }
-      }
-    }
-  }
 
-  .arrow-container {
-    display: flex;
-    justify-content: flex-end; /* Aligns all content to the right */
-    align-items: center;
-    position: relative;
-  }
-  
-  .arrow {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .arrow img {
-    width: 40px; /* Adjust size */
-    height: 40px;
-    filter: grayscale(100%); /* Grey by default */
-    transition: all 0.3s ease;
-  }
-  
-  /* Hover effect for both arrows */
-  .arrow:hover img,
-  .arrow:active img {
-    filter: grayscale(0%); /* Turns black on hover or active */
-  }
-  
-  /* Left arrow specific styles */
-  .left-arrow {
-    position: absolute;
-    right: 70px; /* Position it slightly left of the right arrow */
-  }
-  
-  /* Right arrow specific styles */
-  .right-arrow {
-    position: absolute;
-    right: 20px; /* Align the right arrow closer to the edge */
-  }
+        .highlight-card {
+            border: 1px solid black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: transparent;
+            width: 32%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            /* Smooth transition for both shadow and position */
+
+            &:hover {
+                box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);
+                /* Add shadow on hover */
+                transform: translateY(-10px);
+                /* Move the card slightly upwards on hover */
+            }
+
+            img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            .card-content {
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .location,
+                .category {
+                    font-size: 0.9rem;
+                    color: #8b8b8b;
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                    margin: 10px 0;
+                }
+
+                .description {
+                    font-size: 0.9rem;
+                    color: #333;
+                    flex-grow: 1;
+                }
+
+                .more-link {
+                    font-size: 0.9rem;
+                    color: #000;
+                    text-decoration: none;
+                    margin-top: 10px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.arrow-container {
+display: flex;
+justify-content: flex-end; /* Aligns all content to the right */
+align-items: center;
+position: relative;
+}
+
+.arrow {
+background: none;
+border: none;
+cursor: pointer;
+}
+
+.arrow img {
+width: 40px; /* Adjust size */
+height: 40px;
+filter: grayscale(100%); /* Grey by default */
+transition: all 0.3s ease;
+}
+
+/* Hover effect for both arrows */
+.arrow:hover img,
+.arrow:active img {
+filter: grayscale(0%); /* Turns black on hover or active */
+}
+
+/* Left arrow specific styles */
+.left-arrow {
+position: absolute;
+right: 70px; /* Position it slightly left of the right arrow */
+}
+
+/* Right arrow specific styles */
+.right-arrow {
+position: absolute;
+right: 20px; /* Align the right arrow closer to the edge */
+}
 
 // 第4區塊
-  .hot-picks-section {
-    background-image: url('/assets/images/deco/bg5.png');
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.hot-picks-section {
+background-image: url('/assets/images/deco/bg5.png');
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 
-  .hot-picks-container {
+.hot-picks-container {
+display: flex;
+justify-content: center;
+gap: 20px;
+max-width: 1076px;
+}
+
+.hot-picks-card {
+background-color: white;
+border: 1px solid black; /* 卡片邊線為黑色 */
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+transition: transform 0.3s ease;
+
+&:hover {
+    transform: translateY(-5px);
+    box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);  /* Add shadow on hover */
+}
+
+.picks-image-wrapper {
+    background-image: url('/assets/images/deco/pattern1.png');
+    padding: 16px; /* 四周有16px的padding */
     display: flex;
     justify-content: center;
-    gap: 20px;
-    max-width: 1076px;
-  }
-  
-  .hot-picks-card {
-    background-color: white;
-    border: 1px solid black; /* 卡片邊線為黑色 */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-  
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);  /* Add shadow on hover */
+    align-items: center;
+    border-bottom: 1px solid black; /* 图片底部的黑色边框 */
+
+    img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid black; /* 圖片本身也有黑色邊線 */
     }
-  
-    .picks-image-wrapper {
-      background-image: url('/assets/images/deco/pattern1.png');
-      padding: 16px; /* 四周有16px的padding */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-bottom: 1px solid black; /* 图片底部的黑色边框 */
-  
-      img {
-        max-width: 100%;
-        max-height: 100%;
-        border: 1px solid black; /* 圖片本身也有黑色邊線 */
-      }
+}
+
+.info {
+    padding: 15px;
+
+    h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: #333;
     }
-  
-    .info {
-      padding: 15px;
-  
-      h3 {
-        font-size: 18px;
-        margin: 10px 0 5px;
-        color: #333;
-      }
-  
-      .details {
+
+    .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tag {
+        display: inline-block;
+        background-color: #f0e1c9;
+        color: #a3762c;
+        padding: 4px 8px;
+        font-size: 12px;
+        border-radius: 3px;
+        margin-bottom: 10px;
+    }
+
+    .rating {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-  
-        .tag {
-          display: inline-block;
-          background-color: #f0e1c9;
-          color: #a3762c;
-          padding: 4px 8px;
-          font-size: 12px;
-          border-radius: 3px;
-          margin-bottom: 10px;
+        justify-content: flex-end;
+        font-size: 14px;
+
+        .stars {
+        color: #f39c12; /* 橘色 */
+        margin-right: 5px;
         }
-  
-        .rating {
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-          font-size: 14px;
-  
-          .stars {
-            color: #f39c12; /* 橘色 */
-            margin-right: 5px;
-          }
-  
-          .reviews {
-            color: #777; /* 灰色 */
-          }
+
+        .reviews {
+        color: #777; /* 灰色 */
         }
-      }
     }
-  }
+    }
+}
+}
+
+
 
 // 第5區塊
 .recent-reviews-section {
