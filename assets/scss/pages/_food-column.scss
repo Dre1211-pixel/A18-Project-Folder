@@ -1,8 +1,8 @@
-.banner {
+body.food-column {
   background-image: url("../images/deco/bg1.png");
-  background-size: 1920px 851px; /* 根據需求設置具體寬度和高度 */
-  background-repeat: no-repeat;
-  background-position: top -168px left; /* 可以設置起始位置 */
+  background-size: cover;
+  background-position: center;
+  
 }
 img {
   max-width: 100%;

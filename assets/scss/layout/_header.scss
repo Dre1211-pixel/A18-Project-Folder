@@ -3,13 +3,6 @@ header {
   background: #0000001a;
 }
 
-header {
-  background-image: url("../images/deco/bg1.png");
-  background-size: 1920px 851px; /* 根據需求設置具體寬度和高度 */
-  background-repeat: no-repeat;
-  background-position: top left; /* 可以設置起始位置 */
-}
-
 // 搜尋欄跟著背景色
 .form-control {
   background-color: inherit;
