@@ -415,11 +415,12 @@ transition: transform 0.3s ease;
 
 /* Review Card Styles */
 .review-card {
-    width: 300px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border: 1px solid black; /* 卡片邊線為黑色 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 345.33px; /* 不知道有沒有辦法可以不用 specify width 就讓卡片可以自適應和上面 This Week's Hot Picks 卡片寬度一致？ */
     display: flex;
     flex-direction: column;
 
@@ -427,6 +428,21 @@ transition: transform 0.3s ease;
         border: none;
         border-top: 1px solid #eee;
         margin: 10px 0;
+    }
+}
+
+.picks-image-wrapper {
+    background-image: url('/assets/images/deco/pattern1.png');
+    padding: 16px; /* 四周有16px的padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black; /* 图片底部的黑色边框 */
+
+    img {
+    max-width: 100%;
+    max-height: 100%;
+    border: 1px solid black; /* 圖片本身也有黑色邊線 */
     }
 }
 
