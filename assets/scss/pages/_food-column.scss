@@ -97,7 +97,7 @@ img {
   top: 50%;
   left: -55px;
   transform: translateY(-50%);
-  background-image: url("../assets/images/leftarrow.png");
+
   background-size: cover; /* 或者使用 contain 根據需要 */
   background-position: center;
   width: 52px; /* 根據需要調整寬度 */
@@ -107,7 +107,6 @@ img {
 }
 
 .right-arrow {
-  background-image: url("../assets/images/rightarrow.png");
   background-size: cover; /* 或者使用 contain 根據需要 */
   background-position: center;
   position: absolute;
