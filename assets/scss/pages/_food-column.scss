@@ -1,3 +1,12 @@
+// * {
+//   outline: 1px solid red; /* 為每個元素加紅色邊框 */
+// }
+img {
+  max-width: 100%;
+}
+.btn:hover {
+  background: var(--Primary-60, #f6be3b);
+}
 body.food-column {
   background-image: url("../images/deco/bg1.png");
   background-size: cover;
@@ -20,26 +29,47 @@ body.food-column {
   }
 }
 
-.btn:hover {
-  background: var(--Primary-60, #f6be3b);
-}
-
-img {
-  max-width: 100%;
-}
-
 .banner {
   letter-spacing: 0.04em;
   font-weight: 600;
   line-height: 1.2;
-}
-.banner button {
-  font-family: Noto Serif TC;
-  font-size: 16px;
 
-  line-height: 24px;
+  button {
+    font-family: "Noto Serif TC";
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    position: relative;
 
-  text-align: left;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #000000;
+    }
+
+    &::after {
+      width: 5px;
+      height: 0;
+      bottom: 0;
+      right: -5px;
+    }
+
+    &::before {
+      height: 5px;
+      width: 0;
+      bottom: -5px;
+      right: -5px;
+    }
+
+    &:hover::after {
+      height: 98%;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
 }
 // feature部分
 .feature {
@@ -56,11 +86,28 @@ img {
   }
 }
 
+.swiper-slide::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(33, 37, 41, 0.4);
+  transition: opacity 0.5s;
+}
+.swiper-slide:hover::after {
+  opacity: 0.8;
+}
+
 .swiper-content {
   width: 588px;
   position: absolute;
   top: 289px;
   left: 24px;
+  z-index: 1;
 
   .feature-name {
     font-size: 32px;
@@ -83,13 +130,13 @@ img {
   background-size: cover;
   width: 636px;
   height: 400px;
+  img {
+    display: block;
+    width: 100%;
+    max-height: 100%;
+  }
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  max-height: 100%;
-}
 // 輪播
 .carousel-container {
   overflow: hidden;
@@ -104,13 +151,13 @@ img {
 .slide {
   flex: 0 0 100%;
   /* 確保每個 slide 占滿容器的寬度 */
+  img {
+    height: 520px;
+    width: 636px;
+    object-fit: cover;
+  }
 }
 
-.slide img {
-  height: 520px;
-  width: 636px;
-  object-fit: cover;
-}
 .arrow {
   position: relative;
 }
@@ -127,6 +174,13 @@ img {
   border: none; /* 去除邊框 */
   mix-blend-mode: multiply;
 }
+@media (max-width: 996px) {
+  .left-arrow {
+    position: absolute; /* 重置絕對定位 */
+    top: 105%;
+    left: 0px;
+  }
+}
 
 .right-arrow {
   background-size: cover; /* 或者使用 contain 根據需要 */
@@ -141,7 +195,13 @@ img {
   cursor: pointer; /* 鼠標懸停時顯示手形光標 */
   mix-blend-mode: multiply;
 }
-
+@media (max-width: 996px) {
+  .right-arrow {
+    position: absolute; /* 重置絕對定位 */
+    top: 105%;
+    right: 0px;
+  }
+}
 // festival部分
 .festival {
   background-image: url("../images/deco/bg9.png");
