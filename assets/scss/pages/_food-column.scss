@@ -28,12 +28,17 @@ img {
   max-width: 100%;
 }
 
+.banner {
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  line-height: 1.2;
+}
 .banner button {
   font-family: Noto Serif TC;
   font-size: 16px;
-  font-weight: 600;
+
   line-height: 24px;
-  letter-spacing: 0.04em;
+
   text-align: left;
 }
 // feature部分
@@ -48,6 +53,23 @@ img {
     line-height: 21px;
     letter-spacing: 0.04em;
     text-align: left;
+  }
+}
+
+.swiper-content {
+  width: 588px;
+  position: absolute;
+  top: 289px;
+  left: 24px;
+
+  .feature-name {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+    letter-spacing: 0.04em;
+  }
+  .btn {
+    color: white !important;
   }
 }
 
