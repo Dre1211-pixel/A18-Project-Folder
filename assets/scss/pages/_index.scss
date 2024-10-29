@@ -127,12 +127,22 @@
 
 .flavors-section {
     background-image: url('/assets/images/deco/bg1.png');
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .underline {
+    .section-header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+      
+      .divider {
+        width: 180px; /* Adjust width for the line */
         height: 1px;
+        background-color: #333;
+        margin: 8px 0; /* Spacing between lines */
     }
 
     /* Container for left and right side */
@@ -326,29 +336,41 @@ right: 20px; /* Align the right arrow closer to the edge */
     background-repeat: no-repeat;
     background-size: cover; /* Ensures the image covers the whole wrapper */
     background-position: center; /* Centers the image */
-    padding: 40px 0; /* Optional padding for spacing */
 }
 
 // 第4區塊
 .hot-picks-section {
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .section-header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+      
+    .divider {
+        width: 180px; /* Adjust width for the line */
+        height: 1px;
+        background-color: #333;
+        margin: 8px 0; /* Spacing between lines */
+    }
 }
 
 .hot-picks-container {
-display: flex;
-justify-content: center;
-gap: 20px;
-max-width: 1076px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1076px;
 }
 
 .hot-picks-card {
-background-color: white;
-border: 1px solid black; /* 卡片邊線為黑色 */
-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-overflow: hidden;
-transition: transform 0.3s ease;
+    background-color: white;
+    border: 1px solid black; /* 卡片邊線為黑色 */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 
 &:hover {
     transform: translateY(-5px);
@@ -437,7 +459,19 @@ transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+    .section-header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+      
+    .divider {
+        width: 180px; /* Adjust width for the line */
+        height: 1px;
+        background-color: #333;
+        margin: 8px 0; /* Spacing between lines */
+    }
 }
 
   .recent-review-title {
@@ -458,38 +492,39 @@ transition: transform 0.3s ease;
 /* Review Card Styles */
 .review-card {
     /* Adjust width as needed */
-    padding: 15px;
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     color: #333;
     position: relative;
+    border: 1px solid $primary;
 }
 
 .image-container {
     position: relative;
     width: 100%;
-    height: 200px;
     /* Adjust height based on layout */
     overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    background-image: url('/assets/images/deco/pattern2.png');
+    padding: 16px; /* 四周有16px的padding */
+    border-bottom: 1px solid black; /* 图片底部的黑色边框 */
 }
 
 .product-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: 1px solid black; 
 }
 
 .icon-overlay {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    width: 40px;
-    height: 40px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     overflow: hidden;
-    border: 2px solid white;
+    
     /* Adds a white border around the icon */
 }
 
@@ -497,6 +532,11 @@ transition: transform 0.3s ease;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.review-card-content {
+    padding: 20px;
+
 }
 
 .top-section {
@@ -507,12 +547,11 @@ transition: transform 0.3s ease;
 }
 
 .location-label {
-    background-color: #f5c25b;
+    background-color: $primary-80;
     /* Light yellow color */
-    color: #333;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 12px;
-    padding: 3px 8px;
+    padding: 2px 6px;
 }
 
 .rating {
@@ -530,22 +569,6 @@ transition: transform 0.3s ease;
     /* Gold color for the star */
     font-size: 14px;
     margin-left: 3px;
-}
-
-.shop-info {
-    margin-bottom: 10px;
-}
-
-.shop-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.shop-address {
-    font-size: 12px;
-    color: #777;
-    margin: 0;
 }
 
 hr {
@@ -579,7 +602,7 @@ hr {
 }
 
 .badge {
-    background-color: #f5c25b;
+    background-color: #fff ;
     /* Light yellow for badge */
     color: #333;
     font-size: 10px;
@@ -622,12 +645,20 @@ hr {
     padding-top: 72px;
 }
 
+.pt-20 {
+    padding-top: 80px;
+}
+
 .mr-1 {
     margin-right: 4px;
 }
 
 .mt-3 {
     margin-top: 12px;
+}
+
+.mb-3 {
+    margin-bottom: 12px;
 }
 
 .mb-5 {
