@@ -1,7 +1,3 @@
-// Variables
-$gap: 40px;
-$underline-thickness: 3px;
-
 // 第1區塊
 
 /* Container for text */
@@ -16,7 +12,7 @@ $underline-thickness: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: $gap;
+    gap: 40px;
     }
 
     /* Subtitle */
@@ -32,7 +28,7 @@ $underline-thickness: 3px;
       align-items: center;
 
       div {
-        border-bottom: $underline-thickness solid black;
+        border-bottom: 3px solid black;
         margin: 10px 0;
       }
     }
@@ -62,13 +58,12 @@ $underline-thickness: 3px;
     display: flex;
 }
 
+
 .purpose-header {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 
     h2 {
-        text-transform: uppercase;
         margin-bottom: 10px;
-        font-weight: normal;
         letter-spacing: 1.5px;
         position: relative;
         display: inline-block;
@@ -77,7 +72,6 @@ $underline-thickness: 3px;
         &::after {
             content: '';
             display: block;
-            width: 60px; /* Adjust based on design */
             height: 1px;
             background-color: $primary; /* Same color as the text */
             margin: 8px auto 0; /* Space between text and underline */
@@ -136,108 +130,133 @@ $underline-thickness: 3px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+
+    .underline {
+        height: 1px;
+    }
+
     /* Container for left and right side */
     .content-container {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      max-width: 1312px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 1312px;
     }
-  
+
     /* Left-side text block */
     .flavors-intro {
-      max-width: 306px;
-      margin-right: 20px;
-      text-align: start;
-  
-      .explore-btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-        background-color: transparent;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 20px;
-        border: 1px solid black;
-        transition: background-color 0.3s;
-  
-        &:hover {
-          box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);
-          background-color: #fff;
-          position: relative;
-          transition: box-shadow 0.5 ease, transform 0.5s ease; /* Smooth transition for both shadow and position */
-        
-        }
-      }
-    }
-  
-    /* Right-side cards section */
-    .cards-container {
-        display: flex;
-        gap: 24px;
-        flex: 2;
-        justify-content: space-between;
+        max-width: 306px;
+        text-align: start;
 
-        .highlight-card {
-            border: 1px solid black;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        .explore-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
             background-color: transparent;
-            width: 32%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            transition: box-shadow 0.3s ease, transform 0.3s ease;
-            /* Smooth transition for both shadow and position */
+            text-decoration: none;
+            border: 1px solid black;
+            transition: background-color 0.3s;
+            gap: 8px;
+
 
             &:hover {
                 box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);
-                /* Add shadow on hover */
-                transform: translateY(-10px);
-                /* Move the card slightly upwards on hover */
-            }
-
-            img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-            }
-
-            .card-content {
-                padding: 15px;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-
-                .location,
-                .category {
-                    font-size: 0.9rem;
-                    color: #8b8b8b;
-                }
-
-                h2 {
-                    font-size: 1.2rem;
-                    margin: 10px 0;
-                }
-
-                .description {
-                    font-size: 0.9rem;
-                    color: #333;
-                    flex-grow: 1;
-                }
-
-                .more-link {
-                    font-size: 0.9rem;
-                    color: #000;
-                    text-decoration: none;
-                    margin-top: 10px;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
+                background-color: #fff;
+                position: relative;
+                transition: box-shadow 0.5 ease, transform 0.5s ease;
+                /* Smooth transition for both shadow and position */
             }
         }
+    }
+
+    /* Right-side cards section */
+    .card-container {
+        display: flex;
+        gap: 24px;
+    }
+
+    .highlight-card {
+        background-color: #fff;
+        width: 306px;
+        height: 521px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+
+    }
+
+    .img-container {
+        width: 100%;
+        height: 60%; // Ensures the image takes up half the card
+        overflow: hidden;
+        background: black;
+
+        img {
+            object-fit: cover;
+            opacity:0.6
+        }
+    }
+      
+    .img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Makes sure the image covers the container proportionally
+        }
+
+    .title-overlay {
+        position: absolute;
+        bottom: 50%;
+        /* Positions it at the bottom of the upper half */
+        left: 20px;
+        right: 20px;
+        text-align: center;
+    }
+
+    .title-overlay h3 {
+        margin: 0;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .card-content {
+        color: #333;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .profile img {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+    }
+
+    .more-link {
+        display: inline-block;
+        color: #333;
+        text-decoration: none;
+        padding-bottom: 8px; 
+        border-bottom: 1px solid #333;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-weight: bold;
+        transition: opacity 0.3s ease;
+    }
+
+    .more-link:hover {
+        opacity: 0.7;
     }
 }
 
@@ -271,12 +290,34 @@ filter: grayscale(0%); /* Turns black on hover or active */
 .left-arrow {
 position: absolute;
 right: 70px; /* Position it slightly left of the right arrow */
+    &.left-arrow {
+        background-image: url('left-arrow.png'); // Path to your left arrow image
+
+        &:hover {
+            filter: brightness(0); // Turns black on hover
+        }
+
+        &:active {
+            filter: brightness(0.5); // Turns gray on active
+        }
+    }
 }
 
 /* Right arrow specific styles */
 .right-arrow {
 position: absolute;
 right: 20px; /* Align the right arrow closer to the edge */
+    &.right-arrow {
+        background-image: url('left-arrow.png'); // Path to your left arrow image
+
+        &:hover {
+            filter: brightness(0); // Turns black on hover
+        }
+
+        &:active {
+            filter: brightness(0.5); // Turns gray on active
+        }
+    }
 }
 
 // 第4區塊
@@ -365,25 +406,29 @@ transition: transform 0.3s ease;
 }
 
 .more-recommendation-btn {
-    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid $primary;
+    background-color:#fff;
+    text-decoration: none;
+    color: $primary;
     display: flex;
     gap: 8px;
-    border: 1px solid black;
-    padding: 12px; 
 
     &:hover {
-        background-color: #fff;
         box-shadow: 3.0px 6.1px 6.1px hsl(0deg 0% 0% / 0.41);
         /* Add shadow on hover */
         transform: translateY(-2px);
         /* Move the card slightly upwards on hover */
     }
-}
 
-.more-recommendation-btn a {
-    display: block;
-    width: 100%;
-    height: 100%;
+    svg {
+        width: 20px; // 設定 SVG 大小
+        height: 20px;
+        margin-left: 8px; // SVG 與文字的間距
+        fill: currentColor;
+    }
 }
 
 
@@ -571,6 +616,10 @@ transition: transform 0.3s ease;
     text-align: center;
 }
 
+.pb-4 {
+    padding-bottom: 16px;
+}
+
 .p-5 {
     padding: 20px;
 }
@@ -585,6 +634,10 @@ transition: transform 0.3s ease;
 
 .mr-1 {
     margin-right: 4px;
+}
+
+.mt-3 {
+    margin-top: 12px;
 }
 
 .mb-5 {
