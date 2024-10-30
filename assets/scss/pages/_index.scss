@@ -1,36 +1,110 @@
 // 第1區塊
 
-/* Container for text */
 .banner-container {
     background-image: url('/assets/images/deco/bg7.png');
     display: flex;
     justify-content: center;
+    padding: 20px;
 
+    .container {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 1076px;
+        justify-content: space-between;
+        padding-top: 72px;
+        padding-bottom: 80px;
 
-  /* Text group */
-  .text-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+        .text-group {
+            display: flex;
+            align-items: center;
+
+            .title-wrapper {
+                display: flex;
+                flex-direction: row; // Default horizontal layout for desktop
+                align-items: flex-start; 
+                gap: 24px; 
+            }
+
+            .sub-title {
+                writing-mode: vertical-rl;
+                letter-spacing: 16px;
+            }
+
+            .main-title {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 8px;
+
+                div {
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
     }
 
-    /* Subtitle */
-    .sub-title {
-      writing-mode: vertical-rl;
-      letter-spacing: 16px;
+    .map-container {
+        display: flex;
+        justify-content: center;
+        position: relative; // Allows for absolute positioning if needed for city labels or buttons
+
+        .display-in-desktop {
+            display: block;
+        }
+
+        .display-in-mobile {
+            display: none;
+        }
     }
 
-    /* Main title */
-    .main-title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0px;
 
-      div {
-        border-bottom: 3px solid black;
-        margin: 10px 0;
-      }
+            .text-group {
+                .title-wrapper {
+                    flex-direction: column-reverse; // Stack subtitle above title in mobile
+                    align-items: center;
+                    gap: 0px;
+                }
+
+                .sub-title {
+                    writing-mode: horizontal-tb;
+                    font-size: 1.5rem;
+                    letter-spacing: 8px;
+                }
+
+                .main-title {
+                    flex-direction: row;
+                    gap: 4px;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    letter-spacing: 5px;
+                    margin: 0px;
+                    padding: 0px;
+
+                    div {
+                        margin: 3px 0;
+                    }
+                }
+            }
+        }
+
+        .map-container {
+            .display-in-desktop {
+                display: none; // Hide large map on mobile
+            }
+
+            .display-in-mobile {
+                display: block; // Show small map on mobile
+                width: 90%;
+            }
+        }
     }
 }
 
@@ -611,6 +685,10 @@ hr {
     padding-bottom: 16px;
 }
 
+.p-2 {
+    padding: 8px;
+}
+
 .p-5 {
     padding: 20px;
 }
@@ -625,6 +703,10 @@ hr {
 
 .pt-20 {
     padding-top: 80px;
+}
+
+.pb-20 {
+    padding-bottom: 80px;
 }
 
 .mr-1 {
@@ -643,6 +725,10 @@ hr {
     margin-top: 16px;
 }
 
+.mt-6 {
+    margin-top: 24px;
+}
+
 .mb-2 {
     margin-bottom: 8px;
 }
@@ -653,10 +739,6 @@ hr {
 
 .mb-5 {
     margin-bottom: 5px;
-}
-
-.mb-6 {
-    margin-bottom: 24px;
 }
 
 .mt-18 {

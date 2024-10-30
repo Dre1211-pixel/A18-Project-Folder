@@ -11,23 +11,25 @@
 <body>
   <%- include('./layout/header'); -%>
 
-    <!-- Banner Map -->
-    <section class="banner-container">
-      <div class="row">
-        <div class="col-2 text-group">
-          <div class="main-title display1-bold">
-            <div>美</div>
-            <div>食</div>
-            <div>尋</div>
-            <div>寶</div>
-          </div>
-          <div class="sub-title h3-semiBold">台味共享</div>
+<section class="banner-container">
+  <div class="container">
+    <div class="text-group">
+      <div class="title-wrapper">
+        <div class="main-title display1-bold">
+          <div class="p-2">美</div>
+          <div class="p-2">食</div>
+          <div class="p-2">尋</div>
+          <div class="p-2">寶</div>
         </div>
-        <div class="col-10">
-          <img src="/assets/images/home-section1-taiwan.png" alt="Map of Taiwan">
-        </div>
+        <div class="sub-title h3-semiBold p-2">台味共享</div>
       </div>
-    </section>
+    </div>
+    <div class="map-container">
+      <img src="/assets/images/home-section1-taiwan.png" alt="Map of Taiwan" class="display-in-desktop">
+      <img src="/assets/images/home-section1-taiwan-sm.png" alt="Map of Taiwan" class="display-in-mobile">
+    </div>
+  </div>
+</section>
 
       <!-- Our Purpose -->
     <section class="about-container">
