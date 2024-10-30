@@ -29,13 +29,14 @@
             .sub-title {
                 writing-mode: vertical-rl;
                 letter-spacing: 16px;
+                font-size: 16px;
+                padding: 4px;
             }
 
             .main-title {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                padding: 8px;
 
                 div {
                     border-bottom: 1px solid black;
@@ -75,17 +76,15 @@
 
                 .sub-title {
                     writing-mode: horizontal-tb;
-                    font-size: 1.5rem;
+                    font-size: 24px;
                     letter-spacing: 8px;
                 }
 
                 .main-title {
                     flex-direction: row;
                     gap: 4px;
-                    font-size: 2rem;
-                    font-weight: 700;
+                    font-size: 36px;
                     letter-spacing: 5px;
-                    margin: 0px;
                     padding: 0px;
 
                     div {
@@ -683,6 +682,10 @@ hr {
 
 .pb-4 {
     padding-bottom: 16px;
+}
+
+.p-1 {
+    padding: 4px;
 }
 
 .p-2 {
