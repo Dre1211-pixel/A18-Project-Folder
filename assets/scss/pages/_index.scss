@@ -494,8 +494,6 @@ right: 20px; /* Align the right arrow closer to the edge */
     /* Adjust width as needed */
     background-color: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    color: #333;
-    position: relative;
     border: 1px solid $primary;
 }
 
@@ -524,8 +522,6 @@ right: 20px; /* Align the right arrow closer to the edge */
     height: 64px;
     border-radius: 50%;
     overflow: hidden;
-    
-    /* Adds a white border around the icon */
 }
 
 .icon-image {
@@ -536,7 +532,6 @@ right: 20px; /* Align the right arrow closer to the edge */
 
 .review-card-content {
     padding: 20px;
-
 }
 
 .top-section {
@@ -551,24 +546,12 @@ right: 20px; /* Align the right arrow closer to the edge */
     /* Light yellow color */
     border-radius: 3px;
     font-size: 12px;
-    padding: 2px 6px;
-}
-
-.rating {
-    display: flex;
-    align-items: center;
-}
-
-.rating span {
-    font-size: 14px;
-    color: #333;
+    padding: 4px 4px;
 }
 
 .star {
-    color: #f9c700;
+    color: #f39c12;
     /* Gold color for the star */
-    font-size: 14px;
-    margin-left: 3px;
 }
 
 hr {
@@ -580,12 +563,23 @@ hr {
 .bottom-section {
     display: flex;
     flex-direction: column;
+
+    p {
+        margin:0;
+    }
+}
+
+.shop-info {
+
+    h2, p {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .user-info {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
 }
 
 .user-avatar {
@@ -595,32 +589,16 @@ hr {
     margin-right: 8px;
 }
 
-.username {
-    font-size: 12px;
-    color: #333;
-    margin-right: 5px;
-}
-
 .badge {
-    background-color: #fff ;
-    /* Light yellow for badge */
-    color: #333;
-    font-size: 10px;
-    padding: 2px 5px;
+    background-color: rgb(236, 235, 235);
+    color: $primary;
+    padding: 4px;
     border-radius: 3px;
     margin-right: 8px;
 }
 
 .timestamp {
-    font-size: 10px;
-    color: #999;
     margin-left: auto;
-}
-
-.user-comment {
-    font-size: 13px;
-    color: #555;
-    line-height: 1.4;
 }
 
 // 間距 & 外距 & 部分樣式模組化
@@ -653,8 +631,20 @@ hr {
     margin-right: 4px;
 }
 
+.mr-2 {
+    margin-right: 8px;
+}
+
 .mt-3 {
     margin-top: 12px;
+}
+
+.mt-4 {
+    margin-top: 16px;
+}
+
+.mb-2 {
+    margin-bottom: 8px;
 }
 
 .mb-3 {
