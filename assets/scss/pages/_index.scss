@@ -150,6 +150,7 @@
         }
     }
 }
+
 // 第2區塊
 
 /* Our Purpose */
@@ -162,16 +163,19 @@
     align-items: center;
 }
 
-
 /* Text group */
 .content-box {
     background-image: url(/assets/images/deco/bg4.png);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 40px;
     max-width: 856px;
+    padding: 32px 48px;
     text-align: center;
     position: relative;
     display: flex;
+
+    .container {
+        padding: 0px;
+    }
 }
 
 
@@ -223,8 +227,6 @@
 }
 
 .purpose-description {
-    font-size: 16px;
-    margin-bottom: 30px;
     text-align: start;
 
     p {
