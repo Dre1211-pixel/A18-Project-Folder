@@ -1,11 +1,32 @@
 header {
   border-bottom: 1px solid rgba(72, 70, 69, 1);
   background: #0000001a;
+  letter-spacing: 0.04em;
+}
+
+header:hover {
+  background: white;
 }
 
 // 搜尋欄跟著背景色
 .form-control {
   background-color: inherit;
+}
+
+.search-avatar img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; /* 將元素裁剪為圓形 */
+  background-image: url("你的背景圖片連結"); /* 背景圖設置 */
+  background-size: cover; /* 讓背景圖填滿整個元素 */
+  background-position: center; /* 背景圖置中顯示 */
+  object-fit: cover; /* 確保 img 圖片也能充滿圓形區域 */
+}
+
+@media (max-width: 996px) {
+  img[alt="台味尋寶圖header"] {
+    content: url("../assets/images/Property 1-sm.png");
+  }
 }
 
 .nav-link {
