@@ -11,150 +11,152 @@
 <body>
   <%- include('./layout/header'); -%>
 
-<section class="banner-container">
-  <div class="container">
-    <div class="text-group">
-      <div class="title-wrapper">
-        <div class="main-title display1-bold mb-8">
-          <div class="p-1">美</div>
-          <div class="p-1">食</div>
-          <div class="p-1">尋</div>
-          <div class="p-1">寶</div>
+  <section class="banner-container">
+    <div class="container">
+      <div class="text-group">
+        <div class="title-wrapper">
+          <div class="main-title display1-bold mb-8">
+            <div class="p-1">美</div>
+            <div class="p-1">食</div>
+            <div class="p-1">尋</div>
+            <div class="p-1">寶</div>
+          </div>
+          <div class="sub-title h3-semiBold p-2">台味共享</div>
         </div>
-        <div class="sub-title h3-semiBold p-2">台味共享</div>
+      </div>
+      <div class="map-container">
+        <img src="/assets/images/home-section1-taiwan.png" alt="Map of Taiwan" class="display-in-desktop">
+        <img src="/assets/images/home-section1-taiwan-sm.png" alt="Map of Taiwan" class="display-in-mobile">
+        <div class="city-info-box">
+          <div class="city-name">Taipei</div>
+          <div class="city-title">台北</div>
+          <button class="view-button">查看</button>
+        </div>
       </div>
     </div>
-    <div class="map-container">
-      <img src="/assets/images/home-section1-taiwan.png" alt="Map of Taiwan" class="display-in-desktop">
-      <img src="/assets/images/home-section1-taiwan-sm.png" alt="Map of Taiwan" class="display-in-mobile">
-      <div class="city-info-box">
-        <div class="city-name">Taipei</div>
-        <div class="city-title">台北</div>
-        <button class="view-button">查看</button>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-      <!-- Our Purpose -->
-    <section class="about-container">
-      <div class="content-box mt-30 mb-30">
-        <div class="mr-20">
-          <div class="purpose-header">
-            <h2 class="body2-eng">Our Purpose</h2>
-            <h1 class="h1-semiBold">尋找隱藏的美味<br>珍藏台灣的味道</h1>
-          </div>
-          <div class="purpose-description">
-            <p class="body1-semiBold">台味尋寶圖不僅僅是一個檢索網站，更是承載了我們對台灣與美食的熱愛。期待通過這個平台把台灣的美食推廣到全世界，讓世界看見台灣！</p>
-            <p class="body1-semiBold">無論是分享美食食記，提供店家資訊，或是分享這個網站給你的家人朋友，您的參與都將幫助提升台灣美食的認知度並幫助住在國內的友人更好的規劃下一次的美食之旅！</p>
-          </div>
+  <!-- Our Purpose -->
+  <section class="about-container">
+    <div class="content-box mt-30 mb-30">
+        <div class="purpose-content">
+            <div class="purpose-header">
+                <div class="dashed-line top-line"></div> <!-- Top dashed line -->
+                <h2 class="body2-eng underline">Our Purpose</h2> <!-- Added "underline" class for h2 underline -->
+                <h1 class="h1-semiBold mb-5">尋找隱藏的美味<br>珍藏台灣的味道</h1>
+                <div class="dashed-line bottom-line"></div> <!-- Bottom dashed line -->
+            </div>
+            <div class="purpose-description">
+                <p class="body1-semiBold">台味尋寶圖不僅僅是一個檢索網站，更是承載了我們對台灣與美食的熱愛。期待通過這個平台把台灣的美食推廣到全世界，讓世界看見台灣！</p>
+                <p class="body1-semiBold">無論是分享美食食記，提供店家資訊，或是分享這個網站給你的家人朋友，您的參與都將幫助提升台灣美食的認知度並幫助住在國內的友人更好的規劃下一次的美食之旅！</p>
+            </div>
         </div>
         <div class="purpose-image">
-          <img src="/assets/images/home-section2-box.png" alt="Treasure Chest ">
+            <img src="/assets/images/home-section2-box.png" alt="Treasure Chest">
         </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Highlights Title -->
-    <section class="flavors-section pt-20">
-      <div class="section-header mb-10">
-        <div class="body2-eng">This Week's Highlights</div>
-        <div class="divider"></div>
-        <h1 class="h3-semiBold">美食專欄</h1>
-      </div>
+  <!-- Highlights Title -->
+  <section class="flavors-section pt-20">
+    <div class="section-header mb-10">
+      <div class="body2-eng">This Week's Highlights</div>
+      <div class="divider"></div>
+      <h1 class="h3-semiBold">美食專欄</h1>
+    </div>
 
-      <!-- Container for left and right content -->
-      <div class="content-container">
+    <!-- Container for left and right content -->
+    <div class="content-container">
+    
+      <!-- Left Side: Title and Button -->
+      <div class="flavors-intro">
+        <h3 class="h6-semiBold">台灣食紀</h3>
+        <h1 class="h1-eng">Discover the Flavors of Taiwan</h1>
+        <a href="#" class="explore-btn mt-5">一頁一味，探索美食故事
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.5 12C1.5 11.8011 1.57902 11.6103 1.71967 11.4696C1.86032 11.329 2.05109 11.25 2.25 11.25H19.9395L15.219 6.53097C15.0782 6.39014 14.9991 6.19913 14.9991 5.99997C14.9991 5.80081 15.0782 5.6098 15.219 5.46897C15.3598 5.32814 15.5508 5.24902 15.75 5.24902C15.9492 5.24902 16.1402 5.32814 16.281 5.46897L22.281 11.469C22.3508 11.5386 22.4063 11.6214 22.4441 11.7125C22.4819 11.8036 22.5013 11.9013 22.5013 12C22.5013 12.0986 22.4819 12.1963 22.4441 12.2874C22.4063 12.3785 22.3508 12.4613 22.281 12.531L16.281 18.531C16.1402 18.6718 15.9492 18.7509 15.75 18.7509C15.5508 18.7509 15.3598 18.6718 15.219 18.531C15.0782 18.3901 14.9991 18.1991 14.9991 18C14.9991 17.8008 15.0782 17.6098 15.219 17.469L19.9395 12.75H2.25C2.05109 12.75 1.86032 12.671 1.71967 12.5303C1.57902 12.3896 1.5 12.1989 1.5 12Z" fill="black"/>
+          </svg>
+        </a>
+      </div>
+    
+      <!-- Right Side: Article Cards -->
       
-        <!-- Left Side: Title and Button -->
-        <div class="flavors-intro mr-10">
-          <h3 class="h6-semiBold">台灣食紀</h3>
-          <h1 class="h1-eng">Discover the Flavors of Taiwan</h1>
-          <a href="#" class="explore-btn mt-5">一頁一味，探索美食故事
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.5 12C1.5 11.8011 1.57902 11.6103 1.71967 11.4696C1.86032 11.329 2.05109 11.25 2.25 11.25H19.9395L15.219 6.53097C15.0782 6.39014 14.9991 6.19913 14.9991 5.99997C14.9991 5.80081 15.0782 5.6098 15.219 5.46897C15.3598 5.32814 15.5508 5.24902 15.75 5.24902C15.9492 5.24902 16.1402 5.32814 16.281 5.46897L22.281 11.469C22.3508 11.5386 22.4063 11.6214 22.4441 11.7125C22.4819 11.8036 22.5013 11.9013 22.5013 12C22.5013 12.0986 22.4819 12.1963 22.4441 12.2874C22.4063 12.3785 22.3508 12.4613 22.281 12.531L16.281 18.531C16.1402 18.6718 15.9492 18.7509 15.75 18.7509C15.5508 18.7509 15.3598 18.6718 15.219 18.531C15.0782 18.3901 14.9991 18.1991 14.9991 18C14.9991 17.8008 15.0782 17.6098 15.219 17.469L19.9395 12.75H2.25C2.05109 12.75 1.86032 12.671 1.71967 12.5303C1.57902 12.3896 1.5 12.1989 1.5 12Z" fill="black"/>
-            </svg>
-          </a>
+      <!-- Card 1 -->
+      <div class="card-slider-wrapper">
+        <div class="card-container mb-6">
+          <div class="highlight-card">
+            <div class="img-container">
+              <img src="/assets/images/eatery-1.png" alt="Select Shops in Taipei">
+            </div>
+            <div class="title-overlay">
+              <h3 class="h4-semiBold">巷弄咖啡帶你回到90年代的台北</h3>
+            </div>
+            <div class="card-content mt-3 mb-4">
+              <div class="body2-semiBold">台北 | 中山</div>
+              <div class="profile mb-4">
+                <img src="/assets/images/profile-icon-1.png" alt="Profile Picture">
+                <span class="body2-Bold">台味尋寶圖</span>
+              </div>
+              <p class="body1-semi-bold  pb-4">一家藏身巷弄的咖啡小店，有著濃濃的手作溫度，咖啡香氣與音樂交織，讓人流連忘返。老闆 Steven 笑稱自己是一個老靈魂...</p>
+            </div>
+            <a href="#" class="more-link">更多</a>
+          </div>
+          
+          <!-- Card 2 -->
+          <div class="highlight-card">
+            <div class="img-container">
+              <img src="/assets/images/eatery-2.png" alt="Select Shops in Taipei">
+            </div>
+            <div class="title-overlay">
+              <h3 class="h4-semiBold">型男主廚顛覆你對台菜的想像力</h3>
+            </div>
+            <div class="card-content mt-3 mb-4">
+              <div class="body2-semiBold">台中 | 楠梓</div>
+              <div class="profile mb-4">
+                <img src="/assets/images/profile-icon-2.png" alt="Profile Picture">
+                <span class="body2-semiBold">阿寶</span>
+              </div>
+              <p class="body1-semi-bold pb-4">跨文化的天作之合，“味蕾魔法師”用法式料理手法創新台式家常菜，讓熟悉的菜色有了新生命，絕對是一場難忘的美食盛宴...</p>
+            </div>
+            <a href="#" class="more-link">更多</a>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="highlight-card">
+            <div class="img-container">
+              <img src="/assets/images/eatery-3.png" alt="Select Shops in Taipei">
+            </div>
+            <div class="title-overlay">
+              <h3 class="h4-semiBold">在天然氧吧中品味園藝生活</h3>
+            </div>
+            <div class="card-content mt-3 mb-4">
+              <div class="body2-semiBold">彰化 | 田尾</div>
+              <div class="profile mb-4">
+                <img src="/assets/images/profile-icon-1.png" alt="Profile Picture">
+                <span class="body2-semiBold">台味尋寶圖</span>
+              </div>
+              <p class="body1-semi-bold pb-4">菁芳園原本是經營蘭花和觀葉植物的種植培育場，位在田尾鄉間僻靜幽靜小巷裡,園區生態豐富多元，環境靜謐寧靜，來到這裏可以學習到...</p>
+              <a href="#" class="more-link body1-semiBold">更多</a>
+            </div>
+          </div>
         </div>
       
-        <!-- Right Side: Article Cards -->
+        <!-- Swiper Button -->
+        <div class="arrow-container mb-18">
+          <!-- Left Arrow -->
+          <button id="left-arrow" class="arrow">
+            <img src="/assets/images/icons/Icon-41-arrow-left.svg" alt="Left Arrow">
+          </button>
         
-        <!-- Card 1 -->
-        <div class="card-slider-wrapper">
-          <div class="card-container mb-6">
-            <div class="highlight-card">
-              <div class="img-container">
-                <img src="/assets/images/eatery-1.png" alt="Select Shops in Taipei">
-              </div>
-              <div class="title-overlay">
-                <h3 class="h4-semiBold">巷弄咖啡帶你回到90年代的台北</h3>
-              </div>
-              <div class="card-content mt-3 mb-4">
-                <div class="body2-semiBold">台北 | 中山</div>
-                <div class="profile mb-4">
-                  <img src="/assets/images/profile-icon-1.png" alt="Profile Picture">
-                  <span class="body2-Bold">台味尋寶圖</span>
-                </div>
-                <p class="body1-semi-bold  pb-4">一家藏身巷弄的咖啡小店，有著濃濃的手作溫度，咖啡香氣與音樂交織，讓人流連忘返。老闆 Steven 笑稱自己是一個老靈魂...</p>
-              </div>
-              <a href="#" class="more-link">更多</a>
-            </div>
-            
-            <!-- Card 2 -->
-            <div class="highlight-card">
-              <div class="img-container">
-                <img src="/assets/images/eatery-2.png" alt="Select Shops in Taipei">
-              </div>
-              <div class="title-overlay">
-                <h3 class="h4-semiBold">型男主廚顛覆你對台菜的想像力</h3>
-              </div>
-              <div class="card-content mt-3 mb-4">
-                <div class="body2-semiBold">台中 | 楠梓</div>
-                <div class="profile mb-4">
-                  <img src="/assets/images/profile-icon-2.png" alt="Profile Picture">
-                  <span class="body2-semiBold">阿寶</span>
-                </div>
-                <p class="body1-semi-bold pb-4">跨文化的天作之合，“味蕾魔法師”用法式料理手法創新台式家常菜，讓熟悉的菜色有了新生命，絕對是一場難忘的美食盛宴...</p>
-              </div>
-              <a href="#" class="more-link">更多</a>
-            </div>
-            
-            <!-- Card 3 -->
-            <div class="highlight-card">
-              <div class="img-container">
-                <img src="/assets/images/eatery-3.png" alt="Select Shops in Taipei">
-              </div>
-              <div class="title-overlay">
-                <h3 class="h4-semiBold">在天然氧吧中品味園藝生活</h3>
-              </div>
-              <div class="card-content mt-3 mb-4">
-                <div class="body2-semiBold">彰化 | 田尾</div>
-                <div class="profile mb-4">
-                  <img src="/assets/images/profile-icon-1.png" alt="Profile Picture">
-                  <span class="body2-semiBold">台味尋寶圖</span>
-                </div>
-                <p class="body1-semi-bold pb-4">菁芳園原本是經營蘭花和觀葉植物的種植培育場，位在田尾鄉間僻靜幽靜小巷裡,園區生態豐富多元，環境靜謐寧靜，來到這裏可以學習到...</p>
-                <a href="#" class="more-link body1-semiBold">更多</a>
-              </div>
-            </div>
-          </div>
-       
-          <!-- Swiper Button -->
-          <div class="arrow-container mb-18">
-            <!-- Left Arrow -->
-            <button id="left-arrow" class="arrow">
-              <img src="/assets/images/icons/Icon-41-arrow-left.svg" alt="Left Arrow">
-            </button>
-          
-            <!-- Cards or Carousel Content Goes Here -->
-          
-            <!-- Right Arrow -->
-            <button id="right-arrow" class="arrow">
-              <img src="/assets/images/icons/Icon-42-arrow-right.svg" alt="Right Arrow">
-            </button>
-          </div>
+          <!-- Cards or Carousel Content Goes Here -->
+        
+          <!-- Right Arrow -->
+          <button id="right-arrow" class="arrow">
+            <img src="/assets/images/icons/Icon-42-arrow-right.svg" alt="Right Arrow">
+          </button>
         </div>
-    </section>
+      </div>
+  </section>
 
     <section class="background-wrapper">
       <!-- This Weeks's Hot Picks -->
@@ -218,7 +220,6 @@
             <path d="M1.5 12C1.5 11.8011 1.57902 11.6103 1.71967 11.4696C1.86032 11.329 2.05109 11.25 2.25 11.25H19.9395L15.219 6.53097C15.0782 6.39014 14.9991 6.19913 14.9991 5.99997C14.9991 5.80081 15.0782 5.6098 15.219 5.46897C15.3598 5.32814 15.5508 5.24902 15.75 5.24902C15.9492 5.24902 16.1402 5.32814 16.281 5.46897L22.281 11.469C22.3508 11.5386 22.4063 11.6214 22.4441 11.7125C22.4819 11.8036 22.5013 11.9013 22.5013 12C22.5013 12.0986 22.4819 12.1963 22.4441 12.2874C22.4063 12.3785 22.3508 12.4613 22.281 12.531L16.281 18.531C16.1402 18.6718 15.9492 18.7509 15.75 18.7509C15.5508 18.7509 15.3598 18.6718 15.219 18.531C15.0782 18.3901 14.9991 18.1991 14.9991 18C14.9991 17.8008 15.0782 17.6098 15.219 17.469L19.9395 12.75H2.25C2.05109 12.75 1.86032 12.671 1.71967 12.5303C1.57902 12.3896 1.5 12.1989 1.5 12Z" fill="black"/>
           </svg>
         </a>
-        
       </section>
 
       <!-- Most Recent Reviews --> 

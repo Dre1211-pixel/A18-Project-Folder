@@ -151,8 +151,7 @@
     }
 }
 
-// 第2區塊
-
+// 第2區塊 (RWD 現在還是有問題... Our Purpose 沒有辦法在手機版居中）
 /* Our Purpose */
 .about-container {
     background-image: url(/assets/images/deco/bg8.png);
@@ -170,59 +169,56 @@
     max-width: 856px;
     padding: 32px 48px;
     text-align: center;
+    align-items: center;
     position: relative;
     display: flex;
 
-    .container {
-        padding: 0px;
+    .purpose-content {
+        margin-right: 80px;
     }
 }
-
 
 .purpose-header {
     margin-bottom: 32px;
 
-    h2 {
-        margin-bottom: 10px;
-        letter-spacing: 1.5px;
-        position: relative;
+    h2.underline {
         display: inline-block;
+        position: relative;
+        padding-bottom: 5px;
+        max-width: 100px;
+        text-align: center;
 
-        /* Underline styling */
         &::after {
             content: '';
             display: block;
             height: 1px;
-            background-color: $primary; /* Same color as the text */
-            margin: 8px auto 0; /* Space between text and underline */
-            width: 100%;
+            background-color: black;
+            width: 100%; // Automatically matches text width
+            position: absolute;
+            bottom: 0;
+            left: 0;
         }
     }
 
-    h1 {
-        display: inline-block; /* Makes the h1's width measurable */
+    .dashed-line {
+        border-top: 2px dashed black;
+        width: auto; // Automatically fits content
+        margin: 10px auto;
     }
 
-    /* Dashed line styling */
-    &::before,
-    &::after {
-        content: '';
-        display: block;
-        height: 1px;
-        width: calc(100% - 30px); /* Use a relative width based on h1 */
-        max-width: 100%;
-        border-top: 1px dashed #7a6e58; /* Dashed line color */
-        margin: 0 auto; /* Center the lines */
+    .top-line, .bottom-line {
+        width: auto;
     }
+}
 
-    &::before {
-        width: calc(100% - 30px); /* Ensure the width matches h1 */
-        margin-bottom: 10px; /* Space between top line and title */
-    }
-
-    &::after {
-        width: calc(100% - 30px); /* Ensure the width matches h1 */
-        margin-top: 10px; /* Space between bottom line and title */
+@media (max-width: 991px) {
+    .purpose-header {
+        h2.underline {
+            font-size: 1rem; // Adjust font size for mobile
+            &::after {
+                width: 100%; // Matches h2 text width exactly
+            }
+        }
     }
 }
 
@@ -240,6 +236,47 @@
         margin-top: 20px;
     }
 }
+
+@media (max-width: 991px) {
+    .content-box {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        margin: 12px 40px;
+
+        .purpose-content {
+            margin: 0px;
+        }
+
+        .purpose-header {
+            display: flex;
+            flex-direction: column;
+
+            .purpose-header h1 {
+                font-size: 20px;
+                line-height: 120;
+                font-weight: 700;
+            }
+        
+            .dashed-line {
+                width: 80%; // Set desired width for dashed lines
+                border-top: 2px dashed black; // Dashed line color
+                margin: 10px auto; // Center and space around lines
+            }
+        }
+
+        .purpose-image img {
+            margin: 0px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .purpose-header h1 {
+        font-size: 20px;
+    }
+}
+
 
 // 第3區塊
 
@@ -275,6 +312,7 @@
     .flavors-intro {
         max-width: 306px;
         text-align: start;
+        margin-right: 40px;
 
         .explore-btn {
             display: inline-flex;
@@ -388,6 +426,28 @@
         opacity: 0.7;
     }
 }
+
+@media (max-width: 1350px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+
+        .flavors-intro {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .explore-btn {
+            margin-bottom: 40px;
+        }
+    }
+
+}
+
+@media (max-width: 1050px) {
+    
+}
+
 
 .arrow-container {
 display: flex;
@@ -786,7 +846,7 @@ hr {
 }
 
 .mb-5 {
-    margin-bottom: 5px;
+    margin-bottom: px;
 }
 
 .mt-18 {
