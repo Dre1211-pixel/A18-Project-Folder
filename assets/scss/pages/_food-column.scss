@@ -41,6 +41,9 @@ body.food-column {
     text-align: left;
     position: relative;
 
+    white-space: nowrap; /* 防止文字換行 */
+    height: 48px; /* 確保高度 */
+
     &::after,
     &::before {
       content: "";
@@ -71,6 +74,13 @@ body.food-column {
     }
   }
 }
+
+@media (max-width: 996px) {
+  .banner img[alt="一頁一味"] {
+    content: url("../assets/images/book-sm.png");
+  }
+}
+
 // feature部分
 .feature {
   background-image: url("../images/deco/bg2.png");
@@ -83,6 +93,12 @@ body.food-column {
     line-height: 21px;
     letter-spacing: 0.04em;
     text-align: left;
+  }
+}
+@media (max-width: 996px) {
+  .feature-title img {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -119,7 +135,19 @@ body.food-column {
     color: white !important;
   }
 }
-
+@media (max-width: 996px) {
+  .swiper-content {
+    width: 148px;
+    top: 40%;
+    left: 12px;
+  }
+  .swiper-content .feature-name {
+    font-size: 24px;
+  }
+  .swiper-content a {
+    margin-bottom: 8px;
+  }
+}
 .swiper {
   width: 100%;
   padding-top: 60px;
@@ -133,7 +161,15 @@ body.food-column {
   img {
     display: block;
     width: 100%;
-    max-height: 100%;
+    height: 100%;
+    object-fit: cover; /* 圖片按比例填充容器，避免變形 */
+  }
+}
+
+@media (max-width: 996px) {
+  .swiper-slide {
+    width: 200px;
+    height: 320px;
   }
 }
 
@@ -291,6 +327,13 @@ body.food-column {
     background: var(--Primary-60, #f6be3b);
   }
 }
+@media (max-width: 992px) {
+  .newsfeed .card img {
+    width: 319px;
+    height: 200px;
+    border: 1px solid var(--Black, #000000);
+  }
+}
 
 .newsfeed .card:hover {
   background-image: url("../images/deco/pattern1.png");
@@ -349,7 +392,11 @@ p.festi {
 .mb-64 {
   margin-bottom: 64px;
 }
-
+@media (max-width: 992px) {
+  .mb-64 {
+    margin-bottom: 24px;
+  }
+}
 .line-250 {
   background-color: var(--Black, #000000);
   height: 1px;
