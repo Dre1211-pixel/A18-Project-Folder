@@ -1,0 +1,436 @@
+// * {
+//   outline: 1px solid red; /* 為每個元素加紅色邊框 */
+// }
+img {
+  max-width: 100%;
+}
+.btn:hover {
+  background: var(--Primary-60, #f6be3b);
+}
+body.food-column {
+  background-image: url("../images/deco/bg1.png");
+  background-size: cover;
+  background-position: center;
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  .btn {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 40px;
+    color: var(--Black, #000000);
+  }
+
+  .card {
+    --bs-card-inner-border-radius: 0;
+    border-radius: 0;
+  }
+}
+
+.banner {
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  line-height: 1.2;
+
+  button {
+    font-family: "Noto Serif TC";
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    position: relative;
+
+    white-space: nowrap; /* 防止文字換行 */
+    height: 48px; /* 確保高度 */
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #000000;
+    }
+
+    &::after {
+      width: 5px;
+      height: 0;
+      bottom: 0;
+      right: -5px;
+    }
+
+    &::before {
+      height: 5px;
+      width: 0;
+      bottom: -5px;
+      right: -5px;
+    }
+
+    &:hover::after {
+      height: 98%;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 996px) {
+  .banner img[alt="一頁一味"] {
+    content: url("../assets/images/book-sm.png");
+  }
+}
+
+// feature部分
+.feature {
+  background-image: url("../images/deco/bg2.png");
+  color: #ffffff;
+  background-repeat: no-repeat;
+  .feature-subtitle {
+    font-family: Poltawski Nowy;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+}
+@media (max-width: 996px) {
+  .feature-title img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.swiper-slide::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(33, 37, 41, 0.4);
+  transition: opacity 0.5s;
+}
+.swiper-slide:hover::after {
+  opacity: 0.8;
+}
+
+.swiper-content {
+  width: 588px;
+  position: absolute;
+  top: 289px;
+  left: 24px;
+  z-index: 1;
+
+  .feature-name {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38.4px;
+    letter-spacing: 0.04em;
+  }
+  .btn {
+    color: white !important;
+  }
+}
+@media (max-width: 996px) {
+  .swiper-content {
+    width: 148px;
+    top: 40%;
+    left: 12px;
+  }
+  .swiper-content .feature-name {
+    font-size: 24px;
+  }
+  .swiper-content a {
+    margin-bottom: 8px;
+  }
+}
+.swiper {
+  width: 100%;
+  padding-top: 60px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 636px;
+  height: 400px;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 圖片按比例填充容器，避免變形 */
+  }
+}
+
+@media (max-width: 996px) {
+  .swiper-slide {
+    width: 200px;
+    height: 320px;
+  }
+}
+
+// 輪播
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px; /* 根據需要調整 */
+}
+
+.carousel {
+  display: flex;
+}
+
+.slide {
+  flex: 0 0 100%;
+  /* 確保每個 slide 占滿容器的寬度 */
+  img {
+    height: 520px;
+    width: 636px;
+    object-fit: cover;
+  }
+}
+
+.arrow {
+  position: relative;
+}
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: -55px;
+  transform: translateY(-50%);
+
+  background-size: cover; /* 或者使用 contain 根據需要 */
+  background-position: center;
+  width: 52px; /* 根據需要調整寬度 */
+  height: 48px; /* 根據需要調整高度 */
+  border: none; /* 去除邊框 */
+  mix-blend-mode: multiply;
+}
+@media (max-width: 996px) {
+  .left-arrow {
+    position: absolute; /* 重置絕對定位 */
+    top: 105%;
+    left: 0px;
+  }
+}
+
+.right-arrow {
+  background-size: cover; /* 或者使用 contain 根據需要 */
+  background-position: center;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: -55px;
+  width: 52px; /* 根據需要調整寬度 */
+  height: 48px; /* 根據需要調整高度 */
+  border: none; /* 去除邊框 */
+  cursor: pointer; /* 鼠標懸停時顯示手形光標 */
+  mix-blend-mode: multiply;
+}
+@media (max-width: 996px) {
+  .right-arrow {
+    position: absolute; /* 重置絕對定位 */
+    top: 105%;
+    right: 0px;
+  }
+}
+// festival部分
+.festival {
+  background-image: url("../images/deco/bg9.png");
+  background-size: cover; /* 或者使用 contain 根據需要 */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.festival-content {
+  background-image: url("../images/deco/bg10.png");
+  color: var(--Black, #000000);
+
+  .card {
+    background: var(--Nutral-95, #f4f0ee);
+    color: var(--Black, #000000);
+  }
+}
+
+.festival .card::after,
+.festival .card::before {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+}
+// 偽元素當陰影
+.festival .card::after {
+  width: 5px;
+  height: 0;
+  bottom: 0;
+  right: -5px;
+}
+
+.festival .card::before {
+  height: 5px;
+  width: 0;
+  bottom: -5px;
+  right: -5px;
+}
+
+.festival .card:hover::after {
+  height: 98%;
+}
+
+.festival .card:hover::before {
+  width: 100%;
+}
+// 卡片標題
+.card-title {
+  font-weight: 700;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+// 店家動態部分
+.newsfeed {
+  background-image: url("../images/deco/bg4.png");
+}
+
+.newsfeed .card {
+  border: 1px dashed var(--Black, #000000);
+  background-image: url("../images/deco/pattern2.png");
+  background-size: cover;
+  background-position: center;
+  color: var(--Black, #000000);
+
+  position: relative;
+  img {
+    width: 250px;
+    height: 217px;
+    border: 1px solid var(--Black, #000000);
+  }
+
+  .card-title {
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+  .card-content {
+    border-top: 1px dashed var(--Black, #000000);
+    border-bottom: 1px dashed var(--Black, #000000);
+  }
+
+  .btn {
+    background: var(--Nutral-95, #f4f0ee);
+  }
+  .btn:hover {
+    background: var(--Primary-60, #f6be3b);
+  }
+}
+@media (max-width: 992px) {
+  .newsfeed .card img {
+    width: 319px;
+    height: 200px;
+    border: 1px solid var(--Black, #000000);
+  }
+}
+
+.newsfeed .card:hover {
+  background-image: url("../images/deco/pattern1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.newsfeed .card::after,
+.newsfeed .card::before {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+}
+// 偽元素當陰影
+.newsfeed .card::after {
+  width: 5px;
+  height: 0;
+  bottom: 0;
+  right: -5px;
+}
+
+.newsfeed .card::before {
+  height: 5px;
+  width: 0;
+  bottom: -5px;
+  right: -5px;
+}
+
+.newsfeed .card:hover::after {
+  height: 98%;
+}
+
+.newsfeed .card:hover::before {
+  width: 100%;
+}
+
+// 樣式
+
+p.cui {
+  font-family: Poltawski Nowy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+p.festi {
+  font-family: Poltawski Nowy;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.04em;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+@media (max-width: 992px) {
+  .mb-64 {
+    margin-bottom: 24px;
+  }
+}
+.line-250 {
+  background-color: var(--Black, #000000);
+  height: 1px;
+  width: 250px;
+}
+
+.line-161 {
+  background-color: var(--White, #ffffff);
+  height: 1px;
+  width: 161px;
+}
+
+.line-122 {
+  background-color: var(--Black, #000000);
+  height: 1px;
+  width: 122px;
+}
+
+.line-94 {
+  background-color: var(--Black, #000000);
+  height: 1px;
+  width: 94px;
+}
+
+.line-84 {
+  background-color: var(--Black, #000000);
+  height: 1px;
+  width: 84px;
+}
+
+.fs-48 {
+  font-size: 48px;
+}
+
+.pb-120 {
+  padding-bottom: 120px;
+}

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>美食專欄</title>
+  </head>
+
+  <body class="food-column">
+    <%- include('./layout/header'); -%>
+    <section class="banner pt-10 pb-120">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-12 col-lg-5">
+            <p class="cui mb-2">Story of Cuisine</p>
+            <div class="line-122"></div>
+
+            <img src="../assets/images/book.png " alt="一頁一味" />
+            <div class="fs-48">
+              <p class="mb-3">一頁一味</p>
+              <p class="mb-6">探索美食故事。</p>
+            </div>
+
+            <div class="border-top border-dark py-6">
+              <div class="d-flex d-lg-block">
+                <div>
+                  <p class="mb-2">台灣食紀</p>
+                  <p class="mb-6 fs-5 fs-lg-2 fw-normal">Explore Taiwan</p>
+                </div>
+                <button
+                  class="mt-8 ms-lg-0 ms-2 p-3 d-flex align-items-center justify-content-center"
+                >
+                  一頁一味，探索美食故事<i
+                    class="bi bi-arrow-right fs-4 ms-2"
+                  ></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="arrow">
+              <div class="carousel-container">
+                <div class="carousel">
+                  <div class="slide">
+                    <img src="../assets/images/cook.png" alt="cook" />
+                  </div>
+                  <div class="slide">
+                    <img src="../assets/images/eatery-8.png" alt="" />
+                  </div>
+                  <div class="slide">
+                    <img src="../assets/images/eatery-7.png" alt="" />
+                  </div>
+                  <!-- 更多 slides -->
+                </div>
+              </div>
+              <img
+                id="prev"
+                class="left-arrow"
+                src="../assets/images/leftarrow.png"
+                alt="Next"
+              />
+              <img
+                id="next"
+                class="right-arrow"
+                src="../assets/images/rightarrow.png"
+                alt="Next"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature">
+      <div class="container">
+        <div class="row py-20 feature-title">
+          <div class="col-12">
+            <div class="d-flex justify-content-center align-items-center">
+              <img src="../assets/images/black-shopping-cart.png" alt="cart" />
+              <div
+                class="feature-title d-flex flex-column align-items-center mx-10"
+              >
+                <p class="feature-subtitle text-center mb-2">
+                  Feature Restaurants
+                </p>
+                <div class="line-161"></div>
+                <p class="fs-2 mt-3 mb-0 text-center">本月精選店家</p>
+              </div>
+              <img src="../assets/images/winecup.png" alt="winecup" />
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-content">
+                    <p class="feature-name mb-3">鄒記食譜</p>
+                    <div class="d-lg-flex d-block justify-content-between">
+                      <div>
+                        <a href="#" class="btn btn-outline-light rad-40 fs-14"
+                          >台北市</a
+                        >
+                        <a href="#" class="btn btn-outline-light rad-40 fs-14"
+                          >純預約制</a
+                        >
+                        <a href="#" class="btn btn-outline-light rad-40 fs-14"
+                          >私房菜</a
+                        >
+                      </div>
+                      <p class="d-inline border-bottom p-2">
+                        <a href="#"
+                          >完整介紹 <i class="bi bi-arrow-right"></i
+                        ></a>
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1721315652241-6dd040d351a1?q=80&w=2579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-content">
+                    <p class="feature-name mb-3">鄒記食譜</p>
+                    <div class="d-lg-flex d-block justify-content-between">
+                      <div>
+                        <a href="#" class="btn btn-outline-light rad-40 fs-14"
+                          >台北市</a
+                        >
+                        <a href="#" class="btn btn-outline-light rad-40 fs-14"
+                          >純預約制</a
+                        >
+                        <a href="#" class="btn btn-outline-light rad-40 fs-14"
+                          >私房菜</a
+                        >
+                      </div>
+                      <p class="d-inline border-bottom p-2">
+                        <a href="#"
+                          >完整介紹 <i class="bi bi-arrow-right"></i
+                        ></a>
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1729540631695-5f3e3ddca009?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-content">
+                    <p class="feature-name mb-3">鄒記食譜</p>
+                    <div class="d-lg-flex d-block justify-content-between">
+                      <div>
+                        <a href="#" class="btn btn-outline-light rad-40 fs-14"
+                          >台北市</a
+                        >
+                        <a href="#" class="btn btn-outline-light rad-40 fs-14"
+                          >純預約制</a
+                        >
+                        <a href="#" class="btn btn-outline-light rad-40 fs-14"
+                          >私房菜</a
+                        >
+                      </div>
+                      <p class="d-inline border-bottom p-2">
+                        <a href="#"
+                          >完整介紹 <i class="bi bi-arrow-right"></i
+                        ></a>
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    src="../assets/images/7c6afd306d6d7b0e0a0ac1c725c46cc8.jpg"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="../assets/images/a894632469a6c70f14eec14c2e64f92b.jpg"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="festival">
+      <div class="container">
+        <div class="row justify-content-center py-lg-20">
+          <div
+            class="col-12 col-lg-8 festival-content p-lg-10 py-10 px-3 border border-dark"
+          >
+            <div class="festival-title d-flex flex-column align-items-center">
+              <p class="festi mb-2 text-center">Festivals</p>
+              <p class="line-84"></p>
+              <p class="fs-2">節日美食</p>
+            </div>
+            <div class="festival-content">
+              <div class="card flex-lg-row mb-8 p-3 border-dark">
+                <img
+                  src="../assets/images/newyear.png"
+                  class="card-img-top"
+                  alt="年夜飯"
+                />
+                <div class="card-body mt-3 mt-lg-0 py-0 ps-0 ps-lg-6 pe-0">
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14"
+                    >春節</a
+                  >
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14"
+                    >農曆初一</a
+                  >
+                  <h5 class="card-title">年夜飯的身世探索</h5>
+                  <p class="card-text">
+                    年夜飯是台灣傳統新年中除夕的重要習俗，全家人齊聚一堂，共享豐盛佳餚，象徵團圓與和睦。魚（寓意年年有餘）、雞（象徵吉祥）、餃子（象徵財富）等，每道菜都有吉祥的寓意，祈願新的一年順遂富足。年夜飯不僅是美食，更是情感的聯繫與文化的傳承。
+                  </p>
+                </div>
+              </div>
+              <div class="card flex-lg-row-reverse mb-8 p-3 border-dark">
+                <img
+                  src="../assets/images/mid-autumn.png"
+                  class="card-img-top"
+                  alt="中秋"
+                />
+                <div class="card-body mt-3 mt-lg-0 py-0 ps-0 pe-0 pe-lg-6">
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14"
+                    >中秋節</a
+                  >
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14"
+                    >農曆八月十五日</a
+                  >
+
+                  <h5 class="card-title">
+                    <p class="mb-2">中秋節烤肉的香味傳奇</p>
+                    <p class="mb-0">一家烤肉萬家香</p>
+                  </h5>
+                  <p class="card-text">
+                    中秋節的夜晚，當戾火在爐中燃起，空氣中彌漫著烤肉的香氣，勾起人們的食欲。一家人繞著火爐，忙碌地翻轉著肉片，香氣四溢.笑聲連連。這份烤肉的美味不僅滿足了味蕾，更是讓人心中充滿了溫暖與幸福。
+                  </p>
+                </div>
+              </div>
+              <div class="card flex-lg-row p-3 border-dark">
+                <img
+                  src="../assets/images/dragon-boat-festival.png"
+                  class="card-img-top"
+                  alt="端午節"
+                />
+                <div class="card-body mt-3 mt-lg-0 py-0 ps-0 ps-lg-6 pe-0">
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14"
+                    >端午節</a
+                  >
+                  <a href="#" class="btn btn-outline-primary rad-40 fs-14"
+                    >農曆五月</a
+                  >
+
+                  <h5 class="card-title">端午節來臨，各國粽子大不同</h5>
+                  <p class="card-text">
+                    農曆五月五日，華人傳統節日端午節來臨，是一年一度粽子浮上熱門話題的時期。除了以華人為主體的國家，東北與東南亞皆因文化的代代傳承，發展出各具特色的包米料理。這回世界美食城就來帶你認識端午節時節，各國的道地粽子！
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsfeed">
+      <div class="container py-lg-20 py-10">
+        <div class="news-title d-flex flex-column align-items-center">
+          <p class="text-center mb-2">NewsFeed</p>
+          <p class="line-94 mb-3"></p>
+          <p class="fs-2 mb-64">合作美食店家動態</p>
+        </div>
+        <div class="row g-3 g-lg-auto">
+          <div class="col-12 col-lg-3">
+            <div class="card">
+              <div class="card-content p-lg-4 m-3 px-0 py-2">
+                <img
+                  src="../assets/images/newyear.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body px-0 py-3">
+                  <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-outline-primary rad-40 fs-14"
+                      >手搖飲</a
+                    >
+                    <p class="text-end">2024.01.04</p>
+                  </div>
+                  <h5 class="card-title">六角飲品</h5>
+                  <p class="card-text fs-5">
+                    歡慶新分店開幕~每日限定品項買一送一！
+                  </p>
+
+                  <p class="card-text mt-3 border-top border-dark">
+                    輕纖蕎麥茶、琥珀高峰烏龍茶任1杯（L杯）享同品項第2杯免費
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card">
+              <div class="card-content p-lg-4 m-3 px-0 py-2">
+                <img
+                  src="../assets/images/meat.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body px-0 py-3">
+                  <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-outline-primary rad-40 fs-14"
+                      >火鍋</a
+                    >
+                    <p class="text-end">2024.8.10</p>
+                  </div>
+                  <h5 class="card-title">狂三鍋</h5>
+                  <p class="card-text fs-5">
+                    歡慶三周年~來就送安格斯牛肉一盤！
+                  </p>
+
+                  <p class="card-text mt-3 border-top border-dark">
+                    打卡後出示，可免費領取八盎司安格斯牛肉片
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card">
+              <div class="card-content p-lg-4 m-3 px-0 py-2">
+                <img
+                  src="../assets/images/tea.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body px-0 py-3">
+                  <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-outline-primary rad-40 fs-14"
+                      >抹茶</a
+                    >
+                    <p class="text-end">2024.01.04</p>
+                  </div>
+                  <h5 class="card-title">抹愛茶</h5>
+                  <p class="card-text fs-5">
+                    歡慶新分店開幕~每日限定品項買一送一！
+                  </p>
+
+                  <p class="card-text mt-3 border-dark border-top">
+                    買一送一！滿足你的抹茶控心願！來享受這份清新的美味吧
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="card">
+              <div class="card-content p-lg-4 m-3 px-0 py-2">
+                <img
+                  src="../assets/images/macaron.png"
+                  class="card-img-top"
+                  alt="馬卡龍"
+                />
+                <div class="card-body px-0 py-3">
+                  <div class="d-flex justify-content-between">
+                    <a href="#" class="btn btn-outline-primary rad-40 fs-14"
+                      >馬卡龍</a
+                    >
+                    <p class="text-end">2024.01.04</p>
+                  </div>
+                  <h5 class="card-title">HAAIBI</h5>
+                  <p class="card-text fs-5">
+                    歡慶南京西路店開幕~全新口味珍奶馬卡龍新上市！
+                  </p>
+
+                  <p class="card-text mt-3 border-dark border-top">
+                    南京西路店特有，來店出示可買五送三不限口味唷~
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/food-column.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>
