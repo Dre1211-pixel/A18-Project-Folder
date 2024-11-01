@@ -278,7 +278,7 @@
 }
 
 
-// 第3區塊
+// 第3區塊 (卡關，不知道如何製作「單卡 slider」）！！！！
 
 .flavors-section {
     background-image: url('/assets/images/deco/bg1.png');
@@ -444,9 +444,9 @@
 
 }
 
-@media (max-width: 1050px) {
-    
-}
+// @media (max-width: 1050px) {
+
+// }
 
 
 .arrow-container {
@@ -577,6 +577,7 @@ right: 20px; /* Align the right arrow closer to the edge */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 
     .tag {
         display: inline-block;
@@ -584,7 +585,6 @@ right: 20px; /* Align the right arrow closer to the edge */
         color: $primary;
         padding: 2px 6px;
         border-radius: 3px;
-        margin-bottom: 10px;
     }
 
     .rating {
@@ -631,6 +631,104 @@ right: 20px; /* Align the right arrow closer to the edge */
         fill: currentColor;
     }
 }
+
+/* Responsive Design for Mobile View */
+@media (max-width: 1150px) {
+    .hot-picks-container {
+        flex-direction: column;
+        width: 40%;
+    }
+}
+
+@media (max-width: 776px) {
+    .hot-picks-container {
+        flex-direction: column;
+        padding: 0 20px; /* Left and right padding */
+        gap: 20px; /* Space between each card */
+    }
+
+    .hot-picks-card {
+        display: flex; /* Arrange items in a row */
+        flex-direction: row;
+        width: 100%; /* Full width with padding */
+        margin-bottom: 20px; /* Add spacing between cards */
+        border: 1px solid black;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        overflow: hidden;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 5.3px 10.6px 10.6px rgba(0, 0, 0, 0.34);
+        }
+
+        .picks-image-wrapper {
+            background-image: none;
+            width: 40%; /* Adjust the width of the image container */
+            padding: 0; /* Remove padding for a cleaner look */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%; /* Make the image fill the container */
+                height: auto;
+                border-right: none; /* Remove border between image and info */
+            }
+        }
+
+        .info {
+            width: 60%; /* Adjust width of info container */
+            padding: 10px 15px; /* Add padding for spacing */
+            border-left: 1px solid black; /* Add border only to left side */
+
+            .details {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: start;
+                gap: 8px;
+                margin-bottom: 8px;
+
+                .tag {
+                    color: #333;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin: auto 0;
+                }
+
+                .rating {
+                    font-size: 14px;
+
+                    .stars {
+                        color: #f39c12; /* Yellow for stars */
+                        margin-right: 5px;
+                    }
+
+                    .reviews {
+                        color: #777; /* Gray color */
+                    }
+                }   
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: bold;
+                color: #333;
+            }
+        }
+    }
+}
+
+    .more-recommendation-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - 40px); /* Full width minus padding */
+        margin: 20px auto; /* Center align with spacing */
+        gap: 0px;
+    }
+   
 
 // 第5區塊
 .recent-reviews-section {
