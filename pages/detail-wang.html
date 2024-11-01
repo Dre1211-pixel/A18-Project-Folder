@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>台味尋寶圖：王氏魚皮</title>
+</head>
+<body>
+    <%- include('./layout/header'); -%>
+    <%- include('./layout/search-header'); -%>
+
+    <main class="wang-fish-main">
+        <div class="bg-neutral-90 py-10">
+                <section class="photo-gallery container-md bg-neutral-80 border-black-1 p-6">
+                    <div class="d-flex gap-md-3 gap-xl-5">
+                        <div class="gallery-photo-width-60">
+                            <div class="gallery-img-container">
+                                <img src="../assets/images/eatery-4.png" alt="wang-fish-image" class="gallery-img">
+                            </div>
+                        </div>
+                        <div class="gallery-photo-width-30 d-md-flex flex-md-column gap-md-3 gap-xl-6">
+                            <div class="gallery-photo-width-100">
+                                <div class="gallery-img-container">
+                                    <img src="../assets/images/wang-fish/wang-fish-1.png" alt="wang-fish-image" class="gallery-img">
+                                </div>
+                            </div>
+                            <div class="gallery-photo-width-100">
+                                <div class="gallery-img-container">
+                                    <img src="../assets/images/wang-fish/wang-fish-2.png" alt="wang-fish-image" class="gallery-img">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-photo-width-30">
+                            <div class="gallery-img-container">
+                                <img src="../assets/images/wang-fish/wang-fish-3.png" alt="wang-fish-image" class="gallery-img">
+                                <div class="gallery-mask-layer">
+                                    <a href="#" class="gallery-mask-text detail-link body2-semiBold button-bottom-line-sm text-black">查看更多<i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="gallery-photo-width-30">
+                        <div class="gallery-img-container">
+                            <img src="../assets/images/wang-fish/wang-fish-5.png" alt="wang-fish-image" class="gallery-img">
+                        </div>
+                    </div>
+                </section>
+        </div>
+
+    </main>
+
+
+    
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+</body>
+</html>

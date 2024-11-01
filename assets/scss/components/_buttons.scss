@@ -28,3 +28,95 @@
     border: 1px solid #000;
     border-radius: 40px;
 }
+
+// filter
+.filter-btn{
+    font-weight: $font-weight-semi-bold;
+    background: $white;
+    padding-inline: 0px; // clear
+    padding-block: 0px; // clear
+    padding: 8px;
+    border: 1px solid #000;
+    text-align: center;
+}
+.filter-text-btn{
+    border-radius: 4px;
+}
+.filter-btn:hover{
+    background: $primary-80;
+}
+.filter-btn:focus{
+    background: $primary-80;
+}
+.filter-icon-text-btn{
+    border-radius: 12px;
+}
+// button
+$color-transparent: transparent;
+
+$button-states: (
+    "white": (
+        background: $white,
+        color: $black,
+        border: 1px solid $black
+    ),
+    "neutral": (
+        background: $neutral-95,
+        color: $black,
+        border: 1px solid $black
+    ),
+    "bottom-line": (
+        background: $color-transparent,
+        color: $black,
+        border-bottom: 1px solid $black
+    ),
+    );
+
+@mixin button-style($type) {
+    background-color: map-get(map-get($button-states, $type), background);
+    color: map-get(map-get($button-states, $type), color);
+    border: map-get(map-get($button-states, $type), border);
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    // icon箭頭樣式
+    .icon {
+    font-size: 1em;
+    }
+
+    // 按鈕 hover 樣式
+    &:hover {
+    background-color: darken(map-get(map-get($button-states, $type), background), 10%);
+    color: lighten(map-get(map-get($button-states, $type), color), 10%);
+    }
+    &:active {
+        transform: translate(2px, 2px);
+        box-shadow: none;
+    }
+        
+}
+.button-white {
+    @include button-style("white");
+    box-shadow: #000 2px 2px;
+}
+
+.button-neutral {
+    @include button-style("neutral");
+}
+
+.button-bottom-line {
+    @include button-style("bottom-line");
+}
+.button-bottom-line-sm {
+    @include button-style("bottom-line");
+    padding: 4px;
+}
+

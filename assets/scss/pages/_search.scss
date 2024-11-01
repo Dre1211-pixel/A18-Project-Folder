@@ -1,0 +1,100 @@
+//main
+.main-bg {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Adjust as needed */
+    overflow: hidden;
+
+    .background-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit:cover; /* Similar to 'background-size: cover;' */
+        z-index: -1;
+    }
+    @media (min-width: 768px) {
+        .background-img{
+            left: 30%;
+        }
+    
+    }
+}
+
+// food-list-section
+.food-list-section{
+    .sort-dropdown{
+        border-radius: 0;
+        border: 1px solid #000;
+        option{
+            color:#000;
+            border-radius: 0;
+        }
+    }
+}
+.shop-card-list{
+    .shop-card{
+        border-bottom: 1px solid $neutral-95;
+    }
+    .img-box{
+        width: 120px;
+        .shop-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $border-radius-sm;
+        }
+    }
+    .bi-star-fill{
+        color:$primary-60;
+    }
+    
+}
+
+.status-text {
+    position: relative;
+    padding-left: 16px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background-color: #2EB000; //open
+        border-radius: 50%;
+    }
+
+    &.status-close::before {
+        background-color: #EB4330; // close
+    }
+}
+.detail-link {
+    position: relative;
+    padding-bottom: 4px;
+        
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px; 
+        background-color: #000;
+        width: 100%;
+    }
+}
+
+.map-section {
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
