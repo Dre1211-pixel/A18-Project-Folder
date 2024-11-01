@@ -3,6 +3,18 @@ footer {
   color: #ffffff;
 }
 
+// 搜尋欄default顏色
+footer .form-control {
+  border: 1.5px solid rgba(201, 198, 196, 1);
+}
+footer .form-control::placeholder {
+  color: rgba(201, 198, 196, 1);
+}
+
+.slogon {
+  line-height: 1.2;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -15,10 +27,6 @@ a {
 }
 
 // 間距
-
-.mb-20 {
-  margin-bottom: 20px;
-}
 
 .px-20 {
   padding: 0 20px;

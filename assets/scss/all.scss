@@ -21,6 +21,8 @@
 @import './pages/search.scss';
 @import './pages/detail-wang.scss';
 
+// 導入bootstrap icon
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 // 字體
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap");
 // 搜尋的icon
@@ -32,7 +34,6 @@
   left: 10px; /* 調整圖標的左邊距 */
   top: 50%; /* 垂直置中 */
   transform: translateY(-50%); /* 精確的垂直置中 */
-  color: #6c757d; /* 圖標顏色，根據需要調整 */
 }
 @media (min-width: 992px) {
   .search-icon i {
