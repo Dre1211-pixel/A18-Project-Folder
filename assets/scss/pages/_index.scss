@@ -724,7 +724,7 @@ right: 20px; /* Align the right arrow closer to the edge */
         display: flex;
         justify-content: center;
         align-items: center;
-        width: calc(100% - 40px); /* Full width minus padding */
+        padding: 12px;
         margin: 20px auto; /* Center align with spacing */
         gap: 0px;
     }
