@@ -14,9 +14,12 @@
 @import "./components/buttons.scss";
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
+@import "./layout/search-header.scss";
+
 
 @import './pages/index.scss';
 @import './pages/search.scss';
+@import './pages/detail-wang.scss';
 
 // 字體
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap");
