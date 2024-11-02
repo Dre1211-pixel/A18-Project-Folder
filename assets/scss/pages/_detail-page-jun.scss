@@ -103,3 +103,15 @@
 .rate:hover::before {
   width: 100%;
 }
+
+.comment-text {
+  background: var(--Nutral-95, #f4f0ee);
+  .btn {
+    color: black;
+    background-color: white;
+    border: #000000 1px solid;
+  }
+  .btn-group {
+    gap: 12px;
+  }
+}
