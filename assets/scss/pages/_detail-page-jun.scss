@@ -137,3 +137,104 @@
   width: 116px;
   height: 116px;
 }
+
+.more {
+  position: relative;
+}
+
+.more::after,
+.more::before {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+}
+
+/* 偽元素當陰影 */
+.more::after {
+  width: 5px;
+  height: 0;
+  bottom: 0;
+  right: -5px;
+}
+
+.more::before {
+  height: 5px;
+  width: 0;
+  bottom: -5px;
+  right: -5px;
+}
+
+.more:hover::after {
+  height: 98%;
+}
+
+.more:hover::before {
+  width: 100%;
+}
+
+.looking-more {
+  padding: 24px;
+  background-image: url("/assets/images/deco/bg2.png");
+  color: white;
+  .title {
+    font-family: Poltawski Nowy;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    padding-bottom: 8px;
+  }
+}
+
+.more-card {
+  background-image: url("/assets/images/deco/bg4.png");
+  img {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 996px) {
+  .more-pic {
+    width: 160px;
+    height: 272px;
+    object-fit: cover;
+  }
+}
+.more-card-text {
+  background-color: white;
+  color: #000000;
+}
+
+.more-card {
+  position: relative;
+}
+
+.more-card ::after,
+.more-card ::before {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+}
+
+/* 偽元素當陰影 */
+.more-card ::after {
+  width: 5px;
+  height: 0;
+  bottom: 0;
+  right: -5px;
+}
+
+.more-card ::before {
+  height: 5px;
+  width: 0;
+  bottom: -5px;
+  right: -5px;
+}
+
+.more-card :hover::after {
+  height: 98%;
+}
+
+.more-card :hover::before {
+  width: 100%;
+}
