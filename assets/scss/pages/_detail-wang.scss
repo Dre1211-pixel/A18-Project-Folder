@@ -58,12 +58,29 @@
 
 //section-detail-overview
 .section-detail-overview{
+    
     background-image: url(../assets/images/deco/pattern5.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     border: 1px solid #000;
 
+    .headline-text-wrapper{
+        box-shadow: 4px 4px  $neutral-30; /* 添加整體陰影 */
+    }
+
+    .text-block {
+        display: inline-block;
+        padding: 8px 16px; /* 調整內邊距確保文字有足夠空間 */
+        border: 1px solid black; /* 添加每個文字塊的邊框 */
+        font-size: 24px; /* 根據需要調整字體大小 */
+    }
+    .material-symbols-fill {
+        font-variation-settings:
+        'FILL' 1;
+        color: $primary-10;
+        vertical-align: bottom;
+    }
 
 
     .detail-upper-wrapper{
@@ -85,6 +102,8 @@
             );          
         }
     }
+
+    
 }
 
 .overflow-x{
