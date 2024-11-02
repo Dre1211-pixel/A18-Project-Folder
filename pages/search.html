@@ -9,55 +9,8 @@
 <body>
     <%- include('./layout/header'); -%>
     <!-- search-header -->
-    <header class="search-header py-10">
-        <div class="container d-flex flex-column align-items-center">
-            <h2 class="h3-semiBold text-white text-center d-none d-sm-block">尋味台灣：立即開始您的美食旅程</h2>
-            <div class="search-bar-container py-4 col-12 col-xl-8">
-                <div class="search-inner-container d-flex align-items-center justify-content-between  my-3">
-                    <!-- 縣市 -->
-                    <div class="region-selection col-4 col-md-3">
-                        <select id="region-select" class="form-select py-3 body1-semiBold" aria-label="region-select">
-                            <option selected>縣市</option>
-                            <option value="台南市">台南市</option>
-                            <option value="台北市">台北市</option>
-                            <option value="新北市">新北市</option>
-                            <option value="台中市">台中市</option>
-                            <!-- Add other options as needed -->
-                        </select>
-                    </div>
-                    <!-- 輸入框 -->
-                    <div class="search-text col-8 me-2">
-                        <span class="search-icon "><i class="bi bi-search"></i></span>
-                        <input type="text" class="search-input body1-semiBold" placeholder="今天灣 to eat" aria-label="Search-text-input">
-                    </div>
-                </div>
-                
-                <!-- 搜尋按鈕 -->
-                <div class="col-12">
-                    <button type="button" class="button-white w-100 body1-semiBold">
-                        搜尋 <i class="bi bi-arrow-right"></i>
-                    </button>
-                </div>
-                <!-- filter-sort-mobile -->
-                <div class="filter-sort mobile-filter-sort d-sm-none d-flex py-3 gap-2">
-                    <div class="filters d-flex gap-2">
-                        <button class="filter-btn">篩選器 <i class="bi bi-filter-right"></i></button>
-                    </div>
-                    <div class="sort body1-semiBold">
-                        <select name="sort-options" class="form-select sort-dropdown">
-                            <option>排序：熱門推薦</option>
-                            <option>最多評分</option>
-                            <option>最多評論</option>
-                        </select>
-                    </div>
-                    <button class="filter-btn filter-icon-text-btn body2-semiBold">
-                        <i class="bi bi-check-lg "></i>
-                        營業中
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
+    <%- include('./layout/search-section'); -%>
+
         <!-- food-list-section -->
         <main class="main-bg">
             <img src="../assets/images/Map.png" alt="Map" class="background-img">

@@ -1,5 +1,5 @@
-// search-header
-.search-header {
+// search-section
+.search-section {
     background: none;
     padding: 0;
     .container{
@@ -8,7 +8,7 @@
 }
 
 @media (min-width: 576px) {
-    .search-header {
+    .search-section {
         background-image: url('../assets/images/deco/bg8.png');
         background-position: center;
         background-size: cover;
@@ -55,12 +55,12 @@
     box-shadow:2px 2px  #000;
 }
 
-.search-header .search-icon i{
+.search-section .search-icon i{
     color: #000;
 }
 // 解決和header search-icon的衝突
 @media (max-width: 996px) {
-    .search-header .search-icon i {
+    .search-section .search-icon i {
         left: 12px;
     }
 }
