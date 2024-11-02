@@ -167,116 +167,95 @@
     background-image: url(/assets/images/deco/bg4.png);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 856px;
-    padding: 32px 48px;
+    padding: 40px; // Increased padding for more white space
     text-align: center;
+    display: flex;
     align-items: center;
     position: relative;
-    display: flex;
+    margin-bottom: 120px;
+    margin-top: 120px;
 
     .purpose-content {
-        margin-right: 80px;
+        margin-right: 80px; // Space between content and image on desktop
     }
 }
 
 .purpose-header {
     margin-bottom: 32px;
 
-    h2.underline {
+    h2 {
         display: inline-block;
         position: relative;
         padding-bottom: 5px;
-        max-width: 100px;
-        text-align: center;
-
-        &::after {
-            content: '';
-            display: block;
-            height: 1px;
-            background-color: black;
-            width: 100%; // Automatically matches text width
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
+        text-decoration: underline;
+        text-underline-offset: 10px;
     }
 
     .dashed-line {
         border-top: 2px dashed black;
-        width: auto; // Automatically fits content
         margin: 10px auto;
-    }
-
-    .top-line, .bottom-line {
-        width: auto;
-    }
-}
-
-@media (max-width: 991px) {
-    .purpose-header {
-        h2.underline {
-            font-size: 1rem; // Adjust font size for mobile
-            &::after {
-                width: 100%; // Matches h2 text width exactly
-            }
-        }
     }
 }
 
 .purpose-description {
-    text-align: start;
+    text-align: left; // Align text to start
 
     p {
         line-height: 1.8;
+        margin-bottom: 16px;
     }
 }
 
 .purpose-image {
     img {
-        max-width: 318px;
-        margin-top: 20px;
+        max-width: 100%;
+        height: auto;
     }
 }
 
+/* Responsive Styles */
 @media (max-width: 991px) {
     .content-box {
-        display: flex;
         flex-direction: column;
         max-width: 100%;
-        margin: 12px 40px;
+        margin-bottom: 40px;
+        margin-top: 40px;
 
         .purpose-content {
-            margin: 0px;
+            margin-right: 0;
         }
 
         .purpose-header {
-            display: flex;
-            flex-direction: column;
+            margin-bottom: 24px;
 
-            .purpose-header h1 {
-                font-size: 20px;
-                line-height: 120;
-                font-weight: 700;
-            }
-        
-            .dashed-line {
-                width: 80%; // Set desired width for dashed lines
-                border-top: 2px dashed black; // Dashed line color
-                margin: 10px auto; // Center and space around lines
+            h1 {
+                font-size: 24px;
             }
         }
 
-        .purpose-image img {
-            margin: 0px;
+        .dashed-line {
+            width: 80%; // Adjust dashed line width
+        }
+
+        .purpose-image {
+            img {
+                max-width: 50%;
+                height: auto;
+                object-fit: cover;
+            }
         }
     }
 }
 
 @media (max-width: 576px) {
     .purpose-header h1 {
-        font-size: 20px;
+        font-size: 20px; // Smaller font size on mobile
+    }
+
+    .dashed-line {
+        width: 60%;
     }
 }
-
 
 // 第3區塊 (卡關，不知道如何製作「單卡 slider」）！！！！
 
@@ -291,6 +270,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
       
       .divider {
@@ -298,14 +278,6 @@
         height: 1px;
         background-color: #333;
         margin: 8px 0; /* Spacing between lines */
-    }
-
-    /* Container for left and right side */
-    .content-container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        max-width: 1312px;
     }
 
     /* Left-side text block */
@@ -429,8 +401,10 @@
 
 @media (max-width: 1350px) {
     .content-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
+
 
         .flavors-intro {
             text-align: center;
@@ -443,11 +417,6 @@
     }
 
 }
-
-// @media (max-width: 1050px) {
-
-// }
-
 
 .arrow-container {
 display: flex;
@@ -526,8 +495,9 @@ right: 20px; /* Align the right arrow closer to the edge */
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
-      
+
     .divider {
         width: 180px; /* Adjust width for the line */
         height: 1px;
@@ -535,87 +505,87 @@ right: 20px; /* Align the right arrow closer to the edge */
         margin: 8px 0; /* Spacing between lines */
     }
 }
-
-.hot-picks-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  
+  .hot-picks-container {
     max-width: 1076px;
-}
-
-.hot-picks-card {
+  }
+  
+  .hot-picks-card {
+    display: flex;
+    flex-direction: column;
     background-color: white;
-    border: 1px solid black; /* 卡片邊線為黑色 */
+    border: 1px solid black;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
-
-&:hover {
-    transform: translateY(-5px);
-    box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);  /* Add shadow on hover */
-}
-
-.picks-image-wrapper {
-    background-image: url('/assets/images/deco/pattern1.png');
-    padding: 16px; /* 四周有16px的padding */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 1px solid black; /* 图片底部的黑色边框 */
-
-    img {
-    max-width: 100%;
-    max-height: 100%;
-    border: 1px solid black; /* 圖片本身也有黑色邊線 */
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 5.3px 10.6px 10.6px rgba(0, 0, 0, 0.34);
     }
-}
-
-.info {
-    padding: 15px;
-
-    .details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-
-    .tag {
-        display: inline-block;
-        background-color: $primary-80;
-        color: $primary;
-        padding: 2px 6px;
-        border-radius: 3px;
+    
+    .picks-image-wrapper {
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
     }
+  
+    .info {
+      padding: 20px;
 
-    .rating {
+      .details {
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        font-size: 14px;
+        justify-content: space-between;
+        margin-bottom: 10px;
 
-        .stars {
-        color: #f39c12; /* 橘色 */
-        margin-right: 5px;
+        .tag {
+          background-color: #f5c069;
+          color: #333;
+          padding: 2px 6px;
+          border-radius: 3px;
         }
 
-        .reviews {
-        color: #777; /* 灰色 */
+        .rating {
+
+          .stars {
+            color: #f39c12;
+          }
+          .reviews {
+            color: #777;
+          }
         }
+      }
     }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 776px) {
+    .hot-picks-card {
+      flex-direction: row;
+      
+      .picks-image-wrapper {
+        width: 50%; /* Allow flexibility */
+      }
+      
+      .info {
+        width: 60%;
+        padding: 15px;
+      }
     }
-}
-}
+  }
 
 .more-recommendation-btn {
-    display: inline-flex;
     align-items: center;
+    text-align: center;
     padding: 10px 20px;
     border: 1px solid $primary;
     background-color:#fff;
     text-decoration: none;
     color: $primary;
-    display: flex;
     gap: 8px;
+    width: 122px; // 因為改成 row / col 格式後目前有限時間內只能用這個方法把按鈕的寬度做限制
 
     &:hover {
         box-shadow: 3.0px 6.1px 6.1px hsl(0deg 0% 0% / 0.41);
@@ -631,103 +601,166 @@ right: 20px; /* Align the right arrow closer to the edge */
         fill: currentColor;
     }
 }
+  
+// .hot-picks-section {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
 
-/* Responsive Design for Mobile View */
-@media (max-width: 1150px) {
-    .hot-picks-container {
-        flex-direction: column;
-        width: 40%;
-    }
-}
+//     .section-header {
+//         display: flex;
+//         flex-direction: column;
+//         text-align: center;
+//         align-items: center;
+//     }
+      
+//     .divider {
+//         width: 180px; /* Adjust width for the line */
+//         height: 1px;
+//         background-color: #333;
+//         margin: 8px 0; /* Spacing between lines */
+//     }
+// }
 
-@media (max-width: 776px) {
-    .hot-picks-container {
-        flex-direction: column;
-        padding: 0 20px; /* Left and right padding */
-        gap: 20px; /* Space between each card */
-    }
+// .hot-picks-container {
+//     display: flex;
+//     justify-content: center;
+//     gap: 20px;
+//     max-width: 1076px;
+// }
 
-    .hot-picks-card {
-        display: flex; /* Arrange items in a row */
-        flex-direction: row;
-        width: 100%; /* Full width with padding */
-        margin-bottom: 20px; /* Add spacing between cards */
-        border: 1px solid black;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-        overflow: hidden;
+// .hot-picks-card {
+//     background-color: white;
+//     border: 1px solid black; /* 卡片邊線為黑色 */
+//     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+//     overflow: hidden;
+//     transition: transform 0.3s ease;
 
-        &:hover {
-            transform: translateY(-5px);
-            box-shadow: 5.3px 10.6px 10.6px rgba(0, 0, 0, 0.34);
-        }
+//     &:hover {
+//     transform: translateY(-5px);
+//     box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);  /* Add shadow on hover */
+//     }
 
-        .picks-image-wrapper {
-            background-image: none;
-            width: 40%; /* Adjust the width of the image container */
-            padding: 0; /* Remove padding for a cleaner look */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+//     .picks-image-wrapper {
+//         background-image: url('/assets/images/deco/pattern1.png');
+//         padding: 16px; /* 四周有16px的padding */
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         border-bottom: 1px solid black; /* 图片底部的黑色边框 */
 
-            img {
-                width: 100%; /* Make the image fill the container */
-                height: auto;
-                border-right: none; /* Remove border between image and info */
-            }
-        }
+//         img {
+//         max-width: 100%;
+//         max-height: 100%;
+//         border: 1px solid black; /* 圖片本身也有黑色邊線 */
+//         }
+//     }
+// }
 
-        .info {
-            width: 60%; /* Adjust width of info container */
-            padding: 10px 15px; /* Add padding for spacing */
-            border-left: 1px solid black; /* Add border only to left side */
+// .info {
+//     padding: 20px;
 
-            .details {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: start;
-                gap: 8px;
-                margin-bottom: 8px;
+//     .details {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         margin-bottom: 10px;
+//     }
 
-                .tag {
-                    color: #333;
-                    font-size: 14px;
-                    font-weight: bold;
-                    margin: auto 0;
-                }
+//     .tag {
+//         display: inline-block;
+//         background-color: $primary-80;
+//         color: $primary;
+//         padding: 2px 6px;
+//         border-radius: 3px;
+//     }
 
-                .rating {
-                    font-size: 14px;
+//     .rating {
+//         display: flex;
+//         align-items: center;
+//         justify-content: flex-end;
+//         font-size: 14px;
 
-                    .stars {
-                        color: #f39c12; /* Yellow for stars */
-                        margin-right: 5px;
-                    }
+//         .stars {
+//         color: #f39c12; /* 橘色 */
+//         margin-right: 5px;
+//         }
 
-                    .reviews {
-                        color: #777; /* Gray color */
-                    }
-                }   
-            }
+//         .reviews {
+//         color: #777; /* 灰色 */
+//         }
+//     }
+// }
 
-            h3 {
-                font-size: 18px;
-                font-weight: bold;
-                color: #333;
-            }
-        }
-    }
-}
+// /* Responsive Design for Mobile View */
+// @media (max-width: 1150px) {
+//     .hot-picks-container {
+//         flex-direction: column;
+//     }
+// }
 
-    .more-recommendation-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 12px;
-        margin: 20px auto; /* Center align with spacing */
-        gap: 0px;
-    }
+// @media (max-width: 776px) {    
+//     .hot-picks-container {
+//         flex-direction: column;
+//         padding: 0 20px; /* Left and right padding */
+//         gap: 20px; /* Space between each card */
+//     }
+
+//     .hot-picks-card {
+//         display: flex; /* Arrange items in a row */
+//         flex-direction: row;
+//         margin-bottom: 16px; /* Add spacing between cards */
+
+//         &:hover {
+//             transform: translateY(-5px);
+//             box-shadow: 5.3px 10.6px 10.6px rgba(0, 0, 0, 0.34);
+//         }
+
+//         .picks-image-wrapper {
+//             background-image: none;
+
+//             padding: 0; /* Remove padding for a cleaner look */
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+
+//             img {
+//                 width: 100%; 
+//                 height: auto;
+//                 border-right: none;
+//             }
+//         }
+
+//         .info {
+//             width: 60%; 
+//             padding: 16px;
+//             border-left: 1px solid black; 
+
+//             .details {
+//                 flex-direction: column;
+//                 justify-content: flex-start;
+//                 align-items: start;
+//                 gap: 8px;
+//                 margin-bottom: 8px;
+
+//                 .tag {
+//                     font-size: 14px;
+//                     font-weight: bold;
+//                     margin: auto 0;
+//                 } 
+//             }
+//         }
+//     }
+// }
+
+//     .more-recommendation-btn {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         padding: 12px;
+//         margin: 20px auto; /* Center align with spacing */
+//         gap: 0px;
+//     }
    
 
 // 第5區塊
@@ -735,11 +768,13 @@ right: 20px; /* Align the right arrow closer to the edge */
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 80px;
 
     .section-header {
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
       
     .divider {
@@ -877,6 +912,50 @@ hr {
     margin-left: auto;
 }
 
+@media (max-width: 991px) {
+    .recent-reviews-section {
+      padding-bottom: 40px; /* Adjust padding for smaller screens */
+    }
+    
+    .review-card-container {
+      flex-direction: column; /* Stack items vertically */
+      gap: 16px; /* Adjust gap for vertical layout */
+    }
+  
+    .col-4 {
+      width: 100%; /* Make each column full-width on smaller screens */
+    }
+  
+    .review-card {
+      max-width: 100%; /* Make review cards take the full width */
+      margin-bottom: 20px; /* Add some spacing between cards */
+    }
+  
+    .image-container {
+      padding: 8px; /* Adjust padding for smaller screens */
+    }
+  
+    .review-card-content {
+      padding: 16px; /* Adjust padding for better spacing on smaller screens */
+    }
+  
+    .top-section, .bottom-section {
+      text-align: left; /* Keep text alignment */
+    }
+  
+    .shop-info h5 {
+      font-size: 1.2rem; /* Adjust font size if needed */
+    }
+  
+    .location-label {
+      padding: 2px 6px; /* Adjust padding to keep it compact */
+    }
+  
+    .timestamp {
+      font-size: 0.8rem; /* Adjust font size if needed */
+    }
+}
+
 // 間距 & 外距 & 部分樣式模組化
 
 .align-center {
@@ -941,6 +1020,10 @@ hr {
 
 .mb-3 {
     margin-bottom: 12px;
+}
+
+.mb-4 {
+    margin-bottom: 16px;
 }
 
 .mb-5 {
