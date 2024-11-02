@@ -54,11 +54,52 @@
 .pb-16 {
   padding-bottom: 64px;
 }
+.pb-14 {
+  padding-bottom: 56px;
+}
 
 .rate-text {
   background: var(--Nutral-90, #e5e2e0);
 }
 
+.rate-star {
+  background: white;
+}
+
 .fs-14 {
   font-size: 14px;
+}
+
+.rate {
+  position: relative;
+}
+
+.rate::after,
+.rate::before {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+}
+
+/* 偽元素當陰影 */
+.rate::after {
+  width: 5px;
+  height: 0;
+  bottom: 0;
+  right: -5px;
+}
+
+.rate::before {
+  height: 5px;
+  width: 0;
+  bottom: -5px;
+  right: -5px;
+}
+
+.rate:hover::after {
+  height: 98%;
+}
+
+.rate:hover::before {
+  width: 100%;
 }
