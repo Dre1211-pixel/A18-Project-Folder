@@ -1,0 +1,139 @@
+.comment {
+  font-family: Noto Serif TC;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+}
+
+.comment-title {
+  background: var(--Primary-80, #ffdea0);
+  position: relative;
+}
+
+.comment-title::after,
+.comment-title::before {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+}
+
+/* 偽元素當陰影 */
+.comment-title::after {
+  width: 5px;
+  height: 0;
+  bottom: 0;
+  right: -5px;
+}
+
+.comment-title::before {
+  height: 5px;
+  width: 0;
+  bottom: -5px;
+  right: -5px;
+}
+
+.comment-title:hover::after {
+  height: 98%;
+}
+
+.comment-title:hover::before {
+  width: 100%;
+}
+
+.comment-title img[alt="user"] {
+  display: inline;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%; /* 將元素裁剪為圓形 */
+
+  background-size: cover; /* 讓背景圖填滿整個元素 */
+  background-position: center; /* 背景圖置中顯示 */
+  object-fit: cover; /* 確保 img 圖片也能充滿圓形區域 */
+}
+
+.pb-16 {
+  padding-bottom: 64px;
+}
+.pb-14 {
+  padding-bottom: 56px;
+}
+
+.rate-text {
+  background: var(--Nutral-90, #e5e2e0);
+}
+
+.rate-star {
+  background: white;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.rate {
+  position: relative;
+}
+
+.rate::after,
+.rate::before {
+  content: "";
+  position: absolute;
+  background-color: #000000;
+}
+
+/* 偽元素當陰影 */
+.rate::after {
+  width: 5px;
+  height: 0;
+  bottom: 0;
+  right: -5px;
+}
+
+.rate::before {
+  height: 5px;
+  width: 0;
+  bottom: -5px;
+  right: -5px;
+}
+
+.rate:hover::after {
+  height: 98%;
+}
+
+.rate:hover::before {
+  width: 100%;
+}
+
+.comment-text {
+  background: var(--Nutral-95, #f4f0ee);
+  .btn {
+    color: black;
+    background-color: white;
+    border: #000000 1px solid;
+  }
+  .btn-group {
+    gap: 12px;
+  }
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; /* 將元素裁剪為圓形 */
+  background-image: url("你的背景圖片連結"); /* 背景圖設置 */
+  background-size: cover; /* 讓背景圖填滿整個元素 */
+  background-position: center; /* 背景圖置中顯示 */
+  object-fit: cover; /* 確保 img 圖片也能充滿圓形區域 */
+}
+
+.comment-card {
+  background: white;
+  margin-top: 24px;
+  border: #000000 1px solid;
+  border-top: #000000 2px solid;
+  border-radius: 0 0 12px 12px;
+}
+.food-pic img {
+  width: 116px;
+  height: 116px;
+}
