@@ -17,6 +17,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "bs5-lightbox": "^1.8.3",
     "gh-pages": "^5.0.0",
     "glob": "^10.2.2",
     "node": "^20.18.0",
@@ -25,6 +26,3 @@
     "vite-plugin-live-reload": "^3.0.2"
   }
 }
-
-
-

@@ -120,3 +120,16 @@ $button-states: (
     padding: 4px;
 }
 
+.btn-primary {
+
+    /* 正確的狀態選擇器 */
+    input[type="checkbox"]:checked + .btn,
+    .btn:not(.btn-check) + :active,
+    .btn:first-child:active,
+    .btn.active,
+    .btn.show {
+        color: #fff; /* 假設你希望顏色為白色 */
+        background-color: $primary-10; /* 使用正確的變量名 */
+        border: #000 1px solid;
+    }
+}
