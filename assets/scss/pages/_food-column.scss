@@ -11,6 +11,8 @@ body.food-column {
   background-image: url("../images/deco/bg1.png");
   background-size: cover;
   background-position: center;
+  max-height: 80vh;
+  max-width: 100%;
   font-weight: 600;
 
   letter-spacing: 0.04em;

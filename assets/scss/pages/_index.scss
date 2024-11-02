@@ -1,607 +1,608 @@
 // 第1區塊
+body.banner {
+  background-image: url("../images/deco/bg7.png");
+  background-size: cover;
+  background-position: center;
+  max-height: 80vh;
+  max-width: 100%;
+}
 
 .banner-container {
-    background-image: url('/assets/images/deco/bg7.png');
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1076px;
+    justify-content: space-between;
+    padding-top: 72px;
+    padding-bottom: 80px;
+
+    .text-group {
+      display: flex;
+      align-items: center;
+
+      .title-wrapper {
+        display: flex;
+        flex-direction: row; // Default horizontal layout for desktop
+        align-items: flex-start;
+        gap: 24px;
+      }
+
+      .sub-title {
+        writing-mode: vertical-rl;
+        letter-spacing: 16px;
+        padding: 4px;
+      }
+
+      .main-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div {
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+  }
+
+  .map-container {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    position: relative;
 
+    .display-in-desktop {
+      display: block;
+    }
+
+    .display-in-mobile {
+      display: none;
+    }
+
+    .city-info-box {
+      display: none;
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 991px) {
     .container {
-        display: flex;
-        align-items: flex-start;
-        width: 100%;
-        max-width: 1076px;
-        justify-content: space-between;
-        padding-top: 72px;
-        padding-bottom: 80px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0px;
 
-        .text-group {
-            display: flex;
-            align-items: center;
-
-            .title-wrapper {
-                display: flex;
-                flex-direction: row; // Default horizontal layout for desktop
-                align-items: flex-start; 
-                gap: 24px; 
-            }
-
-            .sub-title {
-                writing-mode: vertical-rl;
-                letter-spacing: 16px;
-                padding: 4px;
-            }
-
-            .main-title {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-                div {
-                    border-bottom: 1px solid black;
-                }
-            }
+      .text-group {
+        .title-wrapper {
+          flex-direction: column-reverse; // Stack subtitle above title in mobile
+          align-items: center;
+          gap: 0px;
         }
+
+        .sub-title {
+          writing-mode: horizontal-tb;
+          font-size: 24px;
+          letter-spacing: 8px;
+        }
+
+        .main-title {
+          flex-direction: row;
+          gap: 4px;
+          font-size: 36px;
+          letter-spacing: 5px;
+          padding: 0px;
+
+          div {
+            margin: 3px 0;
+          }
+        }
+      }
     }
 
     .map-container {
-        display: flex;
-        justify-content: center;
-        position: relative;
+      flex-direction: column;
+      align-items: center;
 
-        .display-in-desktop {
-            display: block;
+      .display-in-desktop {
+        display: none; // Hide large map on mobile
+      }
+
+      .display-in-mobile {
+        display: block; // Show small map on mobile
+        width: 90%;
+      }
+
+      .city-info-box {
+        display: block;
+        border: 1px solid #000; // Black border for rectangle
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+        width: 200px; // Adjust width as needed
+        background-color: #f4f0ee; // Light background color for contrast
+        margin-bottom: 80px;
+
+        .city-name {
+          font-size: 1rem;
+          color: #333;
+          margin-bottom: 10px;
         }
 
-        .display-in-mobile {
-            display: none;
+        .city-title {
+          font-size: 24px;
+          font-weight: 600;
+          color: #333;
+          margin-bottom: 10px;
         }
 
-        .city-info-box {
-            display:none;
+        .view-button {
+          background-color: #fff;
+          color: #333;
+          border: 1px solid #000;
+          padding: 12px 60px;
+          font-size: 16px;
+          font-weight: 600;
+          transition: all 0.3s;
+
+          &:hover {
+            box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);
+          }
         }
+      }
     }
-
-    /* Responsive adjustments */
-    @media (max-width: 991px) {
-        .container {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 0px;
-
-            .text-group {
-                .title-wrapper {
-                    flex-direction: column-reverse; // Stack subtitle above title in mobile
-                    align-items: center;
-                    gap: 0px;
-                }
-
-                .sub-title {
-                    writing-mode: horizontal-tb;
-                    font-size: 24px;
-                    letter-spacing: 8px;
-                }
-
-                .main-title {
-                    flex-direction: row;
-                    gap: 4px;
-                    font-size: 36px;
-                    letter-spacing: 5px;
-                    padding: 0px;
-
-                    div {
-                        margin: 3px 0;
-                    }
-                }
-            }
-        }
-
-        .map-container {
-            flex-direction: column;
-            align-items: center;
-
-            .display-in-desktop {
-                display: none; // Hide large map on mobile
-            }
-
-            .display-in-mobile {
-                display: block; // Show small map on mobile
-                width: 90%;
-            }
-
-            .city-info-box {
-                display: block;
-                border: 1px solid #000; // Black border for rectangle
-                padding: 20px;
-                margin-top: 20px;
-                text-align: center;
-                width: 200px; // Adjust width as needed
-                background-color: #f4f0ee; // Light background color for contrast
-                margin-bottom: 80px;
-    
-                .city-name {
-                    font-size: 1rem;
-                    color: #333;
-                    margin-bottom: 10px;
-                }
-    
-                .city-title {
-                    font-size: 24px;
-                    font-weight: 600;
-                    color: #333;
-                    margin-bottom: 10px;
-                }
-    
-                .view-button {
-                    background-color: #fff;
-                    color: #333;
-                    border: 1px solid #000;
-                    padding: 12px 60px;
-                    font-size: 16px;
-                    font-weight: 600;
-                    transition: all 0.3s;
-    
-                    &:hover {
-                        box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);
-                    }
-                }
-            }
-        }
-    }
+  }
 }
 
 // 第2區塊 (RWD 現在還是有問題... Our Purpose 沒有辦法在手機版居中）
 /* Our Purpose */
 .about-container {
-    background-image: url(/assets/images/deco/bg8.png);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-image: url(/assets/images/deco/bg8.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Text group */
 .content-box {
-    background-image: url(/assets/images/deco/bg4.png);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 856px;
-    padding: 40px; // Increased padding for more white space
-    text-align: center;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-bottom: 120px;
-    margin-top: 120px;
+  background-image: url(/assets/images/deco/bg4.png);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 856px;
+  padding: 40px; // Increased padding for more white space
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 120px;
+  margin-top: 120px;
 
-    .purpose-content {
-        margin-right: 80px; // Space between content and image on desktop
-    }
+  .purpose-content {
+    margin-right: 80px; // Space between content and image on desktop
+  }
 }
 
 .purpose-header {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 
-    h2 {
-        display: inline-block;
-        position: relative;
-        padding-bottom: 5px;
-        text-decoration: underline;
-        text-underline-offset: 10px;
-    }
+  h2 {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 5px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
 
-    .dashed-line {
-        border-top: 2px dashed black;
-        margin: 10px auto;
-    }
+  .dashed-line {
+    border-top: 2px dashed black;
+    margin: 10px auto;
+  }
 }
 
 .purpose-description {
-    text-align: left; // Align text to start
+  text-align: left; // Align text to start
 
-    p {
-        line-height: 1.8;
-        margin-bottom: 16px;
-    }
+  p {
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
 }
 
 .purpose-image {
-    img {
-        max-width: 100%;
-        height: auto;
-    }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Responsive Styles */
 @media (max-width: 991px) {
-    .content-box {
-        flex-direction: column;
-        max-width: 100%;
-        margin-bottom: 40px;
-        margin-top: 40px;
+  .content-box {
+    flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 40px;
+    margin-top: 40px;
 
-        .purpose-content {
-            margin-right: 0;
-        }
-
-        .purpose-header {
-            margin-bottom: 24px;
-
-            h1 {
-                font-size: 24px;
-            }
-        }
-
-        .dashed-line {
-            width: 80%; // Adjust dashed line width
-        }
-
-        .purpose-image {
-            img {
-                max-width: 50%;
-                height: auto;
-                object-fit: cover;
-            }
-        }
+    .purpose-content {
+      margin-right: 0;
     }
-}
 
-@media (max-width: 576px) {
-    .purpose-header h1 {
-        font-size: 20px; // Smaller font size on mobile
+    .purpose-header {
+      margin-bottom: 24px;
+
+      h1 {
+        font-size: 24px;
+      }
     }
 
     .dashed-line {
-        width: 60%;
+      width: 80%; // Adjust dashed line width
     }
+
+    .purpose-image {
+      img {
+        max-width: 50%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .purpose-header h1 {
+    font-size: 20px; // Smaller font size on mobile
+  }
+
+  .dashed-line {
+    width: 60%;
+  }
 }
 
 // 第3區塊 (卡關，不知道如何製作「單卡 slider」）！！！！
 
 .flavors-section {
-    background-image: url('/assets/images/deco/bg1.png');
+  background-image: url("/assets/images/deco/bg1.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .divider {
+    width: 180px; /* Adjust width for the line */
+    height: 1px;
+    background-color: #333;
+    margin: 8px 0; /* Spacing between lines */
+  }
+
+  /* Left-side text block */
+  .flavors-intro {
+    max-width: 306px;
+    text-align: start;
+    margin-right: 40px;
+
+    .explore-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: transparent;
+      text-decoration: none;
+      border: 1px solid black;
+      transition: background-color 0.3s;
+      gap: 8px;
+
+      &:hover {
+        box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);
+        background-color: #fff;
+        position: relative;
+        transition: box-shadow 0.5 ease, transform 0.5s ease;
+        /* Smooth transition for both shadow and position */
+      }
+    }
+  }
+
+  /* Right-side cards section */
+  .card-container {
+    display: flex;
+    gap: 24px;
+  }
+
+  .highlight-card {
+    background-color: #fff;
+    width: 306px;
+    height: 521px;
     background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border: 1px solid black;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 60%; // Ensures the image takes up half the card
+    overflow: hidden;
+    background: black;
+
+    img {
+      object-fit: cover;
+      opacity: 0.6;
+    }
+  }
+
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Makes sure the image covers the container proportionally
+  }
+
+  .title-overlay {
+    position: absolute;
+    bottom: 50%;
+    /* Positions it at the bottom of the upper half */
+    left: 20px;
+    right: 20px;
+    text-align: center;
+  }
+
+  .title-overlay h3 {
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .card-content {
+    color: #333;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .profile img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+
+  .more-link {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+  }
+
+  .more-link:hover {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 1350px) {
+  .content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .section-header {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-      
-      .divider {
-        width: 180px; /* Adjust width for the line */
-        height: 1px;
-        background-color: #333;
-        margin: 8px 0; /* Spacing between lines */
-    }
-
-    /* Left-side text block */
     .flavors-intro {
-        max-width: 306px;
-        text-align: start;
-        margin-right: 40px;
-
-        .explore-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: transparent;
-            text-decoration: none;
-            border: 1px solid black;
-            transition: background-color 0.3s;
-            gap: 8px;
-
-
-            &:hover {
-                box-shadow: 5.3px 10.6px 10.6px hsl(0deg 0% 0% / 0.34);
-                background-color: #fff;
-                position: relative;
-                transition: box-shadow 0.5 ease, transform 0.5s ease;
-                /* Smooth transition for both shadow and position */
-            }
-        }
+      text-align: center;
+      margin: 0 auto;
     }
 
-    /* Right-side cards section */
-    .card-container {
-        display: flex;
-        gap: 24px;
+    .explore-btn {
+      margin-bottom: 40px;
     }
-
-    .highlight-card {
-        background-color: #fff;
-        width: 306px;
-        height: 521px;
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        color: white;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        position: relative;
-        border: 1px solid black;
-
-    }
-
-    .img-container {
-        width: 100%;
-        height: 60%; // Ensures the image takes up half the card
-        overflow: hidden;
-        background: black;
-
-        img {
-            object-fit: cover;
-            opacity:0.6
-        }
-    }
-      
-    .img-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; // Makes sure the image covers the container proportionally
-        }
-
-    .title-overlay {
-        position: absolute;
-        bottom: 50%;
-        /* Positions it at the bottom of the upper half */
-        left: 20px;
-        right: 20px;
-        text-align: center;
-    }
-
-    .title-overlay h3 {
-        margin: 0;
-        color: #fff;
-        text-transform: uppercase;
-    }
-
-    .card-content {
-        color: #333;
-        padding-left: 20px;
-        padding-right: 20px;
-        width: 100%;
-        bottom: 0;
-    }
-
-    .profile {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-    .profile img {
-        width: 30px;
-        height: 30px;
-        margin-right: 8px;
-    }
-
-    .more-link {
-        display: inline-block;
-        color: #333;
-        text-decoration: none;
-        padding-bottom: 8px; 
-        border-bottom: 1px solid #333;
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        font-weight: bold;
-        transition: opacity 0.3s ease;
-    }
-
-    .more-link:hover {
-        opacity: 0.7;
-    }
-}
-
-@media (max-width: 1350px) {
-    .content-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-
-        .flavors-intro {
-            text-align: center;
-            margin: 0 auto;
-        }
-
-        .explore-btn {
-            margin-bottom: 40px;
-        }
-    }
-
+  }
 }
 
 .arrow-container {
-display: flex;
-justify-content: flex-end; /* Aligns all content to the right */
-align-items: center;
-position: relative;
+  display: flex;
+  justify-content: flex-end; /* Aligns all content to the right */
+  align-items: center;
+  position: relative;
 }
 
 .arrow {
-background: none;
-border: none;
-cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .arrow img {
-width: 40px; /* Adjust size */
-height: 40px;
-filter: grayscale(100%); /* Grey by default */
-transition: all 0.3s ease;
+  width: 40px; /* Adjust size */
+  height: 40px;
+  filter: grayscale(100%); /* Grey by default */
+  transition: all 0.3s ease;
 }
 
 /* Hover effect for both arrows */
 .arrow:hover img,
 .arrow:active img {
-filter: grayscale(0%); /* Turns black on hover or active */
+  filter: grayscale(0%); /* Turns black on hover or active */
 }
 
 /* Left arrow specific styles */
 .left-arrow {
-position: absolute;
-right: 70px; /* Position it slightly left of the right arrow */
-    &.left-arrow {
-        background-image: url('left-arrow.png'); // Path to your left arrow image
+  position: absolute;
+  right: 70px; /* Position it slightly left of the right arrow */
+  &.left-arrow {
+    background-image: url("left-arrow.png"); // Path to your left arrow image
 
-        &:hover {
-            filter: brightness(0); // Turns black on hover
-        }
-
-        &:active {
-            filter: brightness(0.5); // Turns gray on active
-        }
+    &:hover {
+      filter: brightness(0); // Turns black on hover
     }
+
+    &:active {
+      filter: brightness(0.5); // Turns gray on active
+    }
+  }
 }
 
 /* Right arrow specific styles */
 .right-arrow {
-position: absolute;
-right: 20px; /* Align the right arrow closer to the edge */
-    &.right-arrow {
-        background-image: url('left-arrow.png'); // Path to your left arrow image
+  position: absolute;
+  right: 20px; /* Align the right arrow closer to the edge */
+  &.right-arrow {
+    background-image: url("left-arrow.png"); // Path to your left arrow image
 
-        &:hover {
-            filter: brightness(0); // Turns black on hover
-        }
-
-        &:active {
-            filter: brightness(0.5); // Turns gray on active
-        }
+    &:hover {
+      filter: brightness(0); // Turns black on hover
     }
+
+    &:active {
+      filter: brightness(0.5); // Turns gray on active
+    }
+  }
 }
 
 .background-wrapper {
-    background-image: url('/assets/images/deco/bg5.png');
-    background-repeat: no-repeat;
-    background-size: cover; /* Ensures the image covers the whole wrapper */
-    background-position: center; /* Centers the image */
+  background-image: url("/assets/images/deco/bg5.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensures the image covers the whole wrapper */
+  background-position: center; /* Centers the image */
 }
 
 // 第4區塊
 .hot-picks-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .section-header {
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
+  }
 
-    .section-header {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    .divider {
-        width: 180px; /* Adjust width for the line */
-        height: 1px;
-        background-color: #333;
-        margin: 8px 0; /* Spacing between lines */
-    }
+  .divider {
+    width: 180px; /* Adjust width for the line */
+    height: 1px;
+    background-color: #333;
+    margin: 8px 0; /* Spacing between lines */
+  }
 }
-  
-  .hot-picks-container {
-    max-width: 1076px;
+
+.hot-picks-container {
+  max-width: 1076px;
+}
+
+.hot-picks-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 5.3px 10.6px 10.6px rgba(0, 0, 0, 0.34);
   }
-  
+
+  .picks-image-wrapper {
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .info {
+    padding: 20px;
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+
+      .tag {
+        background-color: #f5c069;
+        color: #333;
+        padding: 2px 6px;
+        border-radius: 3px;
+      }
+
+      .rating {
+        .stars {
+          color: #f39c12;
+        }
+        .reviews {
+          color: #777;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 776px) {
   .hot-picks-card {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border: 1px solid black;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 5.3px 10.6px 10.6px rgba(0, 0, 0, 0.34);
-    }
-    
+    flex-direction: row;
+
     .picks-image-wrapper {
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
+      width: 50%; /* Allow flexibility */
     }
-  
+
     .info {
-      padding: 20px;
-
-      .details {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-
-        .tag {
-          background-color: #f5c069;
-          color: #333;
-          padding: 2px 6px;
-          border-radius: 3px;
-        }
-
-        .rating {
-
-          .stars {
-            color: #f39c12;
-          }
-          .reviews {
-            color: #777;
-          }
-        }
-      }
+      width: 60%;
+      padding: 15px;
     }
   }
-  
-  /* Responsive Design */
-  @media (max-width: 776px) {
-    .hot-picks-card {
-      flex-direction: row;
-      
-      .picks-image-wrapper {
-        width: 50%; /* Allow flexibility */
-      }
-      
-      .info {
-        width: 60%;
-        padding: 15px;
-      }
-    }
-  }
+}
 
 .more-recommendation-btn {
-    align-items: center;
-    text-align: center;
-    padding: 10px 20px;
-    border: 1px solid $primary;
-    background-color:#fff;
-    text-decoration: none;
-    color: $primary;
-    gap: 8px;
-    width: 122px; // 因為改成 row / col 格式後目前有限時間內只能用這個方法把按鈕的寬度做限制
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  border: 1px solid $primary;
+  background-color: #fff;
+  text-decoration: none;
+  color: $primary;
+  gap: 8px;
+  width: 122px; // 因為改成 row / col 格式後目前有限時間內只能用這個方法把按鈕的寬度做限制
 
-    &:hover {
-        box-shadow: 3.0px 6.1px 6.1px hsl(0deg 0% 0% / 0.41);
-        /* Add shadow on hover */
-        transform: translateY(-2px);
-        /* Move the card slightly upwards on hover */
-    }
+  &:hover {
+    box-shadow: 3px 6.1px 6.1px hsl(0deg 0% 0% / 0.41);
+    /* Add shadow on hover */
+    transform: translateY(-2px);
+    /* Move the card slightly upwards on hover */
+  }
 
-    svg {
-        width: 20px; // 設定 SVG 大小
-        height: 20px;
-        margin-left: 8px; // SVG 與文字的間距
-        fill: currentColor;
-    }
+  svg {
+    width: 20px; // 設定 SVG 大小
+    height: 20px;
+    margin-left: 8px; // SVG 與文字的間距
+    fill: currentColor;
+  }
 }
-  
+
 // .hot-picks-section {
 //     display: flex;
 //     flex-direction: column;
@@ -613,7 +614,7 @@ right: 20px; /* Align the right arrow closer to the edge */
 //         text-align: center;
 //         align-items: center;
 //     }
-      
+
 //     .divider {
 //         width: 180px; /* Adjust width for the line */
 //         height: 1px;
@@ -699,7 +700,7 @@ right: 20px; /* Align the right arrow closer to the edge */
 //     }
 // }
 
-// @media (max-width: 776px) {    
+// @media (max-width: 776px) {
 //     .hot-picks-container {
 //         flex-direction: column;
 //         padding: 0 20px; /* Left and right padding */
@@ -725,16 +726,16 @@ right: 20px; /* Align the right arrow closer to the edge */
 //             align-items: center;
 
 //             img {
-//                 width: 100%; 
+//                 width: 100%;
 //                 height: auto;
 //                 border-right: none;
 //             }
 //         }
 
 //         .info {
-//             width: 60%; 
+//             width: 60%;
 //             padding: 16px;
-//             border-left: 1px solid black; 
+//             border-left: 1px solid black;
 
 //             .details {
 //                 flex-direction: column;
@@ -747,7 +748,7 @@ right: 20px; /* Align the right arrow closer to the edge */
 //                     font-size: 14px;
 //                     font-weight: bold;
 //                     margin: auto 0;
-//                 } 
+//                 }
 //             }
 //         }
 //     }
@@ -761,299 +762,299 @@ right: 20px; /* Align the right arrow closer to the edge */
 //         margin: 20px auto; /* Center align with spacing */
 //         gap: 0px;
 //     }
-   
 
 // 第5區塊
 .recent-reviews-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+
+  .section-header {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-bottom: 80px;
-
-    .section-header {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-      
-    .divider {
-        width: 180px; /* Adjust width for the line */
-        height: 1px;
-        background-color: #333;
-        margin: 8px 0; /* Spacing between lines */
-    }
-}
-
-  .recent-review-title {
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .divider {
+    width: 180px; /* Adjust width for the line */
+    height: 1px;
+    background-color: #333;
+    margin: 8px 0; /* Spacing between lines */
+  }
 }
 
-  .review-card-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1076px;
+.recent-review-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.review-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1076px;
 }
 
 /* Review Card Styles */
 .review-card {
-    /* Adjust width as needed */
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid $primary;
+  /* Adjust width as needed */
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid $primary;
 }
 
 .image-container {
-    position: relative;
-    width: 100%;
-    /* Adjust height based on layout */
-    overflow: hidden;
-    background-image: url('/assets/images/deco/pattern2.png');
-    padding: 16px; /* 四周有16px的padding */
-    border-bottom: 1px solid black; /* 图片底部的黑色边框 */
+  position: relative;
+  width: 100%;
+  /* Adjust height based on layout */
+  overflow: hidden;
+  background-image: url("/assets/images/deco/pattern2.png");
+  padding: 16px; /* 四周有16px的padding */
+  border-bottom: 1px solid black; /* 图片底部的黑色边框 */
 }
 
 .product-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 1px solid black; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid black;
 }
 
 .icon-overlay {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    overflow: hidden;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .icon-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .review-card-content {
-    padding: 20px;
+  padding: 20px;
 }
 
 .top-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .location-label {
-    background-color: $primary-80;
-    /* Light yellow color */
-    border-radius: 3px;
-    font-size: 12px;
-    padding: 4px 4px;
+  background-color: $primary-80;
+  /* Light yellow color */
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 4px 4px;
 }
 
 .star {
-    color: #f39c12;
-    /* Gold color for the star */
+  color: #f39c12;
+  /* Gold color for the star */
 }
 
 hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
 }
 
 .bottom-section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    p {
-        margin:0;
-    }
+  p {
+    margin: 0;
+  }
 }
 
 .shop-info {
-
-    h2, p {
-        margin: 0;
-        padding: 0;
-    }
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .user-info {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .user-avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
 }
 
 .badge {
-    background-color: rgb(236, 235, 235);
-    color: $primary;
-    padding: 4px;
-    border-radius: 3px;
-    margin-right: 8px;
+  background-color: rgb(236, 235, 235);
+  color: $primary;
+  padding: 4px;
+  border-radius: 3px;
+  margin-right: 8px;
 }
 
 .timestamp {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 @media (max-width: 991px) {
-    .recent-reviews-section {
-      padding-bottom: 40px; /* Adjust padding for smaller screens */
-    }
-    
-    .review-card-container {
-      flex-direction: column; /* Stack items vertically */
-      gap: 16px; /* Adjust gap for vertical layout */
-    }
-  
-    .col-4 {
-      width: 100%; /* Make each column full-width on smaller screens */
-    }
-  
-    .review-card {
-      max-width: 100%; /* Make review cards take the full width */
-      margin-bottom: 20px; /* Add some spacing between cards */
-    }
-  
-    .image-container {
-      padding: 8px; /* Adjust padding for smaller screens */
-    }
-  
-    .review-card-content {
-      padding: 16px; /* Adjust padding for better spacing on smaller screens */
-    }
-  
-    .top-section, .bottom-section {
-      text-align: left; /* Keep text alignment */
-    }
-  
-    .shop-info h5 {
-      font-size: 1.2rem; /* Adjust font size if needed */
-    }
-  
-    .location-label {
-      padding: 2px 6px; /* Adjust padding to keep it compact */
-    }
-  
-    .timestamp {
-      font-size: 0.8rem; /* Adjust font size if needed */
-    }
+  .recent-reviews-section {
+    padding-bottom: 40px; /* Adjust padding for smaller screens */
+  }
+
+  .review-card-container {
+    flex-direction: column; /* Stack items vertically */
+    gap: 16px; /* Adjust gap for vertical layout */
+  }
+
+  .col-4 {
+    width: 100%; /* Make each column full-width on smaller screens */
+  }
+
+  .review-card {
+    max-width: 100%; /* Make review cards take the full width */
+    margin-bottom: 20px; /* Add some spacing between cards */
+  }
+
+  .image-container {
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+
+  .review-card-content {
+    padding: 16px; /* Adjust padding for better spacing on smaller screens */
+  }
+
+  .top-section,
+  .bottom-section {
+    text-align: left; /* Keep text alignment */
+  }
+
+  .shop-info h5 {
+    font-size: 1.2rem; /* Adjust font size if needed */
+  }
+
+  .location-label {
+    padding: 2px 6px; /* Adjust padding to keep it compact */
+  }
+
+  .timestamp {
+    font-size: 0.8rem; /* Adjust font size if needed */
+  }
 }
 
 // 間距 & 外距 & 部分樣式模組化
 
 .align-center {
-    text-align: center;
+  text-align: center;
 }
 
 .pb-4 {
-    padding-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 .p-1 {
-    padding: 4px;
+  padding: 4px;
 }
 
 .p-2 {
-    padding: 8px;
+  padding: 8px;
 }
 
 .p-5 {
-    padding: 20px;
+  padding: 20px;
 }
 
 .p-12 {
-    padding: 48px;
+  padding: 48px;
 }
 
 .pt-18 {
-    padding-top: 72px;
+  padding-top: 72px;
 }
 
 .pt-20 {
-    padding-top: 80px;
+  padding-top: 80px;
 }
 
 .pb-20 {
-    padding-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 .mr-1 {
-    margin-right: 4px;
+  margin-right: 4px;
 }
 
 .mr-2 {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .mt-3 {
-    margin-top: 12px;
+  margin-top: 12px;
 }
 
 .mt-4 {
-    margin-top: 16px;
+  margin-top: 16px;
 }
 
 .mt-6 {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 .mb-2 {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .mb-3 {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .mb-4 {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .mb-5 {
-    margin-bottom: px;
+  margin-bottom: px;
 }
 
 .mt-18 {
-    margin-top: 72px;
+  margin-top: 72px;
 }
 
 .mr-10 {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 .mr-20 {
-    margin-right: 80px;;
+  margin-right: 80px;
 }
 
 .mt-30 {
-    margin-top: 120px;
+  margin-top: 120px;
 }
 
 .mb-10 {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .mb-18 {
-    margin-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .mb-30 {
-    margin-bottom: 120px;
+  margin-bottom: 120px;
 }
