@@ -2,6 +2,8 @@ header {
   border-bottom: 1px solid rgba(72, 70, 69, 1);
   background: #0000001a;
   letter-spacing: 0.04em;
+  transition: all 0.3s ease;
+
 }
 
 header:hover {
@@ -105,4 +107,30 @@ header:hover {
 .navbar-toggler:active {
   box-shadow: none; /* 移除陰影效果 */
   border: none; /* 確保不會顯示邊框 */
+}
+
+@media (max-width: 996px) {
+  .navbar-collapse ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: white;
+    width: 100vw;
+  }
+  .navbar-collapse {
+    li {
+      border-bottom: #000 1px solid;
+    }
+  }
+  .top-item {
+    border-top: #000 1px solid;
+  }
+  .navbar-collapse li:hover {
+    background: var(--Nutral-95, #f4f0ee);
+  }
 }
