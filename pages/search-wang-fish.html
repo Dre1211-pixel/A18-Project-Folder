@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search：王氏魚皮</title>
+</head>
+<body>
+    <%- include('./layout/header'); -%>
+    <!-- search-header -->
+    <%- include('./layout/search-section'); -%>
+
+        <!-- food-list-section -->
+        <main class="main-bg">
+            <img src="../assets/images/Map.png" alt="Map" class="background-img">
+            <div class="container">
+                <div class="row flex-column-reverse flex-md-row justify-content-between">
+                    <section class="food-list-section col-12 col-md-6 col-xl-4 px-6 bg-white">
+                        <h3 class="h6-bold text-center text-md-start my-6">台味尋寶圖上的 <i>王氏魚皮</i> 及相關店家</h3>
+                        <!-- filter-sort-desktop -->
+                        <div class="d-none d-sm-flex justify-content-between py-3 filter-sort">
+                            <div class="filters d-flex flex-column gap-2">
+                                <button class="filter-btn">篩選器 <i class="bi bi-filter-right"></i></button>
+                                <button class="filter-btn filter-icon-text-btn body2-semiBold">
+                                    <i class="bi bi-check-lg "></i>
+                                    營業中
+                                </button>
+                            </div>
+                            <div class="sort body1-semiBold">
+                                <select name="sort-options" class="form-select sort-dropdown">
+                                    <option>熱門推薦</option>
+                                    <option>最多評分</option>
+                                    <option>最多評論</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- shop-card-list -->
+                        <ul class="shop-card-list p-0">
+                            <li class="shop-card py-5 d-flex gap-3">
+                                <div class="img-box">
+                                    <img src="../assets/images/eatery-4.png" alt="Wang’s fish skin" class="shop-img">
+                                </div>
+                                <div class="inner flex-fill">
+                                    <h2 class="h6-bold">王氏魚皮</h2>
+                                    <h2 class="body1-eng mb-3">Wang’s fish skin</h2>
+                                    <span class="badge-primary-s body2-semiBold">在地小吃</span>
+                                    <span class="badge-primary-s body2-semiBold">必比登推介</span>
+                                    <p class="body2-semiBold text-neutral-40 py-2 status-text status-open m-0">正在營業：04:00-14:00</p>
+                                    <span class="rank body2-Bold me-3"><i class="bi bi-star-fill me-1"></i>4.4</span>
+                                    <span class="comment body2-Bold"><i class="bi bi-chat-dots-fill me-1"></i>4.4</span>
+                                    <div class="link-list d-flex justify-content-end mt-3">
+                                        <a href="detail-wang.html" class="detail-link body2-semiBold button-bottom-line-sm">查看更多</a>
+                                    </div>
+                            </li>
+                            <li class="shop-card py-5 d-flex gap-3">
+                                <div class="img-box">
+                                    <img src="../assets/images/eatery-5.png" alt="Article Beef Soup" class="shop-img">
+                                </div>
+                                <div class="inner flex-fill">
+                                    <h2 class="h6-bold">文章牛肉湯</h2>
+                                    <h2 class="body1-eng mb-3">Article Beef Soup</h2>
+                                    <span class="badge-primary-s body2-semiBold">在地小吃</span>
+                                    <span class="badge-primary-s body2-semiBold">網友熱議</span>
+                                    <p class="body2-semiBold text-neutral-40 py-2 status-text status-close m-0">下次營業：19:00</p>
+                                    <span class="rank body2-Bold me-3"><i class="bi bi-star-fill me-1"></i>4.4</span>
+                                    <span class="comment body2-Bold"><i class="bi bi-chat-dots-fill me-1"></i>4.4</span>
+                                    <div class="link-list d-flex justify-content-end mt-3">
+                                        <a href="#" class="detail-link body2-semiBold button-bottom-line-sm">查看更多</a>
+                                    </div>
+                                </div>    
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="map-section col-12 col-md-6 col-xl-8">
+                        <img src="../assets/images/Map.png" class="map-img" alt="map" >
+                    </section>
+                </div>
+            </div>
+        </main>
+
+    
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+</body>
+</html>

@@ -1,3 +1,39 @@
+//search-bg
+.search-bg {
+    background-image: url('../assets/images/deco/bg8.png');
+    padding: 0;
+    .container{
+        padding: 0;
+        h2{
+            font-size: 16px;
+            padding-top: 40px;
+        }
+        .search-image{
+            max-width: 80%;
+            z-index: 2;
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .search-bg {
+        background-image: url('../assets/images/deco/bg8.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .container{
+            h2{
+                font-size: 24px;
+                padding-top: 40px;
+            }
+        }
+    }
+}
+.search-bar-container {
+    background-color: $neutral-95;
+    padding: 24px;
+}
+
 //main
 .main-bg {
     position: relative;
