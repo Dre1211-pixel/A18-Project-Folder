@@ -5,41 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
-    <script type="module" crossorigin src="/A18-Project-Folder/assets/main-919a6b2a.js"></script>
-    <link rel="stylesheet" href="/A18-Project-Folder/assets/main-5b3778bd.css">
+    <script type="module" crossorigin src="/A18-Project-Folder/assets/index-b7d04128.js"></script>
+    <link rel="modulepreload" crossorigin href="/A18-Project-Folder/assets/main-5464df68.js">
+    <link rel="stylesheet" href="/A18-Project-Folder/assets/main-7609bdf1.css">
   </head>
-  <body>
+
+  <body class="banner">
     <header>
   <div class="container">
-    <nav class="navbar navbar-expand-lg">
-      <button
-        class="navbar-toggler border-0"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <!-- <span class="navbar-toggler-icon"></span> -->
-        <span class="hamburg-line"></span>
-        <span class="hamburg-line"></span>
-        <span class="hamburg-line"></span>
-      </button>
-      <a href="#" class="navbar-brand">
-        <img src="/A18-Project-Folder/assets/Property 1_Default-f81903fa.png" alt="台味尋寶圖" />
+    <nav class="navbar navbar-expand-lg py-2 py-lg-6">
+      <div class="hamburg-line p-3">
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <span class="hamburg-line"></span>
+          <span class="hamburg-line"></span>
+          <span class="hamburg-line"></span>
+        </button>
+      </div>
+      <a href="index.html" class="navbar-brand py-0 me-0">
+        <img
+          src="/A18-Project-Folder/assets/logo type-1-0d8825b7.svg"
+          alt="台味尋寶圖header"
+        />
       </a>
       <div class="search-avatar d-flex align-items-center order-lg-2">
         <form class="d-flex ms-4 search-icon" role="search">
-          <i class="bi bi-search fs-3 me-2 me-lg-0"></i>
+          <i class="bi bi-search fs-4 me-2 me-lg-0" style="color: black"></i>
           <input
-            class="form-control d-none d-lg-block"
+            class="form-control d-none d-lg-block py-2 pe-2"
             type="search"
             placeholder="搜尋美食"
             aria-label="Search"
           />
         </form>
-        <a href="#"><i class="bi bi-person-circle fs-1 ms-4"></i></a>
+        <a href="#"
+          ><img
+            src="/A18-Project-Folder/assets/avatar-81d73651.png"
+            class="ms-6"
+            alt="使用者"
+        /></a>
       </div>
       <div
         class="collapse navbar-collapse order-lg-1"
@@ -47,10 +59,10 @@
       >
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item text-center">
-            <a class="nav-link" href="#">找尋美食</a>
+            <a class="nav-link" href="search.html">找尋美食</a>
           </li>
           <li class="nav-item ms-lg-4 text-center bt-0">
-            <a class="nav-link" href="#">美食專欄</a>
+            <a class="nav-link" href="food-column.html">美食專欄</a>
           </li>
           <li class="nav-item ms-lg-4 text-center bt-0 d-lg-none">
             <a class="nav-link" href="#">切換英文</a>
@@ -88,66 +100,515 @@
   </div>
 </header>
 
-    <section class="banner container">
-      <div class="row">
-        <div class="col">
-          <div class="text-group">
-            <div class="main-title">
-              <div>美</div>
-              <div>食</div>
-              <div>尋</div>
-              <div>寶</div>
+    <section class="banner-container">
+      <div class="container">
+        <div class="text-group">
+          <div class="title-wrapper">
+            <div class="main-title display1-bold mb-8">
+              <div class="p-1">美</div>
+              <div class="p-1">食</div>
+              <div class="p-1">尋</div>
+              <div class="p-1">寶</div>
             </div>
-            <div class="sub-title">台味共享</div>
+            <div class="sub-title h3-semiBold p-2">台味共享</div>
           </div>
-          <div class="map">
-            <!-- <img
-              src="/assets/images/home-section1-taiwan.png"
-              alt="Map of Taiwan"
-            /> -->
+        </div>
+        <div class="map-container">
+          <img
+            src="/A18-Project-Folder/assets/home-section1-taiwan-6538611a.png"
+            alt="Map of Taiwan"
+            class="display-in-desktop"
+          />
+          <img
+            src="/A18-Project-Folder/assets/home-section1-taiwan-sm-ec05d7c6.png"
+            alt="Map of Taiwan"
+            class="display-in-mobile"
+          />
+          <div class="city-info-box">
+            <div class="city-name">Taipei</div>
+            <div class="city-title">台北</div>
+            <button class="view-button">查看</button>
           </div>
         </div>
       </div>
-      <!-- <div class="text-group">
-        <div class="main-title">
-          <div>美</div>
-          <div>食</div>
-          <div>尋</div>
-          <div>寶</div>
-        </div>
-        <div class="sub-title">台味共享</div>
-      </div>
-      <div class="map">
-        <img
-          src="/assets/images/home-section1-taiwan.png"
-          alt="Map of Taiwan"
-        />
-      </div> -->
     </section>
 
-    <section class></section>
+    <!-- Our Purpose -->
+    <section class="about-container">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto">
+            <div class="content-box mx-0 mx-lg-2">
+              <div class="purpose-content">
+                <div class="purpose-header">
+                  <div class="dashed-line top-line"></div>
+                  <!-- Top dashed line -->
+                  <h2 class="body2-eng underline">Our Purpose</h2>
+                  <!-- Added "underline" class for h2 underline -->
+                  <h1 class="h1-semiBold mb-3">
+                    尋找隱藏的美味<br />珍藏台灣的味道
+                  </h1>
+                  <div class="dashed-line bottom-line"></div>
+                  <!-- Bottom dashed line -->
+                </div>
+                <div class="purpose-description">
+                  <p class="body1-semiBold">
+                    台味尋寶圖不僅僅是一個檢索網站，更是承載了我們對台灣與美食的熱愛。期待通過這個平台把台灣的美食推廣到全世界，讓世界看見台灣！
+                  </p>
+                  <p class="body1-semiBold">
+                    無論是分享美食食記，提供店家資訊，或是分享這個網站給你的家人朋友，您的參與都將幫助提升台灣美食的認知度並幫助住在國內的友人更好的規劃下一次的美食之旅！
+                  </p>
+                </div>
+              </div>
+              <div class="purpose-image">
+                <img
+                  src="/A18-Project-Folder/assets/home-section2-box-179a2ec7.png"
+                  alt="Treasure Chest"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- badge -->
-    <!-- <div class="py-20">
-      <span class="badge-primary-s">台南</span>
-      <span class="badge-primary-m">台南</span>
-      <span class="badge-neutral-m">台南</span>
-    </div> -->
+    <!-- Highlights Title -->
+    <section class="flavors-section pt-20">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-header mb-10">
+              <div class="body2-eng">This Week's Highlights</div>
+              <div class="divider"></div>
+              <h1 class="h3-semiBold">美食專欄</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="flavors-intro">
+              <h3 class="h6-semiBold">台灣食紀</h3>
+              <h1 class="h1-eng">Discover the Flavors of Taiwan</h1>
+              <a href="food-column.html" class="explore-btn mt-5"
+                >一頁一味，探索美食故事
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 12C1.5 11.8011 1.57902 11.6103 1.71967 11.4696C1.86032 11.329 2.05109 11.25 2.25 11.25H19.9395L15.219 6.53097C15.0782 6.39014 14.9991 6.19913 14.9991 5.99997C14.9991 5.80081 15.0782 5.6098 15.219 5.46897C15.3598 5.32814 15.5508 5.24902 15.75 5.24902C15.9492 5.24902 16.1402 5.32814 16.281 5.46897L22.281 11.469C22.3508 11.5386 22.4063 11.6214 22.4441 11.7125C22.4819 11.8036 22.5013 11.9013 22.5013 12C22.5013 12.0986 22.4819 12.1963 22.4441 12.2874C22.4063 12.3785 22.3508 12.4613 22.281 12.531L16.281 18.531C16.1402 18.6718 15.9492 18.7509 15.75 18.7509C15.5508 18.7509 15.3598 18.6718 15.219 18.531C15.0782 18.3901 14.9991 18.1991 14.9991 18C14.9991 17.8008 15.0782 17.6098 15.219 17.469L19.9395 12.75H2.25C2.05109 12.75 1.86032 12.671 1.71967 12.5303C1.57902 12.3896 1.5 12.1989 1.5 12Z"
+                    fill="black"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="highlight-card">
+              <div class="img-container">
+                <img
+                  src="/A18-Project-Folder/assets/eatery-1-8fdad293.png"
+                  alt="Select Shops in Taipei"
+                />
+              </div>
+              <div class="title-overlay">
+                <h3 class="h4-semiBold">巷弄咖啡帶你回到90年代的台北</h3>
+              </div>
+              <div class="card-content mt-3 mb-4">
+                <div class="body2-semiBold">台北 | 中山</div>
+                <div class="profile mb-4">
+                  <img
+                    src="/A18-Project-Folder/assets/profile-icon-1-1789a4be.png"
+                    alt="Profile Picture"
+                  />
+                  <span class="body2-Bold">台味尋寶圖</span>
+                </div>
+                <p class="body1-semi-bold pb-4">
+                  一家藏身巷弄的咖啡小店，有著濃濃的手作溫度，咖啡香氣與音樂交織，讓人流連忘返。老闆
+                  Steven 笑稱自己是一個老靈魂...
+                </p>
+              </div>
+              <a href="#" class="more-link">更多</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="highlight-card">
+              <div class="img-container">
+                <img
+                  src="/A18-Project-Folder/assets/eatery-2-07a5d712.png"
+                  alt="Select Shops in Taipei"
+                />
+              </div>
+              <div class="title-overlay">
+                <h3 class="h4-semiBold">型男主廚顛覆你對台菜的想像力</h3>
+              </div>
+              <div class="card-content mt-3 mb-4">
+                <div class="body2-semiBold">台中 | 楠梓</div>
+                <div class="profile mb-4">
+                  <img
+                    src="/A18-Project-Folder/assets/profile-icon-2-6cad74c8.png"
+                    alt="Profile Picture"
+                  />
+                  <span class="body2-semiBold">阿寶</span>
+                </div>
+                <p class="body1-semi-bold pb-4">
+                  跨文化的天作之合，“味蕾魔法師”用法式料理手法創新台式家常菜，讓熟悉的菜色有了新生命，絕對是一場難忘的美食盛宴...
+                </p>
+              </div>
+              <a href="#" class="more-link">更多</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="highlight-card">
+              <div class="img-container">
+                <img
+                  src="/A18-Project-Folder/assets/eatery-3-08004c22.png"
+                  alt="Select Shops in Taipei"
+                />
+              </div>
+              <div class="title-overlay">
+                <h3 class="h4-semiBold">在天然氧吧中品味園藝生活</h3>
+              </div>
+              <div class="card-content mt-3 mb-4">
+                <div class="body2-semiBold">彰化 | 田尾</div>
+                <div class="profile mb-4">
+                  <img
+                    src="/A18-Project-Folder/assets/profile-icon-1-1789a4be.png"
+                    alt="Profile Picture"
+                  />
+                  <span class="body2-semiBold">台味尋寶圖</span>
+                </div>
+                <p class="body1-semi-bold pb-4">
+                  菁芳園原本是經營蘭花和觀葉植物的種植培育場，位在田尾鄉間僻靜幽靜小巷裡,園區生態豐富多元，環境靜謐寧靜，來到這裏可以學習到...
+                </p>
+                <a href="#" class="more-link body1-semiBold">更多</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <!-- Swiper Button -->
+            <div class="arrow-container mb-18 mt-6">
+              <!-- Left Arrow -->
+              <button id="left-arrow" class="arrow">
+                <img
+                  src="/A18-Project-Folder/assets/Icon-41-arrow-left-ee98909f.svg"
+                  alt="Left Arrow"
+                />
+              </button>
 
-    <!-- Modal 按鈕 -->
-    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button> -->
+              <!-- Cards or Carousel Content Goes Here -->
 
+              <!-- Right Arrow -->
+              <button id="right-arrow" class="arrow">
+                <img
+                  src="/A18-Project-Folder/assets/Icon-42-arrow-right-8ae60a61.svg"
+                  alt="Right Arrow"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="background-wrapper">
+      <!-- This Weeks's Hot Picks -->
+      <section class="hot-picks-section pt-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-header mb-10">
+                <div class="body2-eng">This Week's Hot Picks</div>
+                <div class="divider"></div>
+                <h1 class="h3-semiBold">本週熱門店家</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-12 mb-10">
+              <div class="hot-picks-card">
+                <div class="picks-image-wrapper">
+                  <img src="/A18-Project-Folder/assets/eatery-4-0de35e2f.png" alt="王氏魚皮" />
+                </div>
+                <div class="info">
+                  <div class="details">
+                    <div class="tag body2-semiBold">台南</div>
+                    <div class="rating">
+                      <span class="stars">4.4 ★</span>
+                      <span class="reviews">(21則評論)</span>
+                    </div>
+                  </div>
+                  <h3 class="h5-bold">王氏魚皮</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-12 mb-10">
+              <div class="hot-picks-card">
+                <div class="picks-image-wrapper">
+                  <img src="/A18-Project-Folder/assets/eatery-5-151fbf93.png" alt="文章牛肉湯" />
+                </div>
+                <div class="info">
+                  <div class="details">
+                    <div class="tag body2-semiBold">台南</div>
+                    <div class="rating">
+                      <span class="stars">4.4 ★</span>
+                      <span class="reviews">(21則評論)</span>
+                    </div>
+                  </div>
+                  <h3 class="h5-bold">文章牛肉湯</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-12 mb-10">
+              <div class="hot-picks-card">
+                <div class="picks-image-wrapper">
+                  <img src="/A18-Project-Folder/assets/eatery-6-91f0a789.png" alt="阿和肉燥飯" />
+                </div>
+                <div class="info">
+                  <div class="details">
+                    <div class="tag body2-semiBold">台南</div>
+                    <div class="rating">
+                      <span class="stars">4.4 ★</span>
+                      <span class="reviews">(21則評論)</span>
+                    </div>
+                  </div>
+                  <h3 class="h5-bold">阿和肉燥飯</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-10">
+            <div class="col-12" style="text-align: center">
+              <a href="#" class="more-recommendation-btn"
+                >更多推薦
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.5 12C1.5 11.8011 1.57902 11.6103 1.71967 11.4696C1.86032 11.329 2.05109 11.25 2.25 11.25H19.9395L15.219 6.53097C15.0782 6.39014 14.9991 6.19913 14.9991 5.99997C14.9991 5.80081 15.0782 5.6098 15.219 5.46897C15.3598 5.32814 15.5508 5.24902 15.75 5.24902C15.9492 5.24902 16.1402 5.32814 16.281 5.46897L22.281 11.469C22.3508 11.5386 22.4063 11.6214 22.4441 11.7125C22.4819 11.8036 22.5013 11.9013 22.5013 12C22.5013 12.0986 22.4819 12.1963 22.4441 12.2874C22.4063 12.3785 22.3508 12.4613 22.281 12.531L16.281 18.531C16.1402 18.6718 15.9492 18.7509 15.75 18.7509C15.5508 18.7509 15.3598 18.6718 15.219 18.531C15.0782 18.3901 14.9991 18.1991 14.9991 18C14.9991 17.8008 15.0782 17.6098 15.219 17.469L19.9395 12.75H2.25C2.05109 12.75 1.86032 12.671 1.71967 12.5303C1.57902 12.3896 1.5 12.1989 1.5 12Z"
+                    fill="black"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Most Recent Reviews -->
+      <section class="recent-reviews-section pt-18">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="section-header mb-10">
+                <div class="body2-eng">Most Recent Reviews</div>
+                <div class="divider"></div>
+                <h1 class="h3-semiBold">最新美食評價</h1>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <div class="review-card">
+                <!-- Product Image Section -->
+                <div class="image-container">
+                  <img
+                    src="/A18-Project-Folder/assets/eatery-7-3d702ab3.png"
+                    alt="同記安平豆花"
+                    class="product-photo"
+                  />
+                  <div class="icon-overlay">
+                    <img
+                      src="/A18-Project-Folder/assets/安平豆花logo-c21a6110.png"
+                      alt="同記安平豆花Icon"
+                      class="icon-image"
+                    />
+                  </div>
+                </div>
+
+                <div class="review-card-content">
+                  <!-- Top Section with Location Label and Rating -->
+                  <div class="top-section">
+                    <span class="location-label">台南</span>
+                    <div class="body2-semiBold rating">
+                      <span>4.9</span>
+                      <span class="star">&#9733;</span>
+                      <!-- Unicode star character -->
+                    </div>
+                  </div>
+
+                  <!-- Shop Title and Address -->
+                  <div class="shop-info">
+                    <h5 class="h5-bold">同記安平豆花</h5>
+                    <p class="body2-bold">臺南市安平區安北路433號</p>
+                  </div>
+
+                  <hr />
+
+                  <!-- Bottom Section with User Info and Comment -->
+                  <div class="bottom-section">
+                    <div class="user-info mb-2">
+                      <img
+                        src="/A18-Project-Folder/assets/profile-icon-1-1789a4be.png"
+                        alt="會員頭像"
+                        class="user-avatar"
+                      />
+                      <span class="body2-semiBold mr-2">小美</span>
+                      <span class="body2-semiBold badge">美食評論家</span>
+                      <span class="body2-semiBold timestamp">33mins ago</span>
+                    </div>
+                    <p class="body2-semiBold">
+                      這家的豆花真的超級好吃的～來安平必吃！台南一定要來這裡打卡啦！
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <!-- Card 2 -->
+              <div class="review-card">
+                <!-- Product Image Section -->
+                <div class="image-container">
+                  <img
+                    src="/A18-Project-Folder/assets/eatery-8-fe868133.png"
+                    alt="阿三肉圓"
+                    class="product-photo"
+                  />
+                  <div class="icon-overlay">
+                    <img
+                      src="/A18-Project-Folder/assets/阿三肉圓logo-d81a0d47.png"
+                      alt="同記安平豆花Icon"
+                      class="icon-image"
+                    />
+                  </div>
+                </div>
+
+                <div class="review-card-content">
+                  <!-- Top Section with Location Label and Rating -->
+                  <div class="top-section">
+                    <span class="location-label">彰化</span>
+                    <div class="body2-semiBold rating">
+                      <span>4.4</span>
+                      <span class="star">&#9733;</span>
+                      <!-- Unicode star character -->
+                    </div>
+                  </div>
+
+                  <!-- Shop Title and Address -->
+                  <div class="shop-info">
+                    <h5 class="h5-bold">阿三肉圓</h5>
+                    <p class="body2-bold">彰化縣彰化市三民路242號</p>
+                  </div>
+
+                  <hr />
+
+                  <!-- Bottom Section with User Info and Comment -->
+                  <div class="bottom-section">
+                    <div class="user-info mb-2">
+                      <img
+                        src="/A18-Project-Folder/assets/profile-icon-2-6cad74c8.png"
+                        alt="會員頭像"
+                        class="user-avatar"
+                      />
+                      <span class="body2-semiBold mr-2">阿寶</span>
+                      <span class="body2-semiBold badge">古早味守護者</span>
+                      <span class="body2-semiBold timestamp">15mins ago</span>
+                    </div>
+                    <p class="body2-semiBold">
+                      這是我吃過最脆的肉圓肉圓就是要吃炸的，龍骨腿湯非常濃郁，建護大家....
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <!-- Card 3 -->
+              <div class="review-card">
+                <!-- Product Image Section -->
+                <div class="image-container">
+                  <img
+                    src="/A18-Project-Folder/assets/eatery-9-9ba1cb98.png"
+                    alt="富霸王豬腳"
+                    class="product-photo"
+                  />
+                  <div class="icon-overlay">
+                    <img
+                      src="/A18-Project-Folder/assets/富霸王豬腳logo-30a6acf0.png"
+                      alt="富霸王豬腳Icon"
+                      class="icon-image"
+                    />
+                  </div>
+                </div>
+
+                <div class="review-card-content">
+                  <!-- Top Section with Location Label and Rating -->
+                  <div class="top-section">
+                    <span class="location-label">彰化</span>
+                    <div class="body2-semiBold rating">
+                      <span>4.7</span>
+                      <span class="star">&#9733;</span>
+                      <!-- Unicode star character -->
+                    </div>
+                  </div>
+
+                  <!-- Shop Title and Address -->
+                  <div class="shop-info">
+                    <h5 class="h5-bold">富霸王豬腳</h5>
+                    <p class="body2-bold">台北市中山區南京東路二段11</p>
+                  </div>
+
+                  <hr />
+
+                  <!-- Bottom Section with User Info and Comment -->
+                  <div class="bottom-section">
+                    <div class="user-info mb-2">
+                      <img
+                        src="/A18-Project-Folder/assets/profile-icon-3-31e8b067.png"
+                        alt="會員頭像"
+                        class="user-avatar"
+                      />
+                      <span class="body2-semiBold mr-2">Sandy</span>
+                      <span class="body2-semiBold badge">美食攝影師</span>
+                      <span class="body2-semiBold timestamp">1hr ago</span>
+                    </div>
+                    <p class="body2-semiBold">
+                      看到黃仁勳推薦後來的，腿庫肥瘦肉搭配剛好！醬汁以鹹味為主，11點前....
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
     <footer>
-  <div class="container px-4 py-40 d-none d-lg-block">
-    <div class="row justify-content-between">
-      <div class="left-side col-lg-5 ps-lg-0 pe-lg-100 d-flex flex-column">
+  <div class="container d-none d-lg-block">
+    <div class="row justify-content-between px-0 py-40">
+      <div class="col-lg-5 left-side ps-lg-0 pe-lg-100 d-flex flex-column">
         <div class="logo text-center">
           <img
             src="/A18-Project-Folder/assets/Property 1_Variant2-13d94040.png"
             alt="台味尋寶圖"
-            class="mb-20"
+            class="mb-5"
           />
           <div
             class="social-icon-f d-none d-lg-flex justify-content-center mb-4"
@@ -158,23 +619,26 @@
           </div>
         </div>
         <div class="search">
-          <form class="d-flex search-icon mb-4" role="search">
-            <i class="bi bi-search fs-3 me-2"></i>
+          <form class="d-flex search-icon" role="search">
+            <i
+              class="bi bi-search fs-4 me-2 me-lg-0"
+              style="color: var(--Nutral-80, #c9c6c4)"
+            ></i>
             <input
-              class="form-control radius-5"
+              class="form-control d-none d-lg-block py-2 pe-2"
               type="search"
               placeholder="搜尋美食"
               aria-label="Search"
             />
           </form>
-        </div>
-        <div class="copyright d-none d-lg-block fs-14">
-          <p class="mb-2">
-            Copyright @2024 The Flavors of Taiwan All rights reserved
-          </p>
-          <div class="d-flex">
-            <p class="me-12">網站使用需知</p>
-            <p>隱私權聲明</p>
+          <div class="copyright d-none d-lg-block fs-14 mt-6">
+            <p class="mb-2">
+              Copyright @2024 The Flavors of Taiwan All rights reserved
+            </p>
+            <div class="d-flex">
+              <p class="me-12">網站使用需知</p>
+              <p>隱私權聲明</p>
+            </div>
           </div>
         </div>
       </div>
@@ -218,7 +682,7 @@
 
   <!-- 以下顯示手機板 -->
   <div class="container py-40 d-block d-lg-none">
-    <div class="slogon py-20 fs-28 text-center">
+    <div class="slogon py-lg-20 py-5 fs-28 text-center">
       <p class="mb-2">“尋找隱藏的美味</p>
       <p>珍藏台灣的味道”</p>
     </div>
@@ -233,9 +697,7 @@
         />
       </form>
     </div>
-    <div
-      class="footer-content d-flex mt-4 mb-4 mb-lg-0 justify-content-between"
-    >
+    <div class="footer-content d-flex my-6 justify-content-between text-center">
       <div>
         <p class="subtile-title-color">首頁</p>
         <ul class="list-unstyled">
@@ -268,17 +730,26 @@
       <img
         src="/A18-Project-Folder/assets/Property 1_Variant2-13d94040.png"
         alt="台味尋寶圖"
-        class="mb-20"
+        class="mb-5"
       />
-      <div class="social-icon d-none d-lg-flex justify-content-center mb-4">
+      <div class="social-icon d-flex justify-content-center mb-4">
         <i class="bi bi-instagram fs-4"></i>
-        <i class="bi bi-facebook fs-4 px-20"></i>
+        <i class="bi bi-facebook fs-4 px-4"></i>
         <i class="bi bi-line fs-4"></i>
+      </div>
+      <div class="d-flex justify-content-center fs-14">
+        <p class="me-3">網站使用需知</p>
+        <p>隱私權聲明</p>
+      </div>
+      <div class="copyright fs-14">
+        <p class="mb-2">
+          Copyright @2024 The Flavors of Taiwan All rights reserved
+        </p>
       </div>
     </div>
   </div>
 </footer>
-
+    
     
   </body>
 </html>
